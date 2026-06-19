@@ -1,72 +1,101 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro'
 import { SITE_CONFIG } from '~/lib/siteConfig'
+
+const updated = '2026-06-20'
 ---
 
 <BaseLayout
-  title={`About — ${SITE_CONFIG.name}`}
-  description={`About ${SITE_CONFIG.name}: ${SITE_CONFIG.tagline}.`}
+  title={`About — oriz · cards`}
+  description={`About cards.oriz.in: ${SITE_CONFIG.tagline}`}
 >
-  <header class="container-prose page-head">
-    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / About</p>
-    <h1>About {SITE_CONFIG.name}</h1>
-  </header>
+  <div class="spine-prose">
+    <header class="page-head">
+      <p class="eyebrow mono"><a href="/">cards</a> / about</p>
+      <h1>about</h1>
+      <p class="lede">
+        A Bloomberg-terminal-for-Indian-credit-cards. Every fee, every reward
+        rate, every late charge, in one ledger. No rosettes, no editor's
+        picks, no affiliate steering.
+      </p>
+      <p class="meta">Last updated: {updated}</p>
+    </header>
 
-  <article class="container-prose prose">
-    <p class="lede">
-      <strong>{SITE_CONFIG.name}</strong> is a static catalog of 750+ card
-      profiles issued in India — credit, debit, and prepaid — with fees,
-      rewards, eligibility, and small-print on each.
-    </p>
+    <article class="prose">
+      <h2 id="what-this-is">What this is</h2>
+      <p>
+        cards.oriz.in is a static catalogue of <strong>750 cards</strong> issued
+        in India — credit, debit, and prepaid — across 35 issuers including
+        Amex, Axis, AU SFB, Bandhan, BoB, BoM, Canara, CUB, DCB, Dhanlaxmi,
+        ESAF, Federal, HDFC, HSBC, ICICI, IDBI, IDFC, Indian Bank, IndusInd,
+        IOB, J&K Bank, Karnataka Bank, Kotak, KVB, PNB, PSB, RBL, Saraswat,
+        SBI, SIB, StanChart, TMB, UCO, Union, and Yes Bank.
+      </p>
+      <p>
+        Banks publish card terms across PDFs, microsites, and FAQ pages that
+        change without notice. cards.oriz.in pulls those into a single,
+        searchable, comparable form — open data, open source, no affiliate
+        gating.
+      </p>
 
-    <h2>What this is</h2>
-    <p>
-      Banks publish their card terms across PDFs, microsites, and FAQ pages
-      that change without notice. {SITE_CONFIG.name} pulls those into a
-      single, searchable, comparable form — open data, open source, no
-      affiliate gating.
-    </p>
-    <p>
-      Coverage today: 36+ issuers including Amex, Axis, AU SFB, Bandhan, BoB,
-      BoM, Canara, CUB, DCB, Dhanlaxmi, ESAF, Federal, HDFC, HSBC, ICICI, IDBI,
-      IDFC, Indian Bank, IndusInd, IOB, J&K Bank, Karnataka Bank, Kotak, KVB,
-      PNB, PSB, RBL, Saraswat, SBI, SIB, StanChart, TMB, UCO, Union, Yes Bank.
-    </p>
+      <h2 id="methodology">Methodology</h2>
+      <p>
+        Each card profile is assembled from the <strong>Most Important Terms
+        and Conditions</strong> (MITC) and <strong>Key Fact Statement</strong>
+        (KFS) PDFs the issuer publishes — both of which are mandated by RBI
+        and updated when fees change. We extract the standard fields (joining
+        fee, annual fee, APR, fuel waiver, lounge access, eligibility,
+        insurance) into a normalised schema. Every value is a number — no
+        marketing copy in the data tier.
+      </p>
+      <p>
+        We don't take affiliate commissions and we don't accept paid placement.
+        The choice of which cards to list is the entire universe of cards
+        published by the 35 issuers — there is no editor.
+      </p>
 
-    <h2>Part of oriz</h2>
-    <p>
-      {SITE_CONFIG.name} is one site in the <a href="https://oriz.in/">oriz</a>
-      family — small, free, and quiet tools by Chirag Singhal. One sign-in
-      works across every site (so your saved cards and reading list follow
-      you to the blog, the journal, and back).
-    </p>
+      <h2 id="sources">Sources</h2>
+      <ul>
+        <li><strong>RBI Master Direction on Credit Card and Debit Card</strong> — the regulatory baseline.</li>
+        <li><strong>Issuer MITC documents</strong> — fees, charges, late-payment, over-limit, currency markup.</li>
+        <li><strong>Issuer KFS documents</strong> — APR, billing cycle, grace period, minimum-due rules.</li>
+        <li><strong>Issuer card pages</strong> — rewards tables, lounge programmes, fuel waiver windows, eligibility.</li>
+      </ul>
+      <p>
+        Our extraction date is stamped on each card profile. The footer below
+        shows the most-recent rebuild timestamp for the whole catalogue.
+      </p>
 
-    <h2>Source</h2>
-    <p>
-      Code:
-      <a href="https://github.com/chirag127/oriz-cards">github.com/chirag127/oriz-cards</a>.
-      Issues, corrections, and PRs welcome.
-    </p>
+      <h2 id="licence">Licence</h2>
+      <p>
+        Card data on cards.oriz.in is published under
+        <strong>Creative Commons Attribution 4.0 International</strong> (CC BY
+        4.0). Take a copy, redistribute, build on it — please credit
+        cards.oriz.in and link back. The data is also available as a single
+        JSON dump: <a href="/cards.json">/cards.json</a>.
+      </p>
 
-    <h2>Disclaimer</h2>
-    <p>
-      Information here is for reference. It is not financial advice and may
-      lag the bank's own page by days or weeks. Always verify on the issuing
-      bank's site before applying. See the
-      <a href="/legal/disclaimer/">full disclaimer</a>.
-    </p>
-  </article>
+      <h2>Part of oriz</h2>
+      <p>
+        cards is one site in the <a href="https://oriz.in/">oriz</a> family —
+        small, free, open-source tools by Chirag Singhal. One sign-in works
+        across every site. Visit the
+        <a href="https://oriz.in/">hub</a> for the rest.
+      </p>
+
+      <h2>Source</h2>
+      <p>
+        Code: <a href="https://github.com/chirag127/oriz-cards">github.com/chirag127/oriz-cards</a>.
+        Issues, corrections, and PRs welcome.
+      </p>
+
+      <h2>Disclaimer</h2>
+      <p>
+        Information here is for reference. It is not financial advice and may
+        lag the bank's own page by days or weeks. Always verify on the
+        issuing bank's site before applying. See the
+        <a href="/legal/disclaimer/">full disclaimer</a>.
+      </p>
+    </article>
+  </div>
 </BaseLayout>
-
-<style>
-  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
-  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
-  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
-  .eyebrow a:hover { color: var(--color-fg); }
-  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
-  .prose { padding-block: 2.5rem 4rem; color: var(--color-prose); line-height: 1.75; font-size: 1.0625rem; }
-  .prose .lede { font-size: 1.1875rem; color: var(--color-fg); margin: 0 0 2rem; }
-  .prose h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--color-fg); margin: 2.5rem 0 1rem; }
-  .prose p { margin: 0 0 1.25rem; }
-  .prose a { color: var(--color-accent); }
-</style>

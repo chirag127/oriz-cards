@@ -1,17 +1,279 @@
 @import 'tailwindcss';
-@import '@chirag127/oriz-ui/styles';
-@import '@chirag127/oriz-ui/components.css';
 
-/* Site-specific overrides for cards.oriz.in.
-   Keep this file thin — design tokens live in @chirag127/oriz-ui. */
+/*
+ * oriz-cards — v2 Bloomberg-terminal-for-Indian-credit-cards.
+ *
+ * Surface: slate (cool-archival, distinct from oriz-finance's warm graph paper
+ * and the cream / dark family). Display: Geist Mono — the wide-mono display
+ * face reinforces the screener / terminal metaphor (every card is a row in a
+ * database, every fee is a number in a column). Sans body: Inter Tight.
+ * Numerics: JetBrains Mono with tabular-nums + slashed zero — non-negotiable
+ * because joining fees, APRs, and reward rates have to align vertically across
+ * hundreds of rows.
+ *
+ * Vermilion is RESERVED on this site — only on negative deltas, late-fee
+ * figures, and the lone "Apply" CTA on detail pages. Brass is the chip motif
+ * accent and the wordmark middle-dot — never anything else.
+ *
+ * Tokens are family-anchor compatible: --paper / --ink / --rule / --accent
+ * mirror oriz-home's contract; --vermilion + --brass are the cards-specific
+ * additions.
+ */
 
-.container-page {
-  max-width: var(--container-page);
-  margin-inline: auto;
-  padding-inline: clamp(1rem, 4vw, 2rem);
+@theme {
+  --font-display: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'Inter Tight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --container-spine: 1280px;
+  --container-prose: 720px;
+  --rail-width: 320px;
 }
-.container-prose {
+
+@layer base {
+  :root {
+    color-scheme: light;
+
+    /* Slate paper — distinct cool-archival surface. */
+    --paper: #e8eaee;
+    --paper-raised: #f2f4f7;
+    --paper-deep: #dde0e6;
+    --ink: #0e1116;
+    --ink-mute: #5c6470;
+    --rule: #c9cdd4;
+
+    /* Primary accent: carbon blue. NOT vermilion. */
+    --accent: #2b3a55;
+    --accent-fg: #f2f4f7;
+
+    /* Reserved tokens. */
+    --vermilion: #b8362a; /* negative numbers, late-fee disclosures, ONE Apply CTA */
+    --brass: #b8923a; /* chip motif + wordmark middot only */
+    --brass-deep: #8b6e2a;
+    --brass-light: #d4b163;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --paper: #171922;
+      --paper-raised: #21232e;
+      --paper-deep: #0e1018;
+      --ink: #e6e8ee;
+      --ink-mute: #8b92a0;
+      --rule: #2e323d;
+      --accent: #7c9ad4;
+      --accent-fg: #0e1116;
+      --vermilion: #e26a5c;
+      --brass: #d4ae5c;
+      --brass-deep: #a8893f;
+      --brass-light: #ecd28a;
+    }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+    letter-spacing: -0.005em;
+    margin: 0;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Mono utility — disable ligatures, enable tabular numerals + slashed zero.
+     EVERY number on this site uses this. */
+  code,
+  kbd,
+  pre,
+  samp,
+  .mono,
+  .num {
+    font-family: var(--font-mono);
+    font-feature-settings:
+      'tnum' 1,
+      'zero' 1,
+      'calt' 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--accent) 30%, transparent);
+    color: var(--ink);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* Wide spine for the home ledger (1280px max). */
+.spine {
+  max-width: var(--container-spine);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 1.75rem);
+}
+.spine-prose {
   max-width: var(--container-prose);
   margin-inline: auto;
-  padding-inline: clamp(1rem, 4vw, 2rem);
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+.hairline {
+  height: 1px;
+  background: var(--rule);
+  border: 0;
+  margin: 0;
+}
+.hairline-brass {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brass) 20%, var(--brass) 80%, transparent);
+  border: 0;
+  margin: 0;
+}
+
+/* Page head + prose body — for about / contact / account / legal. */
+.page-head {
+  padding-block: clamp(2rem, 5vw, 3rem) 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+.page-head .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 0 0 0.625rem;
+  font-feature-settings:
+    'tnum' 1,
+    'zero' 1,
+    'calt' 0;
+}
+.page-head .eyebrow a {
+  color: var(--ink-mute);
+}
+.page-head .eyebrow a:hover {
+  color: var(--accent);
+}
+.page-head h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--ink);
+}
+.page-head .lede {
+  margin: 0.875rem 0 0;
+  color: var(--ink-mute);
+  font-size: 1rem;
+  max-width: 60ch;
+}
+.page-head .meta {
+  margin: 0.625rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.prose {
+  padding-block: 2.25rem 4rem;
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
+.prose .lede {
+  font-size: 1.125rem;
+  color: var(--ink);
+  margin: 0 0 1.75rem;
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 2.25rem 0 0.875rem;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--ink);
+  margin: 1.75rem 0 0.625rem;
+}
+.prose p {
+  margin: 0 0 1.125rem;
+  color: color-mix(in oklab, var(--ink) 92%, var(--paper));
+}
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--accent) 50%, transparent);
+}
+.prose a:hover {
+  text-decoration-color: var(--accent);
+}
+.prose strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+  margin: 0 0 1.125rem;
+}
+.prose li {
+  margin-bottom: 0.4rem;
+}
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  padding: 0.125em 0.375em;
+  background: color-mix(in oklab, var(--ink-mute) 18%, transparent);
+  color: var(--ink);
+  border-radius: 0;
+}
+.prose blockquote {
+  border-left: 2px solid var(--rule);
+  padding-left: 1rem;
+  margin-left: 0;
+  color: var(--ink-mute);
+}
+.prose hr {
+  height: 1px;
+  background: var(--rule);
+  border: 0;
+  margin: 2.25rem 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0;
 }

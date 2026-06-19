@@ -1,9 +1,16 @@
-import type { OrizSiteConfig } from '@chirag127/oriz-ui'
+export interface SiteConfig {
+  slug: string
+  name: string
+  origin: string
+  tagline: string
+  description: string
+}
 
-export const SITE_CONFIG: OrizSiteConfig = {
+export const SITE_CONFIG: SiteConfig = {
   slug: 'cards',
-  name: 'Cards',
+  name: 'cards',
   origin: 'https://cards.oriz.in',
-  tagline: '750 India card profiles — credit, debit, prepaid',
-  description: '750 India card profiles — credit, debit, prepaid',
+  tagline: 'A Bloomberg-terminal-for-Indian-credit-cards. 750 profiles, every fee, no rosettes.',
+  description:
+    'Static catalog of 750 credit, debit, and prepaid cards issued in India — fees, rewards, eligibility, and the small-print every issuer site buries.',
 }

@@ -1,78 +1,71 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro'
-import { SITE_CONFIG } from '~/lib/siteConfig'
 
-const updated = '2026-06-19'
+const updated = '2026-06-20'
 ---
 
-<BaseLayout title={`Terms of use — ${SITE_CONFIG.name}`} description={`The rules for using ${SITE_CONFIG.origin.replace('https://', '')}.`}>
-  <header class="container-prose page-head">
-    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / <a href="/legal/">Legal</a> / Terms</p>
-    <h1>Terms of use</h1>
-    <p class="meta">Last updated: {updated}</p>
-  </header>
+<BaseLayout
+  title="Terms of use — oriz · cards"
+  description="The rules for using cards.oriz.in."
+>
+  <div class="spine-prose">
+    <header class="page-head">
+      <p class="eyebrow mono">
+        <a href="/">cards</a> / <a href="/legal/">legal</a> / terms
+      </p>
+      <h1>terms of use</h1>
+      <p class="meta">Last updated: {updated}</p>
+    </header>
 
-  <article class="container-prose prose">
-    <p>
-      By using cards.oriz.in or any <code>*.oriz.in</code> site, you agree to these terms.
-      They are short on purpose.
-    </p>
+    <article class="prose">
+      <p>
+        By using cards.oriz.in or any <code>*.oriz.in</code> site, you agree
+        to these terms. They are short on purpose.
+      </p>
 
-    <h2>Use the sites lawfully</h2>
-    <p>
-      Don't try to break the sites, scrape them at abusive rates, or use them
-      to harass others. Account takeover, copyright infringement, and any
-      activity prohibited under Indian law are forbidden.
-    </p>
+      <h2>Use the sites lawfully</h2>
+      <p>
+        Don't try to break the sites, scrape them at abusive rates, or use them
+        to harass others. Account takeover, copyright infringement, and any
+        activity prohibited under Indian law are forbidden.
+      </p>
 
-    <h2>Content is provided as-is</h2>
-    <p>
-      Card profiles, fees, and rewards data on {SITE_CONFIG.name} are provided
-      for information and convenience only. They are <strong>not</strong>
-      financial advice and may lag the bank's own terms by days or weeks.
-      Always verify with the issuing bank before applying. See the full
-      <a href="/legal/disclaimer/">disclaimer</a>.
-    </p>
+      <h2>Content is provided as-is</h2>
+      <p>
+        Card profiles, fees, and rewards data on cards.oriz.in are provided
+        for information and convenience only. They are <strong>not</strong>
+        financial advice and may lag the bank's own terms by days or weeks.
+        Always verify with the issuing bank before applying. See the full
+        <a href="/legal/disclaimer/">disclaimer</a>.
+      </p>
 
-    <h2>Your content</h2>
-    <p>
-      Anything you save on a oriz site (saved cards, comparisons, bookmarks)
-      stays yours. You grant oriz a limited licence to store and serve that
-      content back to you.
-    </p>
+      <h2>Your content</h2>
+      <p>
+        Anything you save on a oriz site (saved cards, comparisons, bookmarks)
+        stays yours. You grant oriz a limited licence to store and serve that
+        content back to you.
+      </p>
 
-    <h2>Termination</h2>
-    <p>
-      You can delete your account at any time from the
-      <a href="/account/">account page</a>. We can suspend accounts engaged in
-      abuse without notice.
-    </p>
+      <h2>Termination</h2>
+      <p>
+        You can delete your account at any time from the
+        <a href="/account/">account page</a>. We can suspend accounts engaged in
+        abuse without notice.
+      </p>
 
-    <h2>Limitation of liability</h2>
-    <p>
-      To the maximum extent permitted by law, oriz and its operator are not
-      liable for any indirect or consequential damages arising from use of
-      the sites, including financial decisions made in reliance on card data
-      shown here.
-    </p>
+      <h2>Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by law, oriz and its operator are not
+        liable for any indirect or consequential damages arising from use of
+        the sites, including financial decisions made in reliance on card data
+        shown here.
+      </p>
 
-    <h2>Governing law</h2>
-    <p>
-      These terms are governed by the laws of India. Disputes will be settled
-      in the courts of Bhubaneswar, Odisha.
-    </p>
-  </article>
+      <h2>Governing law</h2>
+      <p>
+        These terms are governed by the laws of India. Disputes will be settled
+        in the courts of Bhubaneswar, Odisha.
+      </p>
+    </article>
+  </div>
 </BaseLayout>
-
-<style>
-  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
-  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
-  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
-  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
-  .meta { color: var(--color-fg-soft); font-size: 0.875rem; margin: 0.5rem 0 0; }
-  .prose { padding-block: 2.5rem 4rem; color: var(--color-prose); line-height: 1.7; font-size: 1.0625rem; }
-  .prose h2 { font-family: var(--font-serif); font-size: 1.375rem; font-weight: 600; color: var(--color-fg); margin: 2rem 0 1rem; }
-  .prose p { margin: 0 0 1.25rem; }
-  .prose a { color: var(--color-accent); }
-  .prose code { background: var(--color-bg-muted); padding: 0.125em 0.375em; border-radius: 0.25rem; font-size: 0.875em; }
-</style>

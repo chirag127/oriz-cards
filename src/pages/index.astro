@@ -1,11 +1,56 @@
 ---
+import EmbossedThumb from '~/components/EmbossedThumb.astro'
+/*
+ * Home — the ledger. Two-pane terminal-style layout: 320px sticky filter
+ * rail on the left, scrollable card-row table on the right, compare drawer
+ * pinned bottom-right.
+ *
+ * NO marketing hero. NO card grid. NO star ratings. NO editor's-pick
+ * rosettes. Every card is a row in a database, every fee is a number in
+ * a column. The display contract — Geist Mono headings, Inter Tight body,
+ * JetBrains Mono numerics with tabular-nums + slashed zero — is the
+ * Bloomberg-terminal metaphor made concrete.
+ *
+ * We render all 470 credit cards (the largest subset with meaningful fee
+ * data); debit + prepaid land in /debit/ and /prepaid/ index pages later.
+ */
 import BaseLayout from '~/layouts/BaseLayout.astro'
+import {
+  CREDIT_COUNT,
+  fmtApr,
+  getCreditRows,
+  inr,
+  listIssuers,
+  listNetworks,
+  TOTAL_CARD_COUNT,
+} from '~/lib/cards'
 import { SITE_CONFIG } from '~/lib/siteConfig'
+
+const rows = getCreditRows()
+const issuers = listIssuers()
+const networks = listNetworks()
+
+const FEE_BUCKETS: Array<{ label: string; max: number }> = [
+  { label: 'Free', max: 0 },
+  { label: '≤ ₹500', max: 500 },
+  { label: '≤ ₹2,500', max: 2500 },
+  { label: '≤ ₹10,000', max: 10000 },
+  { label: '> ₹10,000', max: Number.POSITIVE_INFINITY },
+]
+
+const INCOME_BUCKETS: Array<{ label: string; min: number; max: number }> = [
+  { label: 'Any income', min: 0, max: Number.POSITIVE_INFINITY },
+  { label: '≤ ₹3 L', min: 0, max: 300000 },
+  { label: '≤ ₹6 L', min: 0, max: 600000 },
+  { label: '≤ ₹12 L', min: 0, max: 1200000 },
+  { label: '≤ ₹25 L', min: 0, max: 2500000 },
+  { label: '≤ ₹50 L', min: 0, max: 5000000 },
+]
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: `oriz / ${SITE_CONFIG.name}`,
+  name: 'oriz · cards',
   url: SITE_CONFIG.origin,
   description: SITE_CONFIG.description,
   isPartOf: { '@type': 'WebSite', name: 'oriz', url: 'https://oriz.in' },
@@ -14,100 +59,795 @@ const jsonLd = {
 ---
 
 <BaseLayout jsonLd={jsonLd}>
-  <section class="hero">
-    <div class="container-page hero-inner">
-      <p class="eyebrow">
-        <span class="emoji" aria-hidden="true">💳</span>
-        Part of <a href="https://oriz.in/">oriz</a>
-      </p>
-      <h1 class="hero-h">{SITE_CONFIG.name}</h1>
-      <p class="hero-lede">{SITE_CONFIG.tagline}.</p>
+  <section class="ledger-shell" aria-label="Card screener">
+    <aside class="rail" aria-label="Filter rail">
+      <div class="rail-inner">
+        <div class="rail-summary">
+          <span class="rail-count mono" data-rail-count>{CREDIT_COUNT}</span>
+          <span class="rail-total mono">/ {TOTAL_CARD_COUNT} CARDS</span>
+        </div>
+
+        <div class="active-chips" data-active-chips></div>
+
+        <fieldset class="rail-section">
+          <legend class="rail-h mono">Income band</legend>
+          <select class="rail-select mono" data-filter="income">
+            {INCOME_BUCKETS.map((b) => (
+              <option value={b.max}>{b.label}</option>
+            ))}
+          </select>
+        </fieldset>
+
+        <fieldset class="rail-section">
+          <legend class="rail-h mono">Employment</legend>
+          <label class="rail-radio">
+            <input type="radio" name="employment" value="any" checked />
+            <span class="mono">Any</span>
+          </label>
+          <label class="rail-radio">
+            <input type="radio" name="employment" value="salaried" />
+            <span class="mono">Salaried</span>
+          </label>
+          <label class="rail-radio">
+            <input type="radio" name="employment" value="self" />
+            <span class="mono">Self-employed</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="rail-section">
+          <legend class="rail-h mono">Network</legend>
+          <div class="rail-checks">
+            {networks.map((n) => (
+              <label class="rail-check">
+                <input type="checkbox" data-network={n} />
+                <span class="mono">{n}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset class="rail-section">
+          <legend class="rail-h mono">Annual fee</legend>
+          <div class="rail-checks">
+            {FEE_BUCKETS.map((b) => (
+              <label class="rail-check">
+                <input type="checkbox" data-fee={b.max} />
+                <span class="mono">{b.label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset class="rail-section">
+          <legend class="rail-h mono">Perks</legend>
+          <label class="rail-check">
+            <input type="checkbox" data-perk="lounge" />
+            <span class="mono">Lounge access</span>
+          </label>
+          <label class="rail-check">
+            <input type="checkbox" data-perk="fuel" />
+            <span class="mono">Fuel waiver</span>
+          </label>
+          <label class="rail-check">
+            <input type="checkbox" data-perk="ltf" />
+            <span class="mono">Lifetime free</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="rail-section rail-issuers">
+          <legend class="rail-h mono">Issuer</legend>
+          <div class="rail-issuers-scroll">
+            {issuers.map((i) => (
+              <label class="rail-check">
+                <input type="checkbox" data-issuer={i.code} />
+                <span class="mono issuer-name">{i.name}</span>
+                <span class="mono issuer-count">{i.count}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <button type="button" class="rail-reset mono" data-reset>
+          [ × CLEAR ALL ]
+        </button>
+      </div>
+    </aside>
+
+    <div class="ledger">
+      <div class="ledger-header" role="row">
+        <span class="col-thumb">CARD</span>
+        <span class="col-name">NAME ▾</span>
+        <span class="col-num">JOIN</span>
+        <span class="col-num">ANNUAL</span>
+        <span class="col-num">REWARDS</span>
+        <span class="col-num">APR p.a.</span>
+        <span class="col-cmp" aria-label="Compare">▢</span>
+      </div>
+      <div class="ledger-body" data-ledger>
+        {
+          rows.map((r) => (
+            <a
+              href={`/credit/${r.bankCode}/${r.slug}/`}
+              class="row"
+              data-row
+              data-row-issuer={r.bankCode}
+              data-row-network={r.network}
+              data-row-fee={r.annualFee}
+              data-row-income={r.minAnnualIncome}
+              data-row-lounge={String(r.hasLounge)}
+              data-row-fuel={String(r.hasFuelWaiver)}
+              data-row-ltf={String(r.isLtf)}
+              data-row-name={`${r.name} ${r.bank}`.toLowerCase()}
+              data-row-slug={r.slug}
+              data-row-bank={r.bank}
+            >
+              <span class="col-thumb">
+                <EmbossedThumb
+                  bankCode={r.bankCode}
+                  bankName={r.bank}
+                  network={r.network}
+                  binPrefix={r.binPrefix}
+                  stock={r.stockGradient}
+                />
+              </span>
+              <span class="col-name">
+                <span class="row-name">{r.name}</span>
+                <span class="row-bank mono">{r.bank} · {r.tier ?? 'card'}</span>
+              </span>
+              <span class="col-num num">{r.joiningFee === 0 ? <span class="ltf-tag">LTF</span> : `₹${inr(r.joiningFee)}`}</span>
+              <span class="col-num num">{r.annualFee === 0 ? <span class="ltf-tag">LTF</span> : `₹${inr(r.annualFee)}`}</span>
+              <span class="col-num num">{r.rewardsLabel}</span>
+              <span class={`col-num num ${r.apr >= 36 ? 'num-neg' : ''}`}>{fmtApr(r.apr)}</span>
+              <span class="col-cmp">
+                <input
+                  type="checkbox"
+                  class="cmp-check"
+                  data-compare={r.slug}
+                  data-compare-issuer={r.bankCode}
+                  data-compare-name={r.name}
+                  data-compare-bank={r.bank}
+                  data-compare-network={r.network}
+                  aria-label={`Add ${r.name} to compare`}
+                  onclick="event.stopPropagation()"
+                />
+              </span>
+            </a>
+          ))
+        }
+        <div class="ledger-empty mono" hidden data-empty>
+          0 cards match. <button type="button" class="rail-reset" data-reset>clear filters</button>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="container-page section">
-    <div class="prose">
-      <h2>Browse and compare 750 India card profiles</h2>
-      <p>
-        A static catalog of credit, debit, and prepaid cards issued in India —
-        Amex, Axis, HDFC, ICICI, IDFC, Kotak, RBL, SBI, and 30+ other banks.
-        Every card has its own page with fees, rewards, eligibility, and the
-        small-print that the bank's marketing site buries.
-      </p>
-      <p class="placeholder">
-        The catalog and comparison UI are being built. The underlying data
-        (750 card JSONs across credit, debit, and prepaid) already lives in
-        this repo — site rendering ships in a follow-up.
-      </p>
-      <p>
-        Meanwhile, see the <a href="https://github.com/chirag127/oriz-cards">source on GitHub</a>
-        or visit the <a href="https://oriz.in/">oriz hub</a> for the rest of the family.
-      </p>
+  <aside class="cmp-drawer" data-drawer aria-label="Compare drawer">
+    <button type="button" class="cmp-toggle mono" data-drawer-toggle aria-expanded="false">
+      <span>COMPARE · <span data-cmp-count>0</span> / 4</span>
+      <span class="cmp-toggle-icon" aria-hidden="true">▴</span>
+    </button>
+    <div class="cmp-body" data-drawer-body hidden>
+      <p class="cmp-empty mono" data-cmp-empty>add up to 4 cards from the ledger</p>
+      <ul class="cmp-list" data-cmp-list></ul>
+      <button type="button" class="cmp-go mono" data-cmp-go disabled>[ COMPARE → ]</button>
     </div>
-  </section>
+  </aside>
 </BaseLayout>
 
+<script is:inline>
+  // The ledger filter — pure DOM, no framework. Keeps initial JS budget at
+  // a few KB even with 470 rows. Every filter mutation re-applies a single
+  // pass over data-row-* attributes; on a modern device this is sub-frame.
+  ;(() => {
+    const ledger = document.querySelector('[data-ledger]');
+    if (!ledger) return;
+    const rows = Array.from(ledger.querySelectorAll('[data-row]'));
+    const empty = document.querySelector('[data-empty]');
+    const railCount = document.querySelector('[data-rail-count]');
+    const activeChipsEl = document.querySelector('[data-active-chips]');
+    const incomeSel = document.querySelector('[data-filter="income"]');
+    const networkChecks = Array.from(document.querySelectorAll('[data-network]'));
+    const feeChecks = Array.from(document.querySelectorAll('[data-fee]'));
+    const issuerChecks = Array.from(document.querySelectorAll('[data-issuer]'));
+    const perkChecks = Array.from(document.querySelectorAll('[data-perk]'));
+    const employmentRadios = Array.from(document.querySelectorAll('input[name="employment"]'));
+
+    const apply = () => {
+      const income = parseFloat(incomeSel?.value ?? 'Infinity');
+      const networks = networkChecks.filter((c) => c.checked).map((c) => c.dataset.network);
+      const fees = feeChecks.filter((c) => c.checked).map((c) => parseFloat(c.dataset.fee));
+      const issuers = issuerChecks.filter((c) => c.checked).map((c) => c.dataset.issuer);
+      const perks = perkChecks.filter((c) => c.checked).map((c) => c.dataset.perk);
+      let visible = 0;
+      const chips = [];
+      if (income !== Infinity) chips.push({ key: 'income', label: '≤ ₹' + (income / 100000) + 'L' });
+      networks.forEach((n) => chips.push({ key: 'net:' + n, label: n }));
+      issuers.forEach((i) => chips.push({ key: 'iss:' + i, label: i.toUpperCase() }));
+      perks.forEach((p) => chips.push({ key: 'perk:' + p, label: p.toUpperCase() }));
+      fees.forEach((f) => chips.push({ key: 'fee:' + f, label: f === 0 ? 'FREE' : '≤ ₹' + f }));
+
+      for (const row of rows) {
+        const rIncome = parseFloat(row.dataset.rowIncome ?? '0');
+        const rFee = parseFloat(row.dataset.rowFee ?? '0');
+        const rNetwork = row.dataset.rowNetwork ?? '';
+        const rIssuer = row.dataset.rowIssuer ?? '';
+        const rLounge = row.dataset.rowLounge === 'true';
+        const rFuel = row.dataset.rowFuel === 'true';
+        const rLtf = row.dataset.rowLtf === 'true';
+
+        let ok = true;
+        if (rIncome > income) ok = false;
+        if (ok && networks.length && !networks.includes(rNetwork)) ok = false;
+        if (ok && issuers.length && !issuers.includes(rIssuer)) ok = false;
+        if (ok && fees.length) {
+          const matchFee = fees.some((max) => {
+            if (max === 0) return rFee === 0;
+            if (max === Infinity) return rFee > 10000;
+            return rFee > 0 && rFee <= max;
+          });
+          if (!matchFee) ok = false;
+        }
+        if (ok && perks.includes('lounge') && !rLounge) ok = false;
+        if (ok && perks.includes('fuel') && !rFuel) ok = false;
+        if (ok && perks.includes('ltf') && !rLtf) ok = false;
+
+        row.style.display = ok ? '' : 'none';
+        if (ok) visible++;
+      }
+      if (railCount) railCount.textContent = visible.toLocaleString('en-IN');
+      if (empty) empty.hidden = visible !== 0;
+      if (activeChipsEl) {
+        activeChipsEl.innerHTML = '';
+        for (const c of chips) {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'active-chip mono';
+          b.dataset.chipKey = c.key;
+          b.textContent = '[ × ' + c.label + ' ]';
+          activeChipsEl.appendChild(b);
+        }
+      }
+    };
+
+    [incomeSel, ...networkChecks, ...feeChecks, ...issuerChecks, ...perkChecks, ...employmentRadios].forEach((el) => {
+      el?.addEventListener('change', apply);
+    });
+
+    document.querySelectorAll('[data-reset]').forEach((b) => {
+      b.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (incomeSel) incomeSel.value = String(Infinity);
+        [...networkChecks, ...feeChecks, ...issuerChecks, ...perkChecks].forEach((c) => { c.checked = false; });
+        const anyEmp = document.querySelector('input[name="employment"][value="any"]');
+        if (anyEmp) anyEmp.checked = true;
+        apply();
+      });
+    });
+
+    // Click an active-chip to remove the corresponding filter.
+    activeChipsEl?.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) return;
+      const chip = target.closest('[data-chip-key]');
+      if (!chip) return;
+      const key = chip.dataset.chipKey ?? '';
+      if (key === 'income' && incomeSel) incomeSel.value = String(Infinity);
+      if (key.startsWith('net:')) {
+        const n = key.slice(4);
+        const c = networkChecks.find((c) => c.dataset.network === n);
+        if (c) c.checked = false;
+      }
+      if (key.startsWith('iss:')) {
+        const i = key.slice(4);
+        const c = issuerChecks.find((c) => c.dataset.issuer === i);
+        if (c) c.checked = false;
+      }
+      if (key.startsWith('fee:')) {
+        const f = key.slice(4);
+        const c = feeChecks.find((c) => c.dataset.fee === f);
+        if (c) c.checked = false;
+      }
+      if (key.startsWith('perk:')) {
+        const p = key.slice(5);
+        const c = perkChecks.find((c) => c.dataset.perk === p);
+        if (c) c.checked = false;
+      }
+      apply();
+    });
+
+    apply();
+  })();
+
+  // Compare drawer — collects up to 4 cards. Persists in sessionStorage.
+  ;(() => {
+    const KEY = 'oriz:cards:compare';
+    const drawer = document.querySelector('[data-drawer]');
+    const toggle = document.querySelector('[data-drawer-toggle]');
+    const body = document.querySelector('[data-drawer-body]');
+    const list = document.querySelector('[data-cmp-list]');
+    const emptyEl = document.querySelector('[data-cmp-empty]');
+    const countEl = document.querySelector('[data-cmp-count]');
+    const goBtn = document.querySelector('[data-cmp-go]');
+    if (!drawer || !toggle || !body || !list) return;
+
+    const read = () => {
+      try { return JSON.parse(sessionStorage.getItem(KEY) ?? '[]'); }
+      catch { return []; }
+    };
+    const write = (arr) => sessionStorage.setItem(KEY, JSON.stringify(arr));
+
+    const render = () => {
+      const arr = read();
+      if (countEl) countEl.textContent = String(arr.length);
+      if (emptyEl) emptyEl.hidden = arr.length > 0;
+      if (goBtn) goBtn.disabled = arr.length < 2;
+      list.innerHTML = '';
+      for (const c of arr) {
+        const li = document.createElement('li');
+        li.className = 'cmp-item';
+        li.innerHTML = '<span class="cmp-item-name mono">' + c.name + '</span>' +
+          '<span class="cmp-item-bank mono">' + c.bank + ' · ' + c.network + '</span>' +
+          '<button type="button" class="cmp-item-x" aria-label="Remove" data-rm="' + c.slug + '">×</button>';
+        list.appendChild(li);
+      }
+      // Sync checkboxes.
+      document.querySelectorAll('[data-compare]').forEach((cb) => {
+        cb.checked = arr.some((x) => x.slug === cb.dataset.compare);
+      });
+    };
+
+    toggle.addEventListener('click', () => {
+      const open = body.hidden;
+      body.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      drawer.classList.toggle('open', open);
+    });
+
+    document.addEventListener('change', (e) => {
+      const t = e.target;
+      if (!(t instanceof HTMLInputElement) || !t.dataset.compare) return;
+      let arr = read();
+      const slug = t.dataset.compare;
+      if (t.checked) {
+        if (arr.length >= 4) {
+          t.checked = false;
+          alert('Compare drawer is full (4 cards max).');
+          return;
+        }
+        arr.push({
+          slug,
+          issuer: t.dataset.compareIssuer,
+          name: t.dataset.compareName,
+          bank: t.dataset.compareBank,
+          network: t.dataset.compareNetwork,
+        });
+      } else {
+        arr = arr.filter((x) => x.slug !== slug);
+      }
+      write(arr);
+      render();
+    });
+
+    list.addEventListener('click', (e) => {
+      const t = e.target;
+      if (!(t instanceof HTMLElement) || !t.dataset.rm) return;
+      const arr = read().filter((x) => x.slug !== t.dataset.rm);
+      write(arr);
+      render();
+    });
+
+    render();
+  })();
+</script>
+
 <style>
-  .hero {
-    padding-block: 5rem 4rem;
-    border-bottom: 1px solid var(--color-border);
+  /* ── Layout shell ───────────────────────────────────────────────────── */
+  .ledger-shell {
+    display: grid;
+    grid-template-columns: var(--rail-width) minmax(0, 1fr);
+    gap: 0;
+    min-height: calc(100vh - 56px);
+    border-top: 1px solid var(--rule);
   }
-  .hero-inner { max-width: 720px; margin-inline: auto; text-align: center; }
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    background: var(--color-bg-soft);
-    border: 1px solid var(--color-border);
-    color: var(--color-fg-muted);
-    font-size: 0.8125rem;
-    margin: 0 0 1.5rem;
-  }
-  .eyebrow a { color: var(--color-fg); text-decoration: none; }
-  .eyebrow a:hover { color: var(--color-accent); }
-  .emoji { font-size: 1rem; }
-  .hero-h {
-    font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 7vw, 4rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
-    margin: 0 0 1rem;
-  }
-  .hero-lede {
-    color: var(--color-fg-muted);
-    font-size: 1.1875rem;
-    max-width: 56ch;
-    margin: 0 auto;
+  @media (max-width: 1024px) {
+    .ledger-shell {
+      grid-template-columns: 1fr;
+    }
   }
 
-  .section { padding-block: 4rem; }
-  .prose {
-    max-width: var(--container-prose);
-    margin-inline: auto;
-    color: var(--color-prose);
-    line-height: 1.7;
-    font-size: 1.0625rem;
+  /* ── Filter rail ────────────────────────────────────────────────────── */
+  .rail {
+    border-right: 1px solid var(--rule);
+    background: var(--paper-deep);
   }
-  .prose h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 600;
-    color: var(--color-fg);
-    letter-spacing: -0.01em;
-    margin: 0 0 1.25rem;
+  .rail-inner {
+    position: sticky;
+    top: 56px;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
   }
-  .prose p { margin: 0 0 1.25rem; }
-  .prose a { color: var(--color-accent); }
-  .placeholder {
-    padding: 1rem 1.25rem;
-    background: var(--color-bg-soft);
-    border: 1px solid var(--color-border);
-    border-left: 3px solid var(--color-accent);
-    border-radius: var(--radius-button);
-    color: var(--color-fg-muted);
-    font-size: 0.9375rem;
+  .rail-summary {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding-bottom: 0.875rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .rail-count {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    font-feature-settings: 'tnum' 1, 'zero' 1, 'calt' 0;
+  }
+  .rail-total {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--ink-mute);
+  }
+  .active-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+  .active-chip {
+    appearance: none;
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+  }
+  .active-chip:hover {
+    border-color: var(--accent);
+  }
+
+  .rail-section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .rail-h {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink-mute);
+    margin: 0 0 0.4rem;
+    padding: 0;
+  }
+  .rail-select {
+    width: 100%;
+    height: 32px;
+    padding-inline: 0.5rem;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+  .rail-select:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .rail-radio,
+  .rail-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 13px;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .rail-check input,
+  .rail-radio input {
+    accent-color: var(--accent);
+    width: 14px;
+    height: 14px;
+  }
+  .issuer-count {
+    margin-left: auto;
+    color: var(--ink-mute);
+    font-size: 11px;
+  }
+  .rail-issuers-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding-block: 0.5rem;
+  }
+  .rail-reset {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: transparent;
+    border: 1px dashed var(--rule);
+    color: var(--ink-mute);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+  .rail-reset:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* ── Ledger ─────────────────────────────────────────────────────────── */
+  .ledger {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+  }
+  .ledger-header {
+    display: grid;
+    grid-template-columns: 156px minmax(220px, 1fr) 92px 100px 116px 116px 36px;
+    align-items: center;
+    height: 40px;
+    padding-inline: 1rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-raised);
+    position: sticky;
+    top: 56px;
+    z-index: 10;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .ledger-header > span {
+    padding-inline: 0.5rem;
+  }
+  .ledger-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 156px minmax(220px, 1fr) 92px 100px 116px 116px 36px;
+    align-items: center;
+    height: 96px;
+    padding-inline: 1rem;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    text-decoration: none;
+    transition: background 80ms;
+  }
+  .row > * {
+    padding-inline: 0.5rem;
+  }
+  .row:hover {
+    background: var(--paper-raised);
+  }
+  .row:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+  .col-thumb {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .col-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+  .row-name {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .row-bank {
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .col-num {
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink);
+    font-feature-settings: 'tnum' 1, 'zero' 1, 'calt' 0;
+  }
+  .num-neg {
+    color: var(--vermilion);
+  }
+  .ltf-tag {
+    display: inline-block;
+    padding: 0.125rem 0.375rem;
+    background: linear-gradient(135deg, var(--brass-light) 0%, var(--brass) 60%, var(--brass-deep) 100%);
+    color: #1a1410;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .col-cmp {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cmp-check {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+  }
+
+  .ledger-empty {
+    padding: 4rem 1rem;
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .ledger-empty button {
+    background: transparent;
+    border: 0;
+    color: var(--accent);
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+  }
+
+  @media (max-width: 1024px) {
+    .rail {
+      border-right: 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .rail-inner {
+      position: static;
+      max-height: none;
+    }
+    .ledger-header,
+    .row {
+      grid-template-columns: 120px minmax(160px, 1fr) 80px 90px 36px;
+    }
+    .ledger-header .col-num:nth-of-type(3),
+    .ledger-header .col-num:nth-of-type(4),
+    .row > .col-num:nth-of-type(3),
+    .row > .col-num:nth-of-type(4) {
+      display: none;
+    }
+  }
+
+  /* ── Compare drawer ─────────────────────────────────────────────────── */
+  .cmp-drawer {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 40;
+    width: 320px;
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  }
+  .cmp-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 0.875rem;
+    background: var(--paper-deep);
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .cmp-toggle-icon {
+    color: var(--ink-mute);
+    transition: transform 120ms;
+  }
+  .cmp-drawer.open .cmp-toggle-icon {
+    transform: rotate(180deg);
+  }
+  .cmp-body {
+    padding: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .cmp-empty {
+    margin: 0;
+    color: var(--ink-mute);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .cmp-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .cmp-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 0.5rem;
+    align-items: center;
+    padding: 0.4rem 0.5rem;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+  }
+  .cmp-item-name {
+    font-size: 12px;
+    color: var(--ink);
+    font-family: var(--font-sans);
+    grid-column: 1;
+  }
+  .cmp-item-bank {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 10px;
+    color: var(--ink-mute);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .cmp-item-x {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink-mute);
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .cmp-item-x:hover {
+    border-color: var(--vermilion);
+    color: var(--vermilion);
+  }
+  .cmp-go {
+    appearance: none;
+    background: var(--paper);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.5rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+  }
+  .cmp-go:hover:not(:disabled) {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+  .cmp-go:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  @media (max-width: 480px) {
+    .cmp-drawer {
+      width: calc(100vw - 2rem);
+    }
   }
 </style>

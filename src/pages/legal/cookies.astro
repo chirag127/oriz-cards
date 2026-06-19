@@ -1,72 +1,57 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro'
-import { SITE_CONFIG } from '~/lib/siteConfig'
 
-const updated = '2026-06-19'
+const updated = '2026-06-20'
 ---
 
-<BaseLayout title={`Cookie policy — ${SITE_CONFIG.name}`} description={`What cookies ${SITE_CONFIG.name} uses.`}>
-  <header class="container-prose page-head">
-    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / <a href="/legal/">Legal</a> / Cookies</p>
-    <h1>Cookie policy</h1>
-    <p class="meta">Last updated: {updated}</p>
-  </header>
+<BaseLayout
+  title="Cookie policy — oriz · cards"
+  description="What cookies cards.oriz.in uses."
+>
+  <div class="spine-prose">
+    <header class="page-head">
+      <p class="eyebrow mono">
+        <a href="/">cards</a> / <a href="/legal/">legal</a> / cookies
+      </p>
+      <h1>cookie policy</h1>
+      <p class="meta">Last updated: {updated}</p>
+    </header>
 
-  <article class="container-prose prose">
-    <p>
-      {SITE_CONFIG.name} uses the smallest set of cookies and storage we can get away with.
-    </p>
+    <article class="prose">
+      <p>
+        cards.oriz.in uses the smallest set of cookies and storage we can get
+        away with.
+      </p>
 
-    <h2>What we set</h2>
-    <ul>
-      <li>
-        <strong>Theme + accent</strong> — <code>localStorage</code> keys
-        <code>oriz:theme</code> and <code>oriz:accent</code> remember your
-        preference between visits. No tracking.
-      </li>
-      <li>
-        <strong>Auth session</strong> — when you sign in, Firebase Authentication
-        sets cookies on <code>auth.oriz.in</code> so you stay logged in across
-        every <code>*.oriz.in</code> site. These are first-party and essential.
-      </li>
-      <li>
-        <strong>Site preferences</strong> — recently-viewed cards, last-used
-        comparison, and saved filters may be stored in <code>localStorage</code>
-        under keys prefixed <code>oriz:cards:</code>.
-      </li>
-    </ul>
+      <h2>What we set</h2>
+      <ul>
+        <li>
+          <strong>Compare drawer</strong> — <code>sessionStorage</code> key
+          <code>oriz:cards:compare</code> stores the cards you have selected
+          for comparison so they survive a page navigation. Cleared when you
+          close the tab.
+        </li>
+        <li>
+          <strong>Auth session</strong> — when you sign in, Firebase
+          Authentication sets cookies on <code>auth.oriz.in</code> so you stay
+          logged in across every <code>*.oriz.in</code> site. These are
+          first-party and essential.
+        </li>
+      </ul>
 
-    <h2>Third parties</h2>
-    <ul>
-      <li>
-        <strong>Cloudflare</strong> may set anti-abuse cookies (Turnstile, bot
-        management). These are essential for site availability.
-      </li>
-      <li>
-        <strong>Google AdSense</strong> (once approved) may set advertising
-        cookies. The consent banner lets you opt out per-purpose.
-      </li>
-    </ul>
+      <h2>Third parties</h2>
+      <ul>
+        <li>
+          <strong>Cloudflare</strong> may set anti-abuse cookies (Turnstile,
+          bot management). These are essential for site availability.
+        </li>
+      </ul>
 
-    <h2>Opting out</h2>
-    <p>
-      You can clear localStorage and cookies for any oriz domain from your
-      browser's site-data settings. Theme and auth will reset to defaults.
-    </p>
-  </article>
+      <h2>Opting out</h2>
+      <p>
+        You can clear localStorage, sessionStorage, and cookies for any oriz
+        domain from your browser's site-data settings. Auth will reset.
+      </p>
+    </article>
+  </div>
 </BaseLayout>
-
-<style>
-  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
-  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
-  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
-  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
-  .meta { color: var(--color-fg-soft); font-size: 0.875rem; margin: 0.5rem 0 0; }
-  .prose { padding-block: 2.5rem 4rem; color: var(--color-prose); line-height: 1.7; font-size: 1.0625rem; }
-  .prose h2 { font-family: var(--font-serif); font-size: 1.375rem; font-weight: 600; color: var(--color-fg); margin: 2rem 0 1rem; }
-  .prose ul { padding-left: 1.5rem; margin: 0 0 1.25rem; }
-  .prose li { margin-bottom: 0.5rem; }
-  .prose p { margin: 0 0 1.25rem; }
-  .prose a { color: var(--color-accent); }
-  .prose code { background: var(--color-bg-muted); padding: 0.125em 0.375em; border-radius: 0.25rem; font-size: 0.875em; }
-</style>
