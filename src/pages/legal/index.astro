@@ -1,0 +1,55 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { SITE_CONFIG } from '~/lib/siteConfig'
+
+const sections = [
+  { slug: 'privacy', label: 'Privacy policy', desc: 'What we collect, what we don\'t, your rights.' },
+  { slug: 'terms', label: 'Terms of use', desc: `The rules for using ${SITE_CONFIG.origin.replace('https://', '')}.` },
+  { slug: 'disclaimer', label: 'Disclaimer', desc: 'Not financial / medical / legal advice.' },
+  { slug: 'cookies', label: 'Cookie policy', desc: 'What cookies and localStorage we set.' },
+  { slug: 'grievance', label: 'Grievance officer', desc: 'Mandatory contact under IT Rules 2021.' },
+]
+---
+
+<BaseLayout title={`Legal — ${SITE_CONFIG.name}`} description={`Privacy, terms, and grievance contact for ${SITE_CONFIG.origin.replace('https://', '')}.`}>
+  <header class="container-prose page-head">
+    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / Legal</p>
+    <h1>Legal</h1>
+  </header>
+
+  <section class="container-prose section">
+    <ul class="legal-list">
+      {sections.map((s) => (
+        <li>
+          <a href={`/legal/${s.slug}/`} class="card">
+            <h2>{s.label}</h2>
+            <p>{s.desc}</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
+  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
+  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
+  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
+  .section { padding-block: 2.5rem 4rem; }
+  .legal-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.625rem; }
+  .card {
+    display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    color: var(--color-fg); text-decoration: none;
+  }
+  .card:hover { border-color: color-mix(in oklab, var(--color-accent) 50%, var(--color-border)); color: var(--color-fg); }
+  .card h2 { font-family: var(--font-serif); font-size: 1.125rem; font-weight: 600; margin: 0 0 0.25rem; }
+  .card p { color: var(--color-fg-muted); margin: 0; font-size: 0.9375rem; }
+  .arrow { color: var(--color-fg-soft); font-size: 1.125rem; }
+  .card:hover .arrow { color: var(--color-accent); }
+</style>

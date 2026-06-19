@@ -1,0 +1,99 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { SITE_CONFIG } from '~/lib/siteConfig'
+
+const updated = '2026-06-19'
+---
+
+<BaseLayout
+  title={`Privacy policy — ${SITE_CONFIG.name}`}
+  description={`What ${SITE_CONFIG.name} collects, what it doesn't, and your rights.`}
+>
+  <header class="container-prose page-head">
+    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / <a href="/legal/">Legal</a> / Privacy</p>
+    <h1>Privacy policy</h1>
+    <p class="meta">Last updated: {updated}</p>
+  </header>
+
+  <article class="container-prose prose">
+    <h2>Who runs this</h2>
+    <p>
+      cards.oriz.in and the wider <code>oriz.in</code> family are operated by Chirag Singhal,
+      based in Bhubaneswar, Odisha, India. Contact:
+      <a href="mailto:whyiswhen@gmail.com">whyiswhen@gmail.com</a>.
+    </p>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li>
+        <strong>Cloudflare Web Analytics</strong> — aggregate page views and country.
+        Cookieless. No personal identifiers.
+      </li>
+      <li>
+        <strong>Authentication</strong> — if you sign in, Firebase Authentication stores
+        your email, display name, and profile photo (if you sign in with Google/GitHub).
+        We never see your password.
+      </li>
+      <li>
+        <strong>Site-specific data</strong> — when you save a card, build a comparison,
+        or bookmark a profile, that data is stored in Firestore under your user ID
+        and accessible only to you.
+      </li>
+      <li>
+        <strong>Contact form</strong> — submissions go through Web3Forms which
+        forwards them to my email. Web3Forms keeps copies; see their privacy policy.
+      </li>
+      <li>
+        <strong>Display ads</strong> — once approved, Google AdSense may set
+        cookies to personalize ads. You can opt out via the consent banner or
+        at <a href="https://adssettings.google.com">adssettings.google.com</a>.
+      </li>
+    </ul>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>No tracking across sessions for analytics (Cloudflare is anonymous).</li>
+      <li>No selling of personal data to third parties.</li>
+      <li>No newsletters unless you explicitly subscribe.</li>
+      <li>No affiliate sign-up steering — card data is published as-is.</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <p>
+      You can delete your account from the <a href="/account/">account page</a>;
+      this removes your Firebase Auth record and any saved cards / comparisons.
+    </p>
+    <p>
+      Under India's DPDP Act 2023, you have the right to access, correct,
+      and delete your personal data. Contact the
+      <a href="/legal/grievance/">grievance officer</a>.
+    </p>
+
+    <h2>Children</h2>
+    <p>
+      {SITE_CONFIG.name} is not directed at children under 13. If you believe a
+      child has provided data to us, contact the grievance officer for removal.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      We will update this page when the practice changes, with the new date
+      at the top. Material changes get a banner on the site.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
+  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
+  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
+  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
+  .meta { color: var(--color-fg-soft); font-size: 0.875rem; margin: 0.5rem 0 0; }
+  .prose { padding-block: 2.5rem 4rem; color: var(--color-prose); line-height: 1.7; font-size: 1.0625rem; }
+  .prose h2 { font-family: var(--font-serif); font-size: 1.375rem; font-weight: 600; color: var(--color-fg); margin: 2rem 0 1rem; }
+  .prose ul { padding-left: 1.5rem; margin: 0 0 1.25rem; }
+  .prose li { margin-bottom: 0.5rem; }
+  .prose p { margin: 0 0 1.25rem; }
+  .prose a { color: var(--color-accent); }
+  .prose code { background: var(--color-bg-muted); padding: 0.125em 0.375em; border-radius: 0.25rem; font-size: 0.875em; }
+</style>

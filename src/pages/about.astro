@@ -1,0 +1,72 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { SITE_CONFIG } from '~/lib/siteConfig'
+---
+
+<BaseLayout
+  title={`About — ${SITE_CONFIG.name}`}
+  description={`About ${SITE_CONFIG.name}: ${SITE_CONFIG.tagline}.`}
+>
+  <header class="container-prose page-head">
+    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / About</p>
+    <h1>About {SITE_CONFIG.name}</h1>
+  </header>
+
+  <article class="container-prose prose">
+    <p class="lede">
+      <strong>{SITE_CONFIG.name}</strong> is a static catalog of 750+ card
+      profiles issued in India — credit, debit, and prepaid — with fees,
+      rewards, eligibility, and small-print on each.
+    </p>
+
+    <h2>What this is</h2>
+    <p>
+      Banks publish their card terms across PDFs, microsites, and FAQ pages
+      that change without notice. {SITE_CONFIG.name} pulls those into a
+      single, searchable, comparable form — open data, open source, no
+      affiliate gating.
+    </p>
+    <p>
+      Coverage today: 36+ issuers including Amex, Axis, AU SFB, Bandhan, BoB,
+      BoM, Canara, CUB, DCB, Dhanlaxmi, ESAF, Federal, HDFC, HSBC, ICICI, IDBI,
+      IDFC, Indian Bank, IndusInd, IOB, J&K Bank, Karnataka Bank, Kotak, KVB,
+      PNB, PSB, RBL, Saraswat, SBI, SIB, StanChart, TMB, UCO, Union, Yes Bank.
+    </p>
+
+    <h2>Part of oriz</h2>
+    <p>
+      {SITE_CONFIG.name} is one site in the <a href="https://oriz.in/">oriz</a>
+      family — small, free, and quiet tools by Chirag Singhal. One sign-in
+      works across every site (so your saved cards and reading list follow
+      you to the blog, the journal, and back).
+    </p>
+
+    <h2>Source</h2>
+    <p>
+      Code:
+      <a href="https://github.com/chirag127/oriz-cards">github.com/chirag127/oriz-cards</a>.
+      Issues, corrections, and PRs welcome.
+    </p>
+
+    <h2>Disclaimer</h2>
+    <p>
+      Information here is for reference. It is not financial advice and may
+      lag the bank's own page by days or weeks. Always verify on the issuing
+      bank's site before applying. See the
+      <a href="/legal/disclaimer/">full disclaimer</a>.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
+  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
+  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
+  .eyebrow a:hover { color: var(--color-fg); }
+  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
+  .prose { padding-block: 2.5rem 4rem; color: var(--color-prose); line-height: 1.75; font-size: 1.0625rem; }
+  .prose .lede { font-size: 1.1875rem; color: var(--color-fg); margin: 0 0 2rem; }
+  .prose h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--color-fg); margin: 2.5rem 0 1rem; }
+  .prose p { margin: 0 0 1.25rem; }
+  .prose a { color: var(--color-accent); }
+</style>

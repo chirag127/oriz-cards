@@ -1,0 +1,75 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { SITE_CONFIG } from '~/lib/siteConfig'
+
+const updated = '2026-06-19'
+---
+
+<BaseLayout title={`Disclaimer — ${SITE_CONFIG.name}`} description={`What ${SITE_CONFIG.name} is and isn't.`}>
+  <header class="container-prose page-head">
+    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / <a href="/legal/">Legal</a> / Disclaimer</p>
+    <h1>Disclaimer</h1>
+    <p class="meta">Last updated: {updated}</p>
+  </header>
+
+  <article class="container-prose prose">
+    <p>
+      Everything on cards.oriz.in is published in good faith for general
+      information only. Use it at your own risk.
+    </p>
+
+    <h2>Not financial advice</h2>
+    <p>
+      The card profiles, fees, rewards rates, and eligibility criteria on
+      {SITE_CONFIG.name} are reference data assembled from public sources.
+      They are <strong>not</strong> investment, tax, or insurance advice, and
+      they are <strong>not</strong> a recommendation to apply for or use any
+      particular card.
+    </p>
+    <p>
+      Card terms change. The fee, interest rate, reward rate, or feature on
+      this site may be out of date or wrong. <strong>Always verify on the
+      issuing bank's own website</strong> before applying or relying on a
+      benefit. Consult a SEBI-registered investment advisor for financial
+      decisions.
+    </p>
+    <p>
+      oriz, its operator, and its contributors do not recommend, endorse, or
+      assume responsibility for any card, bank, or financial product discussed
+      on this site.
+    </p>
+
+    <h2>Not legal advice</h2>
+    <p>
+      Articles touching on tax, regulation, or compliance reflect the author's
+      reading of the rules at the time of writing. Rules change. Verify with
+      your own counsel before acting.
+    </p>
+
+    <h2>External links</h2>
+    <p>
+      We link to third-party sites — including issuing banks — that we find
+      useful. We don't control their content, and inclusion is not an
+      endorsement.
+    </p>
+
+    <h2>Affiliate disclosure</h2>
+    <p>
+      {SITE_CONFIG.name} does not currently use affiliate links. If that ever
+      changes, such links will be marked clearly. The choice of which cards
+      we list is never influenced by referral economics.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
+  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
+  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
+  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
+  .meta { color: var(--color-fg-soft); font-size: 0.875rem; margin: 0.5rem 0 0; }
+  .prose { padding-block: 2.5rem 4rem; color: var(--color-prose); line-height: 1.7; font-size: 1.0625rem; }
+  .prose h2 { font-family: var(--font-serif); font-size: 1.375rem; font-weight: 600; color: var(--color-fg); margin: 2rem 0 1rem; }
+  .prose p { margin: 0 0 1.25rem; }
+  .prose a { color: var(--color-accent); }
+</style>

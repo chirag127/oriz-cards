@@ -1,0 +1,49 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { ContactForm } from '@chirag127/oriz-ui'
+import { SITE_CONFIG } from '~/lib/siteConfig'
+
+const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? ''
+---
+
+<BaseLayout
+  title={`Contact — ${SITE_CONFIG.name}`}
+  description={`Get in touch about ${SITE_CONFIG.name} — typos, broken links, suggestions.`}
+>
+  <header class="container-prose page-head">
+    <p class="eyebrow"><a href="/">{SITE_CONFIG.name}</a> / Contact</p>
+    <h1>Contact</h1>
+  </header>
+
+  <section class="container-prose prose">
+    <p class="lede">
+      Spotted a wrong fee on a card page, an outdated rewards rate, or a card
+      we missed? Drop a note. The fastest way to reach me is email:
+      <a href="mailto:whyiswhen@gmail.com"><strong>whyiswhen@gmail.com</strong></a>.
+    </p>
+    <p>
+      For anything site-related — typo, broken link, suggestion — use the form
+      below. It posts to Web3Forms which forwards to my inbox. No data is
+      stored on this site.
+    </p>
+
+    <ContactForm client:visible web3formsKey={web3formsKey} fromName={`${SITE_CONFIG.name} contact form`} />
+
+    <p class="meta">
+      For privacy questions or DMCA notices, see the
+      <a href="/legal/grievance/">grievance officer</a> page (mandatory under IT Rules 2021).
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--color-border); }
+  .eyebrow { color: var(--color-fg-muted); font-size: 0.8125rem; margin: 0 0 0.5rem; }
+  .eyebrow a { color: var(--color-fg-muted); text-decoration: none; }
+  .eyebrow a:hover { color: var(--color-fg); }
+  h1 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.02em; margin: 0; }
+  .prose { padding-block: 2.5rem 4rem; color: var(--color-prose); line-height: 1.7; font-size: 1.0625rem; }
+  .prose .lede { font-size: 1.1875rem; color: var(--color-fg); margin: 0 0 1.5rem; }
+  .prose a { color: var(--color-accent); }
+  .meta { font-size: 0.875rem; color: var(--color-fg-muted); margin-top: 2rem; }
+</style>

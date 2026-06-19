@@ -1,0 +1,113 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { SITE_CONFIG } from '~/lib/siteConfig'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: `oriz / ${SITE_CONFIG.name}`,
+  url: SITE_CONFIG.origin,
+  description: SITE_CONFIG.description,
+  isPartOf: { '@type': 'WebSite', name: 'oriz', url: 'https://oriz.in' },
+  publisher: { '@type': 'Person', name: 'Chirag Singhal', url: 'https://oriz.in/about/' },
+}
+---
+
+<BaseLayout jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="container-page hero-inner">
+      <p class="eyebrow">
+        <span class="emoji" aria-hidden="true">💳</span>
+        Part of <a href="https://oriz.in/">oriz</a>
+      </p>
+      <h1 class="hero-h">{SITE_CONFIG.name}</h1>
+      <p class="hero-lede">{SITE_CONFIG.tagline}.</p>
+    </div>
+  </section>
+
+  <section class="container-page section">
+    <div class="prose">
+      <h2>Browse and compare 750 India card profiles</h2>
+      <p>
+        A static catalog of credit, debit, and prepaid cards issued in India —
+        Amex, Axis, HDFC, ICICI, IDFC, Kotak, RBL, SBI, and 30+ other banks.
+        Every card has its own page with fees, rewards, eligibility, and the
+        small-print that the bank's marketing site buries.
+      </p>
+      <p class="placeholder">
+        The catalog and comparison UI are being built. The underlying data
+        (750 card JSONs across credit, debit, and prepaid) already lives in
+        this repo — site rendering ships in a follow-up.
+      </p>
+      <p>
+        Meanwhile, see the <a href="https://github.com/chirag127/oriz-cards">source on GitHub</a>
+        or visit the <a href="https://oriz.in/">oriz hub</a> for the rest of the family.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-block: 5rem 4rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .hero-inner { max-width: 720px; margin-inline: auto; text-align: center; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    color: var(--color-fg-muted);
+    font-size: 0.8125rem;
+    margin: 0 0 1.5rem;
+  }
+  .eyebrow a { color: var(--color-fg); text-decoration: none; }
+  .eyebrow a:hover { color: var(--color-accent); }
+  .emoji { font-size: 1rem; }
+  .hero-h {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+  }
+  .hero-lede {
+    color: var(--color-fg-muted);
+    font-size: 1.1875rem;
+    max-width: 56ch;
+    margin: 0 auto;
+  }
+
+  .section { padding-block: 4rem; }
+  .prose {
+    max-width: var(--container-prose);
+    margin-inline: auto;
+    color: var(--color-prose);
+    line-height: 1.7;
+    font-size: 1.0625rem;
+  }
+  .prose h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--color-fg);
+    letter-spacing: -0.01em;
+    margin: 0 0 1.25rem;
+  }
+  .prose p { margin: 0 0 1.25rem; }
+  .prose a { color: var(--color-accent); }
+  .placeholder {
+    padding: 1rem 1.25rem;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-button);
+    color: var(--color-fg-muted);
+    font-size: 0.9375rem;
+  }
+</style>

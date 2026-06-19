@@ -1,0 +1,65 @@
+---
+import HeaderControls from '~/components/HeaderControls.tsx'
+import { SITES } from '~/lib/sites'
+import { SITE_CONFIG } from '~/lib/siteConfig'
+---
+
+<header class="site-header">
+  <div class="container-page header-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">{SITE_CONFIG.name}</span>
+      <span class="brand-dot">.</span>
+    </a>
+
+    <nav aria-label="Primary" class="primary-nav">
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="https://oriz.in/" class="hub-link">oriz hub →</a>
+    </nav>
+
+    <HeaderControls client:idle sites={SITES} />
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in oklab, var(--color-bg) 85%, transparent);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .header-inner {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .brand {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    color: var(--color-fg);
+    line-height: 1;
+  }
+  .brand-dot { color: var(--color-accent); }
+  .primary-nav {
+    display: none;
+    gap: 1.5rem;
+    flex: 1;
+    font-size: 0.9375rem;
+  }
+  .primary-nav a {
+    color: var(--color-fg-muted);
+    text-decoration: none;
+  }
+  .primary-nav a:hover { color: var(--color-fg); }
+  .hub-link { color: var(--color-fg-soft) !important; }
+  @media (min-width: 768px) {
+    .primary-nav { display: flex; }
+  }
+</style>
