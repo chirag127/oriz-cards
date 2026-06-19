@@ -1,25 +1,41 @@
 ---
-import { SITES } from '~/lib/sites'
+import { AdSlot, NewsletterCta, FAMILY, FAMILY_SITES } from '@chirag127/oriz-ui'
 import { SITE_CONFIG } from '~/lib/siteConfig'
+
 const year = new Date().getFullYear()
+const buttondown = import.meta.env.PUBLIC_BUTTONDOWN_USERNAME
+const adsenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT
+const adsenseFooterSlot = import.meta.env.PUBLIC_ADSENSE_SLOT_FOOTER
 ---
 
 <footer class="site-footer">
+  {adsenseClient && adsenseFooterSlot && (
+    <div class="container-page footer-ad">
+      <AdSlot client:visible client={adsenseClient} slotId={adsenseFooterSlot} format="horizontal" />
+    </div>
+  )}
+
+  {buttondown && (
+    <div class="container-page footer-newsletter">
+      <NewsletterCta client:visible buttondownUsername={buttondown} />
+    </div>
+  )}
+
   <div class="container-page footer-inner">
     <div class="footer-col">
       <p class="footer-brand">{SITE_CONFIG.name}</p>
       <p class="footer-tag">
         {SITE_CONFIG.tagline}. Part of the
-        <a href="https://oriz.in/">oriz</a> family by
-        <a href="/about/">Chirag Singhal</a>.
+        <a href={FAMILY.rootOrigin}>{FAMILY.brand}</a> family by
+        <a href="/about/">{FAMILY.operator.name}</a>.
       </p>
     </div>
 
     <div class="footer-col">
       <h2 class="footer-h">Family</h2>
       <ul class="footer-links">
-        {SITES.map((s) => (
-          <li><a href={s.url}>{s.name}</a></li>
+        {FAMILY_SITES.map((s) => (
+          <li><a href={s.url}><span aria-hidden="true">{s.emoji}</span> {s.name}</a></li>
         ))}
       </ul>
     </div>
@@ -47,7 +63,7 @@ const year = new Date().getFullYear()
   </div>
 
   <div class="container-page footer-bottom">
-    <p>&copy; {year} Chirag Singhal. Built with <a href="https://github.com/chirag127/oriz">oriz</a>.</p>
+    <p>&copy; {year} {FAMILY.operator.name}. Built with <a href={`https://github.com/${FAMILY.operator.githubHandle}/oriz`}>oriz</a>.</p>
   </div>
 </footer>
 
@@ -58,6 +74,8 @@ const year = new Date().getFullYear()
     border-top: 1px solid var(--color-border);
     background: var(--color-bg-soft);
   }
+  .footer-ad { margin-bottom: 2.5rem; }
+  .footer-newsletter { margin-bottom: 2.5rem; }
   .footer-inner {
     display: grid;
     grid-template-columns: 1fr;

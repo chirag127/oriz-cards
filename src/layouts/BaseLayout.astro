@@ -3,6 +3,7 @@ import '~/styles/global.css'
 import preflight from '~/lib/preflight.js?raw'
 import Header from '~/components/Header.astro'
 import Footer from '~/components/Footer.astro'
+import SiteSidebar from '~/components/SiteSidebar.astro'
 import { SITE_CONFIG } from '~/lib/siteConfig'
 
 interface Props {
@@ -11,6 +12,10 @@ interface Props {
   canonical?: string
   noindex?: boolean
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
+  /** Hide the secondary site sidebar (e.g. on focused pages like account, legal). */
+  hideSidebar?: boolean
+  /** Active sidebar slug, used by SiteSidebar to mark the current section. */
+  activeSection?: string
 }
 
 const {
@@ -19,10 +24,13 @@ const {
   canonical = `${SITE_CONFIG.origin}${Astro.url.pathname}`,
   noindex = false,
   jsonLd,
+  hideSidebar = false,
+  activeSection,
 } = Astro.props
 
 const adsenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT
 const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN
+const ga4Id = import.meta.env.PUBLIC_GA4_ID
 ---
 
 <!doctype html>
@@ -78,11 +86,24 @@ const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN
         data-cf-beacon={`{"token": "${beaconToken}"}`}
       />
     )}
+
+    {ga4Id && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`} />
+        <script
+          is:inline
+          set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${ga4Id}');`}
+        />
+      </>
+    )}
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
     <Header />
-    <main id="main"><slot /></main>
+    <div class="page-shell">
+      {!hideSidebar && <SiteSidebar activeSection={activeSection} />}
+      <main id="main" class={hideSidebar ? 'main-full' : 'main-shell'}><slot /></main>
+    </div>
     <Footer />
 
     <style is:global>
@@ -97,6 +118,20 @@ const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN
         border-radius: 0 0 0.5rem 0;
       }
       .skip-link:focus { left: 0; }
+
+      .page-shell {
+        display: block;
+      }
+      .main-shell, .main-full { min-height: 60vh; }
+
+      @media (min-width: 1024px) {
+        .page-shell {
+          display: grid;
+          grid-template-columns: 260px minmax(0, 1fr);
+          gap: 0;
+          align-items: start;
+        }
+      }
     </style>
   </body>
 </html>

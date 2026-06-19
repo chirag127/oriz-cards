@@ -12,6 +12,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_BUTTONDOWN_USERNAME?: string
   readonly PUBLIC_GA4_ID?: string
   readonly PUBLIC_ADSENSE_CLIENT?: string
+  readonly PUBLIC_ADSENSE_SLOT_FOOTER?: string
   readonly PUBLIC_FUNDING_CHOICES_ID?: string
 }
 

@@ -1,23 +1,23 @@
 ---
 import HeaderControls from '~/components/HeaderControls.tsx'
-import { SITES } from '~/lib/sites'
+import { FAMILY, FAMILY_SITES } from '@chirag127/oriz-ui'
 import { SITE_CONFIG } from '~/lib/siteConfig'
 ---
 
 <header class="site-header">
   <div class="container-page header-inner">
-    <a href="/" class="brand">
-      <span class="brand-mark">{SITE_CONFIG.name}</span>
+    <a href={FAMILY.rootOrigin} class="brand" aria-label={`${FAMILY.brand} — back to hub`}>
+      <span class="brand-mark">{FAMILY.brand}</span>
       <span class="brand-dot">.</span>
+      <span class="brand-badge" aria-hidden="true">💳 {SITE_CONFIG.name}</span>
     </a>
 
     <nav aria-label="Primary" class="primary-nav">
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
-      <a href="https://oriz.in/" class="hub-link">oriz hub →</a>
     </nav>
 
-    <HeaderControls client:idle sites={SITES} />
+    <HeaderControls client:idle sites={FAMILY_SITES} siteName={SITE_CONFIG.name} />
   </div>
 </header>
 
@@ -35,9 +35,12 @@ import { SITE_CONFIG } from '~/lib/siteConfig'
     height: 64px;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-serif);
     font-size: 1.25rem;
     font-weight: 600;
@@ -47,9 +50,23 @@ import { SITE_CONFIG } from '~/lib/siteConfig'
     line-height: 1;
   }
   .brand-dot { color: var(--color-accent); }
+  .brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-fg-muted);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
   .primary-nav {
     display: none;
-    gap: 1.5rem;
+    gap: 1.25rem;
     flex: 1;
     font-size: 0.9375rem;
   }
@@ -58,7 +75,6 @@ import { SITE_CONFIG } from '~/lib/siteConfig'
     text-decoration: none;
   }
   .primary-nav a:hover { color: var(--color-fg); }
-  .hub-link { color: var(--color-fg-soft) !important; }
   @media (min-width: 768px) {
     .primary-nav { display: flex; }
   }

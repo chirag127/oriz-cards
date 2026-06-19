@@ -4,8 +4,7 @@
  */
 import { useEffect, useId, useRef, useState } from 'react'
 import { Palette, Search, Sun, User } from 'lucide-react'
-import type { Site } from '~/lib/sites'
-import { SITE_CONFIG } from '~/lib/siteConfig'
+import type { FamilySite } from '@chirag127/oriz-ui'
 
 const THEMES = [
   { id: 'dark', label: 'Dark' },
@@ -27,10 +26,11 @@ type ThemeId = (typeof THEMES)[number]['id']
 type AccentId = (typeof ACCENTS)[number]['id']
 
 interface Props {
-  sites: Site[]
+  sites: FamilySite[]
+  siteName: string
 }
 
-export default function HeaderControls({ sites }: Props) {
+export default function HeaderControls({ sites, siteName }: Props) {
   const [theme, setTheme] = useState<ThemeId>('dark')
   const [accent, setAccent] = useState<AccentId>('amber')
   const [searchOpen, setSearchOpen] = useState(false)
@@ -84,7 +84,7 @@ export default function HeaderControls({ sites }: Props) {
           type="button"
           className="ctrl-btn"
           onClick={() => setSearchOpen(true)}
-          aria-label={`Search the oriz family from ${SITE_CONFIG.name} (⌘K)`}
+          aria-label={`Search the oriz family from ${siteName} (⌘K)`}
         >
           <Search size={16} aria-hidden="true" />
           <span className="ctrl-label">Search</span>
@@ -151,7 +151,7 @@ export default function HeaderControls({ sites }: Props) {
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search sites…"
+              placeholder="Search the oriz family…"
               className="search-input"
               autoComplete="off"
             />
