@@ -1,14 +1,4 @@
-/*
- * Local vendored copy of @chirag127/oriz-family FAMILY_SITES.
- *
- * Why local: matches sister-site pattern (oriz-home, oriz-blog, etc.). The
- * @chirag127/oriz-family package is workspace-only until it ships to npm —
- * every site keeps its own copy that is byte-identical to the canonical
- * source at sync time. When it ships:
- *   export { FAMILY_SITES, FAMILY, type FamilySite } from '@chirag127/oriz-family'
- *
- * Last synced: 2026-06-19 from chirag127/oriz-family@e90446e.
- */
+// Family sites listing — inline per-app.
 
 export const FAMILY = {
   brand: 'oriz',
