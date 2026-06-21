@@ -23,6 +23,7 @@
   "dependencies": {
     "@astrojs/react": "^5.0.5",
     "@astrojs/sitemap": "^3.2.0",
+    "@chirag127/astro-chrome": "^0.1.1",
     "@chirag127/astro-data": "^0.1.1",
     "@tailwindcss/vite": "^4.3.1",
     "astro": "^6.4.7",

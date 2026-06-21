@@ -1,101 +1,12 @@
-/*
- * FinishSignIn — local copy emitting the canonical
- * `data-oriz-finish-sign-in-*` hooks.
- */
-import { isSignInWithEmailLink, signInWithEmailLink } from 'firebase/auth'
-import { useCallback, useEffect, useState } from 'react'
+// Thin shim — re-exports the consolidated FinishSignIn from @chirag127/astro-chrome
+// and injects this app's Firebase `auth` instance so existing call sites
+// (`<FinishSignIn />` with no `auth` prop) keep working unchanged.
+import { FinishSignIn as ChromeFinishSignIn, type FinishSignInProps } from '@chirag127/astro-chrome/FinishSignIn'
 import { auth } from '~/lib/firebase'
 
-interface Props {
-  successPath?: string
-  emailStorageKey?: string
-}
+export type { FinishSignInProps }
+export { ChromeFinishSignIn as FinishSignIn }
 
-export default function FinishSignIn({
-  successPath = '/account/',
-  emailStorageKey = 'oriz:emailForSignIn',
-}: Props) {
-  const [status, setStatus] = useState<'working' | 'need-email' | 'done' | 'error'>('working')
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState<string | null>(null)
-
-  const finish = useCallback(
-    async (e: string) => {
-      setStatus('working')
-      setError(null)
-      try {
-        await signInWithEmailLink(auth, e, window.location.href)
-        window.localStorage.removeItem(emailStorageKey)
-        setStatus('done')
-        window.setTimeout(() => {
-          window.location.href = successPath
-        }, 1200)
-      } catch (err) {
-        setStatus('error')
-        setError(err instanceof Error ? err.message : String(err))
-      }
-    },
-    [emailStorageKey, successPath],
-  )
-
-  useEffect(() => {
-    if (!isSignInWithEmailLink(auth, window.location.href)) {
-      setStatus('error')
-      setError('This link is invalid or expired.')
-      return
-    }
-    const stored = window.localStorage.getItem(emailStorageKey)
-    if (stored) void finish(stored)
-    else setStatus('need-email')
-  }, [emailStorageKey, finish])
-
-  if (status === 'working') {
-    return (
-      <p data-oriz-finish-sign-in data-oriz-finish-sign-in-state="working" role="status">
-        Signing you in…
-      </p>
-    )
-  }
-  if (status === 'done') {
-    return (
-      <p data-oriz-finish-sign-in data-oriz-finish-sign-in-state="done" role="status">
-        Signed in. Redirecting…
-      </p>
-    )
-  }
-  if (status === 'need-email') {
-    return (
-      <form
-        data-oriz-finish-sign-in
-        data-oriz-finish-sign-in-state="need-email"
-        onSubmit={(e) => {
-          e.preventDefault()
-          void finish(email)
-        }}
-      >
-        <p>Please confirm the email address you used:</p>
-        <input
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
-          autoComplete="email"
-        />
-        <button type="submit" data-oriz-account-provider="email">
-          Continue
-        </button>
-      </form>
-    )
-  }
-  return (
-    <div data-oriz-finish-sign-in data-oriz-finish-sign-in-state="error">
-      <p data-oriz-finish-sign-in-error role="alert">
-        {error ?? 'Sign-in failed.'}
-      </p>
-      <a href="/account/" data-oriz-account-provider="email">
-        Back to sign in
-      </a>
-    </div>
-  )
+export default function FinishSignIn(props: Omit<FinishSignInProps, 'auth'> & { auth?: FinishSignInProps['auth'] }) {
+  return <ChromeFinishSignIn auth={props.auth ?? auth} {...props} />
 }
