@@ -1,10 +1,10 @@
 import type { OrizSiteConfig } from '@chirag127/astro-shell/types'
 
 export const SITE_CONFIG: OrizSiteConfig = {
-  slug: 'cards',
-  name: 'cards',
-  origin: 'https://cards.oriz.in',
-  tagline: 'A Bloomberg-terminal-for-Indian-credit-cards. 750 profiles, every fee, no rosettes.',
+  slug: 'financial-cards',
+  name: 'financial-cards',
+  origin: 'https://financial-cards.oriz.in',
+  tagline: 'A Bloomberg-terminal-for-Indian-financial-cards. 750+ profiles across credit, debit, prepaid, travel, corporate — every fee, no rosettes.',
   description:
-    'Static catalog of 750 credit, debit, and prepaid cards issued in India — fees, rewards, eligibility, and the small-print every issuer site buries.',
+    'Static catalog of every financial card issued in India — credit, debit, prepaid, travel/forex, corporate, business. Fees, rewards, eligibility, and the small-print every issuer site buries.',
 }

@@ -1,16 +1,16 @@
 ---
 type: index
-title: "oriz-tabs-cards-app — knowledge bundle"
-description: "App-specific knowledge for oriz-tabs-cards-app. Cross-cutting family rules live at master `c:/D/oriz/knowledge/`."
-tags: [okf, index, app, tabs-cards]
-timestamp: 2026-06-21
+title: "oriz-financial-cards-app — knowledge bundle"
+description: "App-specific knowledge for oriz-financial-cards-app. Cross-cutting family rules live at master `c:/D/oriz/knowledge/`."
+tags: [okf, index, app, financial-cards]
+timestamp: 2026-06-22
 format_version: okf-v0.1
 status: active
 ---
 
-# oriz-tabs-cards-app — knowledge bundle
+# oriz-financial-cards-app — knowledge bundle
 
-This is the per-app OKF-light bundle for **oriz-tabs-cards-app**. App-specific facts only. Cross-cutting family rules / decisions / services live at master [`../../../../knowledge/`](../../../../knowledge/).
+This is the per-app OKF-light bundle for **oriz-financial-cards-app**. App-specific facts only. Cross-cutting family rules / decisions / services live at master [`../../../../knowledge/`](../../../../knowledge/).
 
 ## Subdirs
 
@@ -20,9 +20,9 @@ This is the per-app OKF-light bundle for **oriz-tabs-cards-app**. App-specific f
 
 ## App snapshot
 
-- **Subdomain**: https://cards.oriz.in
+- **Subdomain**: https://financial-cards.oriz.in
 - **Category**: content
-- **Family role**: India card intelligence — 750 credit, debit, and prepaid card profiles.
+- **Family role**: India financial card intelligence — credit, debit, prepaid, travel/forex, corporate, business card profiles (750+ credit cards live; other categories seeded).
 
 ## Cross-refs
 

@@ -1,4 +1,4 @@
-name = "oriz-cards"
+name = "oriz-financial-cards"
 compatibility_date = "2026-06-17"
 compatibility_flags = ["nodejs_compat"]
 
@@ -7,4 +7,4 @@ directory = "./dist"
 not_found_handling = "404-page"
 
 # Custom domain bound via dashboard:
-#   cards.oriz.in -> oriz-cards
+#   financial-cards.oriz.in -> oriz-financial-cards
