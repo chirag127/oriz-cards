@@ -1,8 +1,8 @@
 ---
 import '~/styles/global.css'
 import '~/styles/oriz-ui-overrides.css'
-import Footer from '~/components/Footer.astro'
-import Header from '~/components/Header.astro'
+import Footer from '@chirag127/astro-chrome/Footer.astro'
+import Header from '@chirag127/astro-chrome/Header.astro'
 import { SITE_CONFIG } from '~/lib/siteConfig'
 
 interface Props {
@@ -25,6 +25,7 @@ const {
 } = Astro.props
 
 const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN
+import '@chirag127/astro-shell/tokens.css'
 ---
 
 <!doctype html>
