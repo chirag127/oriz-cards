@@ -1,8 +1,7 @@
 ---
 import '~/styles/global.css'
 import '~/styles/oriz-ui-overrides.css'
-import Footer from '@chirag127/astro-chrome/Footer.astro'
-import Header from '@chirag127/astro-chrome/Header.astro'
+import Layout from '@chirag127/astro-chrome/Layout.astro'
 import { SITE_CONFIG } from '~/lib/siteConfig'
 
 interface Props {
@@ -25,6 +24,12 @@ const {
 } = Astro.props
 
 const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN
+const bottomBarActions = [
+  { icon: '⌂', label: 'Home', href: 'https://oriz.in/' },
+  { icon: '✎', label: 'Blog', href: 'https://blog.oriz.in/' },
+  { icon: '⚒', label: 'Tools', href: 'https://oriz.in/tools/' },
+  { icon: 'ℹ', label: 'About', href: '/about/' },
+]
 import '@chirag127/astro-shell/tokens.css'
 ---
 
@@ -73,8 +78,12 @@ import '@chirag127/astro-shell/tokens.css'
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    {!hideChrome && <Header />}
-    <main id="main"><slot /></main>
-    {!hideChrome && <Footer />}
+    {hideChrome ? (
+      <main id="main"><slot /></main>
+    ) : (
+      <Layout bottomBarActions={bottomBarActions}>
+        <slot />
+      </Layout>
+    )}
   </body>
 </html>
