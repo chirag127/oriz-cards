@@ -1,7 +1,13 @@
 ---
 import '~/styles/global.css'
 import '~/styles/oriz-ui-overrides.css'
-import Layout from '@chirag127/astro-chrome/Layout.astro'
+import '@chirag127/astro-shell/tokens.css'
+import Header from '~/components/Header.astro'
+import AppSidebarContent from '~/components/AppSidebarContent.astro'
+import Sidebar from '@chirag127/astro-chrome/Sidebar.astro'
+import Footer from '@chirag127/astro-chrome/Footer.astro'
+import BottomBar from '@chirag127/astro-chrome/BottomBar.astro'
+import { bottomBarActions } from '~/data/bottombar-actions'
 import { SITE_CONFIG } from '~/lib/siteConfig'
 
 interface Props {
@@ -24,13 +30,6 @@ const {
 } = Astro.props
 
 const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN
-const bottomBarActions = [
-  { icon: '⌂', label: 'Home', href: 'https://oriz.in/' },
-  { icon: '✎', label: 'Blog', href: 'https://blog.oriz.in/' },
-  { icon: '⚒', label: 'Tools', href: 'https://oriz.in/tools/' },
-  { icon: 'ℹ', label: 'About', href: '/about/' },
-]
-import '@chirag127/astro-shell/tokens.css'
 ---
 
 <!doctype html>
@@ -81,9 +80,25 @@ import '@chirag127/astro-shell/tokens.css'
     {hideChrome ? (
       <main id="main"><slot /></main>
     ) : (
-      <Layout bottomBarActions={bottomBarActions}>
-        <slot />
-      </Layout>
+      <>
+        <Header />
+        <div class="layout-body has-sidebar">
+          <Sidebar><AppSidebarContent /></Sidebar>
+          <main id="main" class="layout-main"><slot /></main>
+        </div>
+        <Footer />
+        <BottomBar actions={bottomBarActions} />
+      </>
     )}
+    <style>
+      .layout-body { display: block; }
+      .layout-main { min-height: 50vh; }
+      .layout-body.has-sidebar { display: flex; align-items: flex-start; }
+      .layout-body.has-sidebar .layout-main { flex: 1 1 auto; min-width: 0; }
+      @media (max-width: 767px) {
+        .layout-body.has-sidebar { display: block; }
+        .layout-main { padding-bottom: 64px; }
+      }
+    </style>
   </body>
 </html>

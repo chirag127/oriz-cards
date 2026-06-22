@@ -1,0 +1,115 @@
+---
+/*
+ * Wordmark — `oriz · cards` set in Geist Mono with the middle `·` replaced
+ * by an 8×8 brass-gradient square (the chip motif). This is THE cards-site
+ * brand mark — the chip is the visual hook that ties wordmark to the
+ * embossed-card hero. Sister sites use different middot motifs; cards uses
+ * brass to evoke EMV chip metal.
+ *
+ * NOT the vermilion-z-strike from oriz-home (that mark is reserved for the
+ * family anchor). Brass-chip middot is the cards-site signature and it is
+ * never reused elsewhere.
+ *
+ * The brass square is rendered as an inline pseudo-element at the precise
+ * mid-baseline position of the dot it replaces, so the wordmark scales
+ * correctly at any size.
+ */
+
+interface Props {
+  /** Sub-section name — rendered after a `/` separator in accent. */
+  subtitle?: string
+  /** Display size in CSS pixels. Defaults to 18 (header lockup). */
+  size?: number
+  /** Wrap the mark in an <a href="/"> — defaults true on every page except `/`. */
+  href?: string | null
+  /** Render-only mode for hero (no link wrapper). */
+  asHeading?: boolean
+}
+
+const { subtitle, size = 18, href = null, asHeading = false } = Astro.props
+const Tag = asHeading ? 'h1' : ('div' as const)
+---
+
+{
+  href ? (
+    <a class="wordmark-link" href={href} aria-label={subtitle ? `oriz cards / ${subtitle}` : 'oriz cards'}>
+      <Tag class="wordmark" style={`--wm-size: ${size}px;`}>
+        <span class="wordmark-mark">
+          <span class="wordmark-text">oriz</span>
+          <span class="wordmark-chip" aria-hidden="true" />
+          <span class="wordmark-text">cards</span>
+        </span>
+        {subtitle && (
+          <>
+            <span class="wordmark-sep" aria-hidden="true">/</span>
+            <span class="wordmark-sub">{subtitle}</span>
+          </>
+        )}
+      </Tag>
+    </a>
+  ) : (
+    <Tag class="wordmark" style={`--wm-size: ${size}px;`}>
+      <span class="wordmark-mark">
+        <span class="wordmark-text">oriz</span>
+        <span class="wordmark-chip" aria-hidden="true" />
+        <span class="wordmark-text">cards</span>
+      </span>
+      {subtitle && (
+        <>
+          <span class="wordmark-sep" aria-hidden="true">/</span>
+          <span class="wordmark-sub">{subtitle}</span>
+        </>
+      )}
+    </Tag>
+  )
+}
+
+<style>
+  .wordmark-link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+  }
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--wm-size, 18px);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .wordmark-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32em;
+  }
+  .wordmark-text {
+    display: inline-block;
+  }
+  /* The brass chip — EMV-canonical proportions, miniaturised. */
+  .wordmark-chip {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.4em;
+    background: linear-gradient(135deg, var(--brass-light) 0%, var(--brass) 50%, var(--brass-deep) 100%);
+    border: 0.5px solid var(--brass-deep);
+    /* Two horizontal hairlines hint at the chip contact pattern. */
+    background-image:
+      linear-gradient(180deg, transparent 28%, color-mix(in oklab, var(--brass-deep) 60%, transparent) 28% 33%, transparent 33% 65%, color-mix(in oklab, var(--brass-deep) 60%, transparent) 65% 70%, transparent 70%),
+      linear-gradient(135deg, var(--brass-light) 0%, var(--brass) 50%, var(--brass-deep) 100%);
+  }
+  .wordmark-sep {
+    margin-inline: 0.18em;
+    color: var(--ink-mute);
+    font-weight: 400;
+  }
+  .wordmark-sub {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  /* Light-vs-dark token swap is automatic via root --brass / --brass-deep. */
+</style>
