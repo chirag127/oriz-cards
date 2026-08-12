@@ -47,6 +47,7 @@ updates:
         patterns:
           - "@types/*"
     ignore:
+      - dependency-name: "@chirag127/*"   # workspace/path deps Dependabot can't resolve
       - dependency-name: astro
         update-types: ["version-update:semver-major"]
       - dependency-name: "@astrojs/*"
