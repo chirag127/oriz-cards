@@ -99,6 +99,9 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - name: Generate Astro content types
+        run: pnpm exec astro sync
+
       - name: TypeScript --noEmit
         run: pnpm exec tsc --noEmit
 

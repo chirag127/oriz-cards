@@ -68,11 +68,11 @@ export default function EmbossedCard({
   const isThumb = size === 'thumb'
   const shouldRedact = redactName ?? isThumb
   const fallbackName = 'YOUR NAME HERE'
-  const rawName = displayName?.toUpperCase() ?? fallbackName
+  const rawName: string = displayName ? displayName.toUpperCase() : fallbackName
   const cardholderName = shouldRedact
     ? rawName
         .split(' ')
-        .map((w) => '•'.repeat(Math.max(2, Math.min(w.length, 6))))
+        .map((w: string) => '•'.repeat(Math.max(2, Math.min(w.length, 6))))
         .join(' ')
     : rawName
 
