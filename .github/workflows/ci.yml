@@ -169,7 +169,7 @@ jobs:
       deployments: write
     environment:
       name: production
-      url: ${{ steps.deploy.outputs.url }}
+      url: ${{ steps.deploy.outputs.deployment-url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -198,17 +198,9 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         id: deploy
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: oriz-cards-site
-          # Common output dirs across the family — pick one per site:
-          #   Astro: dist
-          #   Next (static): out
-          #   Vite: dist
-          #   Nuxt: .output/public
-          # Default to "dist"; override per-repo if needed.
-          directory: dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Astro→dist. wrangler-action replaces the archived pages-action@v1.
+          command: pages deploy dist --project-name=oriz-financial-cards --branch=main --commit-dirty=true
