@@ -13,13 +13,7 @@ interface NavItem {
   label: string
 }
 
-export default function MobileNavDrawer({
-  links,
-  current,
-}: {
-  links: NavItem[]
-  current: string
-}) {
+export default function MobileNavDrawer({ links, current }: { links: NavItem[]; current: string }) {
   const [open, setOpen] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
@@ -66,8 +60,7 @@ export default function MobileNavDrawer({
     }
   }, [open, close])
 
-  const isActive = (href: string) =>
-    href === '/' ? current === '/' : current.startsWith(href)
+  const isActive = (href: string) => (href === '/' ? current === '/' : current.startsWith(href))
 
   return (
     <>
@@ -87,9 +80,7 @@ export default function MobileNavDrawer({
         </span>
       </button>
 
-      {open && (
-        <div className="mnav-overlay" onClick={close} aria-hidden="true" />
-      )}
+      {open && <div className="mnav-overlay" onClick={close} aria-hidden="true" />}
 
       <div
         id={drawerId}

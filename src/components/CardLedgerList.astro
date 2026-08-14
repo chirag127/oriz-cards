@@ -11,9 +11,7 @@ interface Props {
   rows: CardRow[]
 }
 const { rows } = Astro.props as Props
-const sorted = [...rows].sort(
-  (a, b) => a.annualFee - b.annualFee || a.name.localeCompare(b.name),
-)
+const sorted = [...rows].sort((a, b) => a.annualFee - b.annualFee || a.name.localeCompare(b.name))
 ---
 
 <div class="ledger">

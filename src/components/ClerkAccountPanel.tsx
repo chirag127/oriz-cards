@@ -38,11 +38,7 @@ export default function ClerkAccountPanel() {
     <ClerkProvider>
       <SignedOut>
         <div className="acct-signin-mount">
-          <SignIn
-            routing="hash"
-            signUpUrl="/account/"
-            fallbackRedirectUrl="/account/"
-          />
+          <SignIn routing="hash" signUpUrl="/account/" fallbackRedirectUrl="/account/" />
           <p className="acct-anon">
             Just browsing? <a href="/">Continue anonymously →</a> The card ledger is always free and
             never asks you to sign in.

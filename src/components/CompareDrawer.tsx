@@ -104,7 +104,9 @@ export default function CompareDrawer() {
             className={`cmp-drw-go mono${items.length < 2 ? ' is-disabled' : ''}`}
             href={items.length < 2 ? undefined : `/compare?ids=${encodeURIComponent(ids)}`}
             aria-disabled={items.length < 2}
-            aria-label={items.length < 2 ? 'Select at least 2 cards to compare' : 'Compare selected cards'}
+            aria-label={
+              items.length < 2 ? 'Select at least 2 cards to compare' : 'Compare selected cards'
+            }
           >
             [ COMPARE ({items.length}) → ]
           </a>

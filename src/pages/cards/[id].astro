@@ -87,7 +87,10 @@ const eligibilityRows: Row[] = [
     label: 'Min monthly salary',
     value: card.eligibility?.minSalary ? `₹${inr(card.eligibility.minSalary)}` : '—',
   },
-  { label: 'Age', value: `${card.eligibility?.minAge ?? '—'} – ${card.eligibility?.maxAge ?? '—'}` },
+  {
+    label: 'Age',
+    value: `${card.eligibility?.minAge ?? '—'} – ${card.eligibility?.maxAge ?? '—'}`,
+  },
   {
     label: 'Min credit score',
     value: card.eligibility?.minCreditScore ? String(card.eligibility.minCreditScore) : '—',
@@ -174,11 +177,17 @@ const atmRows: Row[] = [
 ]
 
 const txRows: Row[] = [
-  { label: 'Currency markup', value: TX.currencyMarkupPercent ? `${TX.currencyMarkupPercent}%` : '—' },
+  {
+    label: 'Currency markup',
+    value: TX.currencyMarkupPercent ? `${TX.currencyMarkupPercent}%` : '—',
+  },
   { label: 'DCC fee', value: TX.dccFeePercent ? `${TX.dccFeePercent}%` : '—' },
   { label: 'Cross-border fee', value: TX.crossBorderFee ? `₹${inr(TX.crossBorderFee)}` : '—' },
   { label: 'SMS alert / month', value: TX.smsAlertPerMonth ? `₹${inr(TX.smsAlertPerMonth)}` : '—' },
-  { label: 'PIN regen', value: TX.pinRegenerationCharge ? `₹${inr(TX.pinRegenerationCharge)}` : '—' },
+  {
+    label: 'PIN regen',
+    value: TX.pinRegenerationCharge ? `₹${inr(TX.pinRegenerationCharge)}` : '—',
+  },
   {
     label: 'Physical statement',
     value: TX.physicalStatementCharge ? `₹${inr(TX.physicalStatementCharge)}` : '—',
@@ -188,19 +197,31 @@ const txRows: Row[] = [
 const fuelRows: Row[] = FUEL?.available
   ? [
       { label: 'Surcharge waiver', value: FUEL.waiverPercent ? `${FUEL.waiverPercent}%` : '—' },
-      { label: 'Min txn', value: FUEL.minTransactionAmount ? `₹${inr(FUEL.minTransactionAmount)}` : '—' },
-      { label: 'Max txn', value: FUEL.maxTransactionAmount ? `₹${inr(FUEL.maxTransactionAmount)}` : '—' },
+      {
+        label: 'Min txn',
+        value: FUEL.minTransactionAmount ? `₹${inr(FUEL.minTransactionAmount)}` : '—',
+      },
+      {
+        label: 'Max txn',
+        value: FUEL.maxTransactionAmount ? `₹${inr(FUEL.maxTransactionAmount)}` : '—',
+      },
       {
         label: 'Max waiver / cycle',
         value: FUEL.maxWaiverPerCycle ? `₹${inr(FUEL.maxWaiverPerCycle)}` : '—',
       },
-      { label: 'Networks', value: FUEL.fuelNetworks?.length ? FUEL.fuelNetworks.join(', ') : 'All' },
+      {
+        label: 'Networks',
+        value: FUEL.fuelNetworks?.length ? FUEL.fuelNetworks.join(', ') : 'All',
+      },
     ]
   : [{ label: 'Fuel waiver', value: 'Not available' }]
 
 const limitRows: Row[] = [
   { label: 'ATM / day', value: LIMITS.atmPerDay ? `₹${inr(LIMITS.atmPerDay)}` : '—' },
-  { label: 'POS + e-com / day', value: LIMITS.posEcomPerDay ? `₹${inr(LIMITS.posEcomPerDay)}` : '—' },
+  {
+    label: 'POS + e-com / day',
+    value: LIMITS.posEcomPerDay ? `₹${inr(LIMITS.posEcomPerDay)}` : '—',
+  },
   {
     label: 'Contactless / txn',
     value: LIMITS.contactlessPerTxn ? `₹${inr(LIMITS.contactlessPerTxn)}` : '—',
@@ -221,7 +242,10 @@ const insRows: Row[] = INS
         label: 'Permanent disability',
         value: INS.permanentDisabilityCover ? `₹${inr(INS.permanentDisabilityCover)}` : '—',
       },
-      { label: 'Air accident', value: INS.airAccidentCover ? `₹${inr(INS.airAccidentCover)}` : '—' },
+      {
+        label: 'Air accident',
+        value: INS.airAccidentCover ? `₹${inr(INS.airAccidentCover)}` : '—',
+      },
       {
         label: 'Travel insurance',
         value: INS.travelInsuranceCover ? `₹${inr(INS.travelInsuranceCover)}` : '—',
@@ -230,7 +254,9 @@ const insRows: Row[] = INS
       {
         label: 'Lost-card liability',
         value: INS.lostCardLiability ? `₹${inr(INS.lostCardLiability)}` : '—',
-        note: INS.lostCardLiabilityWindow ? `within ${INS.lostCardLiabilityWindow} h of loss` : undefined,
+        note: INS.lostCardLiabilityWindow
+          ? `within ${INS.lostCardLiabilityWindow} h of loss`
+          : undefined,
       },
       {
         label: 'Purchase protection',

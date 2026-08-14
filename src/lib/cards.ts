@@ -207,9 +207,11 @@ function toRow(card: FullCard): CardRow {
     (card.loungeAccess?.domestic?.count ?? 0) !== 0 ||
     (card.loungeAccess?.international?.count ?? 0) !== 0
   const fuel = !!card.fuelSurcharge?.available
-  const hasRewards = rewardsRate > 0 || !!card.rewardProgram?.earnRate || !!card.rewardProgram?.rewardRateStr
+  const hasRewards =
+    rewardsRate > 0 || !!card.rewardProgram?.earnRate || !!card.rewardProgram?.rewardRateStr
   const hasWelcomeBonus = !!card.welcomeBonus?.available || !!card.welcomeBonus?.description
-  const hasInsurance = !!card.insurance && Object.values(card.insurance).some((v) => typeof v === 'number' && v > 0)
+  const hasInsurance =
+    !!card.insurance && Object.values(card.insurance).some((v) => typeof v === 'number' && v > 0)
   const hasInternational = !!card.internationalUsable || card.usage === 'International'
   const network = String(card.network ?? 'Visa')
   const binPrefix =
