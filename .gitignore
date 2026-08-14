@@ -10,3 +10,4 @@ dist
 # env (synced via sops + age)
 .env.*.local
 .sops-age-key.txt
+package-lock.json

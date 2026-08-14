@@ -11,7 +11,7 @@
  * the global CompareDrawer island (BaseLayout) renders the drawer. This
  * island does NOT render its own drawer — one drawer, one bucket, max 4.
  */
-import { useEffect, useMemo, useState, type CSSProperties } from 'react'
+import { type CSSProperties, useEffect, useMemo, useState } from 'react'
 import { type CardRow, type CardType, fmtApr } from '~/lib/cards'
 
 interface Props {
@@ -126,9 +126,7 @@ function LedgerThumb({ row }: { row: CardRow }) {
         <span className="emboss-chip-line" />
         <span className="emboss-chip-line" />
       </span>
-      <span className="emboss-bin">
-        {row.binPrefix} •••• •••• ••••
-      </span>
+      <span className="emboss-bin">{row.binPrefix} •••• •••• ••••</span>
       <span className="emboss-name">•••• •••• ••••</span>
       <span className="emboss-network">{NET_LABEL[row.network] ?? row.network.toUpperCase()}</span>
       <span className="emboss-shimmer" />
@@ -146,6 +144,10 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
   const [ltfOnly, setLtfOnly] = useState(false)
   const [sortKey, setSortKey] = useState('name')
   const [page, setPage] = useState(0)
+  // Reset to first page when the filtered set changes — the React-recommended
+  // "adjust state during render" pattern (no effect ⇒ no extra render, and it
+  // sidesteps useExhaustiveDependencies on a setter-only effect).
+  const [prevFiltered, setPrevFiltered] = useState<CardRow[] | null>(null)
   const [compareSlugs, setCompareSlugs] = useState<Set<string>>(new Set())
   const [filtersOpen, setFiltersOpen] = useState(false)
 
@@ -187,7 +189,10 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
     return scored.map((s) => s.row)
   }, [rows, types, nets, banks, benefits, feeMax, ltfOnly, q, sortKey])
 
-  useEffect(() => setPage(0), [q, types, nets, banks, benefits, feeMax, ltfOnly, sortKey])
+  if (filtered !== prevFiltered) {
+    setPrevFiltered(filtered)
+    setPage(0)
+  }
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const pageRows = filtered.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE)
@@ -227,7 +232,11 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
   /** Active-filter mono chips at the rail top: `[ × ICICI ]`. */
   const activeChips: Array<{ key: string; label: string; remove: () => void }> = []
   for (const t of types) {
-    activeChips.push({ key: `type-${t}`, label: TYPE_LABEL[t as CardType] ?? t, remove: () => toggleSet(types, t, setTypes) })
+    activeChips.push({
+      key: `type-${t}`,
+      label: TYPE_LABEL[t as CardType] ?? t,
+      remove: () => toggleSet(types, t, setTypes),
+    })
   }
   for (const n of nets) {
     activeChips.push({ key: `net-${n}`, label: n, remove: () => toggleSet(nets, n, setNets) })
@@ -237,23 +246,30 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
     activeChips.push({ key: `ben-${b}`, label, remove: () => toggleSet(benefits, b, setBenefits) })
   }
   for (const c of banks) {
-    activeChips.push({ key: `bank-${c}`, label: issuerName(c), remove: () => toggleSet(banks, c, setBanks) })
+    activeChips.push({
+      key: `bank-${c}`,
+      label: issuerName(c),
+      remove: () => toggleSet(banks, c, setBanks),
+    })
   }
-  if (ltfOnly) activeChips.push({ key: 'ltf', label: 'LIFETIME FREE', remove: () => setLtfOnly(false) })
+  if (ltfOnly)
+    activeChips.push({ key: 'ltf', label: 'LIFETIME FREE', remove: () => setLtfOnly(false) })
   if (feeMax < maxFee) {
     activeChips.push({ key: 'fee', label: `≤ ₹${inr(feeMax)}`, remove: () => setFeeMax(maxFee) })
   }
 
   const activeCount =
-    types.size + nets.size + banks.size + benefits.size + (ltfOnly ? 1 : 0) + (feeMax < maxFee ? 1 : 0)
+    types.size +
+    nets.size +
+    banks.size +
+    benefits.size +
+    (ltfOnly ? 1 : 0) +
+    (feeMax < maxFee ? 1 : 0)
   const compareCount = compareSlugs.size
 
   return (
     <div className="scr-shell">
-      <aside
-        className={`scr-rail ${filtersOpen ? 'open' : ''}`}
-        aria-label="Filter cards"
-      >
+      <aside className={`scr-rail ${filtersOpen ? 'open' : ''}`} aria-label="Filter cards">
         <div className="scr-rail-inner">
           <div className="scr-rail-summary">
             <span className="scr-count">{filtered.length.toLocaleString('en-IN')}</span>
@@ -270,7 +286,7 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
           />
 
           {activeChips.length > 0 && (
-            <div className="scr-chips" role="list" aria-label="Active filters">
+            <fieldset className="scr-chips" aria-label="Active filters">
               {activeChips.map((c) => (
                 <button
                   key={c.key}
@@ -279,11 +295,13 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
                   onClick={c.remove}
                   aria-label={`Remove ${c.label} filter`}
                 >
-                  <span className="scr-chip-x" aria-hidden="true">×</span>
+                  <span className="scr-chip-x" aria-hidden="true">
+                    ×
+                  </span>
                   {c.label}
                 </button>
               ))}
-            </div>
+            </fieldset>
           )}
 
           <fieldset className="scr-sect">
@@ -386,9 +404,7 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
           >
             Filters{activeCount ? ` · ${activeCount}` : ''}
           </button>
-          <span className="scr-toolbar-count">
-            {filtered.length.toLocaleString('en-IN')} cards
-          </span>
+          <span className="scr-toolbar-count">{filtered.length.toLocaleString('en-IN')} cards</span>
           <label className="scr-sort">
             <span className="scr-sort-lbl">Sort</span>
             <select
@@ -415,7 +431,7 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
           </div>
         ) : (
           <div className="scr-ledger">
-            <div className="scr-ledger-header" role="row">
+            <div className="scr-ledger-header" aria-hidden="true">
               <span>Card</span>
               <span>Name</span>
               <span className="scr-h-num">Join</span>
@@ -443,10 +459,18 @@ export default function CardScreener({ rows, issuers, networks, cardTypes, maxFe
                     </span>
                   </span>
                   <span className="scr-num">
-                    {r.joiningFee === 0 ? <span className="scr-ltf">LTF</span> : `₹${inr(r.joiningFee)}`}
+                    {r.joiningFee === 0 ? (
+                      <span className="scr-ltf">LTF</span>
+                    ) : (
+                      `₹${inr(r.joiningFee)}`
+                    )}
                   </span>
                   <span className="scr-num">
-                    {r.annualFee === 0 ? <span className="scr-ltf">LTF</span> : `₹${inr(r.annualFee)}`}
+                    {r.annualFee === 0 ? (
+                      <span className="scr-ltf">LTF</span>
+                    ) : (
+                      `₹${inr(r.annualFee)}`
+                    )}
                   </span>
                   <span className="scr-num">{r.rewardsLabel}</span>
                   <span className={`scr-num ${r.apr >= 36 ? 'is-neg' : ''}`}>{fmtApr(r.apr)}</span>

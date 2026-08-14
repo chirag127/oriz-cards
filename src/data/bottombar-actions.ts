@@ -1,4 +1,11 @@
-import type { BottomBarAction } from '@chirag127/astro-chrome/BottomBar.astro'
+// BottomBar.astro exports `BottomBarAction` only from its .astro frontmatter,
+// which tsc can't resolve from a plain .ts module. Mirror the shape here.
+export interface BottomBarAction {
+  icon: string
+  label: string
+  href: string
+  active?: boolean
+}
 export const bottomBarActions: BottomBarAction[] = [
   { icon: '⌂', label: 'Home', href: '/' },
   { icon: '⊞', label: 'Collections', href: '/collections/' },

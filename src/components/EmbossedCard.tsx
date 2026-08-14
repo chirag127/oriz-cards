@@ -63,7 +63,7 @@ export default function EmbossedCard({
   // Cardholder name comes from an optional prop; when absent we show the
   // placeholder. (Personalised embossing with the signed-in name is wired on
   // the account page where a ClerkProvider is in scope.)
-  const displayName: string | null = null
+  const displayName = null as string | null
 
   const isThumb = size === 'thumb'
   const shouldRedact = redactName ?? isThumb

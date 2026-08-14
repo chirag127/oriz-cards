@@ -152,6 +152,10 @@
 
 /* Active-filter chips — `[ × ICICI ]` mono chips at the rail top. */
 .scr-chips {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;

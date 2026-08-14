@@ -17,7 +17,7 @@
  * Source-of-truth: this file. Update here and re-run `astro check`.
  */
 
-import { z } from 'astro:content'
+import { z } from 'astro/zod'
 
 // ───────────────────────────────────────────────────────────── enums
 

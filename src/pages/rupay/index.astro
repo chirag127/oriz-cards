@@ -5,7 +5,7 @@
  */
 import CardLedgerList from '~/components/CardLedgerList.astro'
 import BaseLayout from '~/layouts/BaseLayout.astro'
-import { RUPAY_COUNT, getRowsByNetwork, inr } from '~/lib/cards'
+import { getRowsByNetwork, inr, RUPAY_COUNT } from '~/lib/cards'
 import { SITE_CONFIG } from '~/lib/siteConfig'
 
 const rows = getRowsByNetwork('RuPay')
