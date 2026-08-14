@@ -10,7 +10,7 @@
  * One Clerk org = one session across every *.oriz.in site.
  */
 import { SignedIn, SignedOut, SignIn, UserButton, useUser } from '@clerk/clerk-react'
-import ClerkProvider from './auth/ClerkProvider'
+import ClerkProvider, { hasClerk } from './auth/ClerkProvider'
 
 function SignedInSummary() {
   const { user } = useUser()
@@ -34,6 +34,23 @@ function SignedInSummary() {
 }
 
 export default function ClerkAccountPanel() {
+  // No Clerk key (e.g. CI build): show the anonymous-browse fallback only —
+  // never Clerk context-dependent components, which throw without a provider.
+  if (!hasClerk) {
+    return (
+      <div className="acct-signin-mount">
+        <p className="acct-anon">
+          Accounts are temporarily unavailable. <a href="/">Continue anonymously →</a> The card
+          ledger is always free and never asks you to sign in.
+        </p>
+        <style>{`
+          .acct-signin-mount { display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+          .acct-anon { color: var(--ink-mute, #6B6A63); font-size: 14px; text-align: center; max-width: 42ch; }
+          .acct-anon a { color: var(--rupay, #097DC6); text-decoration: underline; text-underline-offset: 3px; }
+        `}</style>
+      </div>
+    )
+  }
   return (
     <ClerkProvider>
       <SignedOut>

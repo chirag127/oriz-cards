@@ -7,9 +7,19 @@
  * free ledger.
  */
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
-import ClerkProvider from './auth/ClerkProvider'
+import ClerkProvider, { hasClerk } from './auth/ClerkProvider'
 
 export default function AuthButton() {
+  // No Clerk key configured (e.g. CI build without the secret): render a plain
+  // link to the account page rather than Clerk context-dependent components,
+  // which would throw without a real provider.
+  if (!hasClerk) {
+    return (
+      <a className="auth-btn" href="/account/">
+        Sign in
+      </a>
+    )
+  }
   return (
     <ClerkProvider>
       <SignedOut>

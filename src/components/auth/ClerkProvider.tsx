@@ -3,6 +3,11 @@ import type { ReactNode } from 'react'
 
 const publishableKey = import.meta.env.PUBLIC_CLERK_PUBLISHABLE_KEY
 
+// True only when a publishable key is configured. Consumers must not render
+// Clerk context-dependent components (SignedIn/SignedOut/useUser/…) when this
+// is false — without a real provider those throw at render/build time.
+export const hasClerk = Boolean(publishableKey)
+
 // The Embossing Plate — phosphor-mint primary on a graphite-steel deck,
 // Instrument Serif headings, oxidized-brass avatar ring. Themed to this
 // site's palette.
