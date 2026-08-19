@@ -79,6 +79,62 @@
       "isSellable": false,
       "isActive": true,
       "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Liv or Hotstar)",
+      "description": "Any 01 OTT Complementary 12 months membership",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Cover",
+      "description": "Upto ₹10 Lakh (Permanent Total Disability or Accidental Death- *T&C Apply)",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "(SRL Diagnostics /Thyrocare)",
+      "description": "1 Complementary health check-up package every calendar Quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Gym - Cult.fit",
+      "description": "1 Complementary Gym membership every calendar quarter (90 days for Home Workouts or 30 days for the Offline Workouts)",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "salon E-Gift Card)",
+      "description": "1 Complementary SPA session or Salon Service every calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Golf - Golftripz",
+      "description": "1 Complementary Golf Lesson or Round every calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Concierge Services",
+      "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
     }
   ],
   "welcomeBonus": {
@@ -155,5 +211,48 @@
   ],
   "estimatedBenefitValue": "₹18,000–22,000/year (full redemption); ~₹6,000–8,000 realistic",
   "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-neo.pdf",
-  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=pzi8GocaHyf6LL159W58mw%3D%3D"
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=pzi8GocaHyf6LL159W58mw%3D%3D",
+  "documents": [
+    {
+      "type": "benefits",
+      "title": "PNB RUPAY SELECT NEO INTERNATIONAL DEBIT CARD",
+      "file": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-neo.pdf",
+      "url": "https://pnb.bank.in/downloadprocess.aspx?fid=pzi8GocaHyf6LL159W58mw%3D%3D",
+      "text": "प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 1 of 2 PNB RUPAY SELECT NEO INTERNATIONAL DEBIT CARD Benefits Offer Description Lounge Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders two (2) times per calendar year per card in any of the participating International Airport lounges. OTT (Amazon Prime or Sony Liv or Hotstar) Any 01 OTT Complementary 12 months membership Personal Accident Insurance Cover Upto ₹10 Lakh (Permanent Total Disability or Accidental Death- *T&C Apply) Medical Check-up (SRL Diagnostics /Thyrocare) 1 Complementary health check-up package every calendar Quarter Gym - Cult.fit 1 Complementary Gym membership every calendar quarter (90 days for Home Workouts or 30 days for the Offline Workouts) SPA / Salon Services (The Four Fountain SPA, Kairali Ayurvedic SPA, Aroma Thai SPA, ODE SPA and Lakme salon E-Gift Card) 1 Complementary SPA session or Salon Service every calendar quarter Golf - Golftripz 1 Complementary Golf Lesson or Round every calendar quarter Concierge Services Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages Regular Discount offer across all categories as provided by NPCI from time-to-time. For latest offers please refer to NPCI (RuPay) Website. The Debit Card holder will have to visit the Website for registration process (one time) and thereafter can claim the same after login, for more details  Click here प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 2 of 2 Important Note: Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  rupay@golftripz.com . Further, the issuing bank will not be liable for the same. *Terms & Conditions apply **Promotional offers and schemes are often time-sensitive and can be modified or withdrawn at any point of time.   To stay updated on the offers mentioned herewith, always refer to the Bank’s official website.",
+      "extracted": [
+        {
+          "title": "Lounge",
+          "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders two (2) times per calendar year per card in any of the participating International Airport lounges."
+        },
+        {
+          "title": "Liv or Hotstar)",
+          "description": "Any 01 OTT Complementary 12 months membership"
+        },
+        {
+          "title": "Cover",
+          "description": "Upto ₹10 Lakh (Permanent Total Disability or Accidental Death- *T&C Apply)"
+        },
+        {
+          "title": "(SRL Diagnostics /Thyrocare)",
+          "description": "1 Complementary health check-up package every calendar Quarter"
+        },
+        {
+          "title": "Gym - Cult.fit",
+          "description": "1 Complementary Gym membership every calendar quarter (90 days for Home Workouts or 30 days for the Offline Workouts)"
+        },
+        {
+          "title": "salon E-Gift Card)",
+          "description": "1 Complementary SPA session or Salon Service every calendar quarter"
+        },
+        {
+          "title": "Golf - Golftripz",
+          "description": "1 Complementary Golf Lesson or Round every calendar quarter"
+        },
+        {
+          "title": "Concierge Services",
+          "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages"
+        }
+      ]
+    }
+  ]
 }

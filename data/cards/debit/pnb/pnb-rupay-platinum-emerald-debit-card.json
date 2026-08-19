@@ -32,6 +32,102 @@
       "isSellable": false,
       "isActive": true,
       "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "OTT- Zee 5",
+      "description": "Free Annual Subscription",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "membership",
+      "description": "Once per calendar year",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "BigBasket",
+      "description": "Voucher worth ₹250 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Myntra",
+      "description": "Voucher worth ₹250 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Annual Gaana Subs.",
+      "description": "Annual Subscription",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Check-up",
+      "description": "SRL Diagnostics - Mammogram once per calendar year",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Cult.Fit Gym",
+      "description": "03 months online Home Workout once per calendar year",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Tata Cliq",
+      "description": "Voucher worth ₹500 once per calendar year",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Nykaa",
+      "description": "Voucher worth ₹500 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Book My Show",
+      "description": "Flat ₹250 off on minimum purchase of 2 tickets once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Merchant Offers",
+      "description": "Exclusive Domestic and International offers from partner Merchants",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Concierge Services",
+      "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
     }
   ],
   "benefitIcons": [
@@ -87,5 +183,72 @@
     ],
     "lastVerified": "2026-08-19"
   },
-  "lastUpdated": "2026-08-19"
+  "lastUpdated": "2026-08-19",
+  "documents": [
+    {
+      "type": "benefits",
+      "title": "PNB RUPAY PLATINUM EMERALD INTERNATIONAL DEBIT CARD",
+      "file": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-emerald.pdf",
+      "url": "https://pnb.bank.in/downloadprocess.aspx?fid=vtivl23mOBk/jdR7UCc75Q%3D%3D",
+      "text": "प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 1 of 2 PNB RUPAY PLATINUM EMERALD INTERNATIONAL DEBIT CARD Benefits Offer Description Lounge 01 domestic Airport lounge visit per calendar year OTT- Zee 5 Free Annual Subscription Swiggy One 3 months membership Once per calendar year BigBasket Voucher worth ₹250 once per calendar quarter Myntra Voucher worth ₹250 once per calendar quarter Annual Gaana Subs. Annual Subscription Check-up SRL Diagnostics - Mammogram once per calendar year Cult.Fit Gym 03 months online Home Workout once per calendar year Tata Cliq Voucher worth ₹500 once per calendar year Nykaa Voucher worth ₹500 once per calendar quarter Book My Show Flat ₹250 off on minimum purchase of 2 tickets once per calendar quarter Merchant Offers Exclusive Domestic and International offers from partner Merchants Personal Accident Insurance Personal Accident insurance cover up to ₹2 Lakh (Permanent total disability or Accidental death) *T&C of NPCI applied Concierge Services Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages Regular Discount offer across all categories as provided by NPCI from time-to-time. For latest offers please refer to NPCI (RuPay) Website. The Debit Card holder will have to visit the Website for registration process (one time) and thereafter can claim the same after login, for more details  Click here Important Note: Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  rupay@golftripz.com . Further, the issuing bank will not be liable for the same. प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 2 of 2 *Terms & Conditions apply **Promotional offers and schemes are often time-sensitive and can be modified or withdrawn at any point of time.   To stay updated on the offers mentioned herewith, always refer to the Bank’s official website.",
+      "extracted": [
+        {
+          "title": "Lounge",
+          "description": "01 domestic Airport lounge visit per calendar year"
+        },
+        {
+          "title": "OTT- Zee 5",
+          "description": "Free Annual Subscription"
+        },
+        {
+          "title": "membership",
+          "description": "Once per calendar year"
+        },
+        {
+          "title": "BigBasket",
+          "description": "Voucher worth ₹250 once per calendar quarter"
+        },
+        {
+          "title": "Myntra",
+          "description": "Voucher worth ₹250 once per calendar quarter"
+        },
+        {
+          "title": "Annual Gaana Subs.",
+          "description": "Annual Subscription"
+        },
+        {
+          "title": "Check-up",
+          "description": "SRL Diagnostics - Mammogram once per calendar year"
+        },
+        {
+          "title": "Cult.Fit Gym",
+          "description": "03 months online Home Workout once per calendar year"
+        },
+        {
+          "title": "Tata Cliq",
+          "description": "Voucher worth ₹500 once per calendar year"
+        },
+        {
+          "title": "Nykaa",
+          "description": "Voucher worth ₹500 once per calendar quarter"
+        },
+        {
+          "title": "Book My Show",
+          "description": "Flat ₹250 off on minimum purchase of 2 tickets once per calendar quarter"
+        },
+        {
+          "title": "Merchant Offers",
+          "description": "Exclusive Domestic and International offers from partner Merchants"
+        },
+        {
+          "title": "Insurance",
+          "description": "Personal Accident insurance cover up to ₹2 Lakh (Permanent total disability or Accidental death) *T&C of NPCI applied"
+        },
+        {
+          "title": "Concierge Services",
+          "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages"
+        }
+      ]
+    }
+  ]
 }

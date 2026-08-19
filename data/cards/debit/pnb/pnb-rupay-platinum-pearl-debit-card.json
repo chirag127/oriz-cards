@@ -23,6 +23,86 @@
       "activationRequired": true,
       "valueNum": 200000,
       "valueStr": "Rs. 200,000"
+    },
+    {
+      "category": "offer",
+      "title": "OTT- Zee 5",
+      "description": "Free Annual Subscription",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "membership",
+      "description": "Once per year free",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "BigBasket",
+      "description": "Voucher worth ₹250 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Myntra",
+      "description": "Voucher worth ₹250 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Annual Gaana Subs.",
+      "description": "Annual Subscription free",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Check-UP",
+      "description": "SRL Diagnostics - Mammogram once calendar year free",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Nykaa",
+      "description": "Voucher worth ₹500 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Book My show",
+      "description": "Flat INR 250 off on minimum purchase of 2 tickets once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Merchant Offers",
+      "description": "Exclusive Domestic and International offers from partner Merchants",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Concierge Services",
+      "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
     }
   ],
   "benefitIcons": [
@@ -78,5 +158,60 @@
     ],
     "lastVerified": "2026-08-19"
   },
-  "lastUpdated": "2026-08-19"
+  "lastUpdated": "2026-08-19",
+  "documents": [
+    {
+      "type": "benefits",
+      "title": "PNB RUPAY PLATINUM PEARL INTERNATIONAL DEBIT CARD",
+      "file": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-pearl.pdf",
+      "url": "https://pnb.bank.in/downloadprocess.aspx?fid=wwivM%2BhbK7PobpQsmZB1Fg%3D%3D",
+      "text": "प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 1 of 2 PNB RUPAY PLATINUM PEARL INTERNATIONAL DEBIT CARD Benefits Offer Description OTT- Zee 5 Free Annual Subscription Swiggy One 3 months membership Once per year free BigBasket Voucher worth ₹250 once per calendar quarter Myntra Voucher worth ₹250 once per calendar quarter Annual Gaana Subs. Annual Subscription free Check-UP SRL Diagnostics - Mammogram once calendar year free Nykaa Voucher worth ₹500 once per calendar quarter Book My show Flat INR 250 off on minimum purchase of 2 tickets once per calendar quarter Merchant Offers Exclusive Domestic and International offers from partner Merchants Personal Accident Insurance Personal Accident insurance cover up to ₹2 Lakh (Permanent total disability or Accidental death) *T&C of NPCI applied Concierge Services Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages Regular Discount offer across all categories as provided by NPCI from time-to-time. For latest offers please refer to NPCI (RuPay) Website. The Debit Card holder will have to visit the Website for registration process (one time) and thereafter can claim the same after login, for more details  Click here Important Note: Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  rupay@golftripz.com . Further, the issuing bank will not be liable for the same. *Terms & Conditions apply प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 2 of 2 **Promotional offers and schemes are often time-sensitive and can be modified or withdrawn at any point of time.   To stay updated on the offers mentioned herewith, always refer to the Bank’s official website.",
+      "extracted": [
+        {
+          "title": "OTT- Zee 5",
+          "description": "Free Annual Subscription"
+        },
+        {
+          "title": "membership",
+          "description": "Once per year free"
+        },
+        {
+          "title": "BigBasket",
+          "description": "Voucher worth ₹250 once per calendar quarter"
+        },
+        {
+          "title": "Myntra",
+          "description": "Voucher worth ₹250 once per calendar quarter"
+        },
+        {
+          "title": "Annual Gaana Subs.",
+          "description": "Annual Subscription free"
+        },
+        {
+          "title": "Check-UP",
+          "description": "SRL Diagnostics - Mammogram once calendar year free"
+        },
+        {
+          "title": "Nykaa",
+          "description": "Voucher worth ₹500 once per calendar quarter"
+        },
+        {
+          "title": "Book My show",
+          "description": "Flat INR 250 off on minimum purchase of 2 tickets once per calendar quarter"
+        },
+        {
+          "title": "Merchant Offers",
+          "description": "Exclusive Domestic and International offers from partner Merchants"
+        },
+        {
+          "title": "Insurance",
+          "description": "Personal Accident insurance cover up to ₹2 Lakh (Permanent total disability or Accidental death) *T&C of NPCI applied"
+        },
+        {
+          "title": "Concierge Services",
+          "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages"
+        }
+      ]
+    }
+  ]
 }

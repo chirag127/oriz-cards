@@ -116,6 +116,14 @@ export interface FullCard {
     valueStr?: string
     annualValue?: number
   }>
+  documents?: Array<{
+    type?: string
+    title?: string
+    file?: string
+    url?: string
+    text?: string
+    extracted?: Array<{ title?: string; description?: string }>
+  }>
   creditCardDetails?: {
     billingCycleDays?: number
     gracePeriodDays?: number

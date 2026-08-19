@@ -23,6 +23,22 @@
       "activationRequired": true,
       "valueNum": 200000,
       "valueStr": "Rs. 200,000"
+    },
+    {
+      "category": "offer",
+      "title": "Merchant Offers",
+      "description": "Exclusive Domestic & International offers from partner Merchants",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Concierge Services",
+      "description": "Personal Assistance Anytime, anywhere. 24*7 assistance is available in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages on the toll-free number- 1800-26-78729",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
     }
   ],
   "benefitIcons": [
@@ -78,5 +94,32 @@
     ],
     "lastVerified": "2026-08-19"
   },
-  "lastUpdated": "2026-08-19"
+  "lastUpdated": "2026-08-19",
+  "documents": [
+    {
+      "type": "benefits",
+      "title": "PNB RUPAY PLATINUM HARIT INTERNATIONAL DEBIT CARD",
+      "file": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-harit.pdf",
+      "url": "https://pnb.bank.in/uploadfile/Cards/PNB_RUPAY_PLATINUM_HARIT-_OFFER_&_BENEFITS_DETAILS.pdf",
+      "text": "प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 1 of 1 PNB RUPAY PLATINUM HARIT INTERNATIONAL DEBIT CARD Benefits Offer Description Lounge Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders one (1) time per calendar year per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders One (1) time per calendar year per card in any of the participating International Airport lounges. Personal Accident Insurance Personal Accident insurance cover upto ₹2,00,000/- (Permanent total disability or Accidental death) *t&c of NPCI apply Merchant Offers Exclusive Domestic & International offers from partner Merchants Concierge Services Personal Assistance Anytime, anywhere. 24*7 assistance is available in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages on the toll-free number- 1800-26-78729 Regular Discount offer across all categories as provided by NPCI from time-to-time. For latest offers please refer to NPCI (RuPay) Website. The Debit Card holder will have to visit the Website for registration process (one time) and thereafter can claim the same after login, for more details  Click here Important Note: Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  rupay@golftripz.com . Further, the issuing bank will not be liable for the same. *Terms & Conditions apply **Promotional offers and schemes are often time-sensitive and can be modified or withdrawn at any point of time.   To stay updated on the offers mentioned herewith, always refer to the Bank’s official website.",
+      "extracted": [
+        {
+          "title": "Lounge",
+          "description": "Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders one (1) time per calendar year per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders One (1) time per calendar year per card in any of the participating International Airport lounges."
+        },
+        {
+          "title": "Insurance",
+          "description": "Personal Accident insurance cover upto ₹2,00,000/- (Permanent total disability or Accidental death) *t&c of NPCI apply"
+        },
+        {
+          "title": "Merchant Offers",
+          "description": "Exclusive Domestic & International offers from partner Merchants"
+        },
+        {
+          "title": "Concierge Services",
+          "description": "Personal Assistance Anytime, anywhere. 24*7 assistance is available in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages on the toll-free number- 1800-26-78729"
+        }
+      ]
+    }
+  ]
 }

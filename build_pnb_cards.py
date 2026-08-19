@@ -27,6 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PNB_DIR = ROOT / "data" / "cards" / "debit" / "pnb"
 MANIFEST = PNB_DIR / "manifest.json"
+PDF_EXTRACTED = PNB_DIR / "pdf-extracted.json"
 AGGREGATE = ROOT / "data" / "cards.json"
 PAGE_URL = "https://pnb.bank.in/card-index.html"
 CUSTOMER_CARE = "1800 180 2222"
@@ -306,10 +307,13 @@ def merge_card(base: dict, scraped: dict) -> dict:
 def main(argv=None):
     dry = "--dry-run" in (argv or sys.argv[1:])
     cards = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    pdf_extracted = {}
+    if PDF_EXTRACTED.exists():
+        pdf_extracted = json.loads(PDF_EXTRACTED.read_text(encoding="utf-8"))
 
     existing_files = {}
     for p in PNB_DIR.glob("*.json"):
-        if p.name in ("manifest.json",):
+        if p.name in ("manifest.json", "pdf-extracted.json"):
             continue
         existing_files[json.loads(p.read_text(encoding="utf-8"))["id"]] = p
 
@@ -325,6 +329,33 @@ def main(argv=None):
     new_ids: list[str] = []
     for c in cards:
         scraped = parse_card(c)
+        # attach PDF-derived content (documents + offer benefits)
+        pdf_file = scraped.get("pdfFile")
+        if pdf_file and pdf_file in pdf_extracted:
+            ex = pdf_extracted[pdf_file]
+            doc = {
+                "type": "benefits",
+                "title": ex.get("title") or scraped["name"],
+                "file": pdf_file,
+            }
+            if scraped.get("pdfUrl"):
+                doc["url"] = scraped["pdfUrl"]
+            if ex.get("text"):
+                doc["text"] = ex["text"]
+            if ex.get("table"):
+                doc["extracted"] = ex["rows"]
+                for row in ex["rows"]:
+                    tl = row["title"].lower()
+                    if "lounge" in tl or "insurance" in tl:
+                        continue
+                    scraped.setdefault("benefits", []).append({
+                        "category": "offer",
+                        "title": row["title"],
+                        "description": row.get("description", ""),
+                        "isSellable": False, "isActive": True,
+                        "activationRequired": False,
+                    })
+            scraped.setdefault("documents", []).append(doc)
         oid = ID_OVERRIDES.get(c["slug"])
         key = norm_key(scraped["name"])
         if not oid:

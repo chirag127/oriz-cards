@@ -30,6 +30,86 @@
       "isSellable": false,
       "isActive": true,
       "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "OTT- Amazon Prime or Hotstar",
+      "description": "Annual Subscription",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "BigBasket",
+      "description": "Voucher worth ₹250 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Flipkart",
+      "description": "Voucher worth ₹250 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Annual Gaana Subs.",
+      "description": "Annual Subscription once per calendar year",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "MMT – Makemytrip",
+      "description": "MMT Flat 10% off upto ₹1500 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Netmeds",
+      "description": "Netmeds 20% off on medicine on minimum order of ₹999 once per calendar year",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "BMS-Book my show",
+      "description": "Flat off of ₹250 on minimum purchase of 2 tickets once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "TATA Cliq",
+      "description": "Voucher worth ₹500 once per calendar quarter",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Merchant Offers",
+      "description": "Exclusive Domestic and International offers from partner Merchants",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Concierge Services",
+      "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
     }
   ],
   "benefitIcons": [
@@ -93,5 +173,64 @@
     ],
     "lastVerified": "2026-08-19"
   },
-  "lastUpdated": "2026-08-19"
+  "lastUpdated": "2026-08-19",
+  "documents": [
+    {
+      "type": "benefits",
+      "title": "PNB RUPAY PLATINUM VAIBHAV INTERNATIONAL DEBIT CARD",
+      "file": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-vaibhav.pdf",
+      "url": "https://pnb.bank.in/downloadprocess.aspx?fid=L0x0zfQoyOMRwcj2fJ9F/w%3D%3D",
+      "text": "प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 1 of 2 PNB RUPAY PLATINUM VAIBHAV INTERNATIONAL DEBIT CARD Benefits Offer Description Lounge 02 domestic Airport lounge visits per calendar year OTT- Amazon Prime or Hotstar Annual Subscription Swiggy One 3 months membership  Once per calendar year free BigBasket Voucher worth ₹250 once per calendar quarter Flipkart Voucher worth ₹250 once per calendar quarter Annual Gaana Subs. Annual Subscription once per calendar year MMT – Makemytrip MMT Flat 10% off upto ₹1500 once per calendar quarter Netmeds Netmeds 20% off on medicine on minimum order of ₹999 once per calendar year BMS-Book my show Flat off of ₹250 on minimum purchase of 2 tickets once per calendar quarter TATA Cliq Voucher worth ₹500 once per calendar quarter Merchant Offers Exclusive Domestic and International offers from partner Merchants Personal Accident Insurance Personal Accident insurance cover up to ₹2 Lakh (Permanent total disability or Accidental death) *T&C of NPCI applied Concierge Services Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages Regular Discount offer across all categories as provided by NPCI from time-to-time. For latest offers please refer to NPCI (RuPay) Website. The Debit Card holder will have to visit the Website for registration process (one time) and thereafter can claim the same after login, for more details  Click here Important Note: Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  rupay@golftripz.com . Further, the issuing bank will not be liable for the same. *Terms & Conditions apply प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 2 of 2 **Promotional offers and schemes are often time-sensitive and can be modified or withdrawn at any point of time.   To stay updated on the offers mentioned herewith, always refer to the Bank’s official website.",
+      "extracted": [
+        {
+          "title": "Lounge",
+          "description": "02 domestic Airport lounge visits per calendar year"
+        },
+        {
+          "title": "OTT- Amazon Prime or Hotstar",
+          "description": "Annual Subscription"
+        },
+        {
+          "title": "BigBasket",
+          "description": "Voucher worth ₹250 once per calendar quarter"
+        },
+        {
+          "title": "Flipkart",
+          "description": "Voucher worth ₹250 once per calendar quarter"
+        },
+        {
+          "title": "Annual Gaana Subs.",
+          "description": "Annual Subscription once per calendar year"
+        },
+        {
+          "title": "MMT – Makemytrip",
+          "description": "MMT Flat 10% off upto ₹1500 once per calendar quarter"
+        },
+        {
+          "title": "Netmeds",
+          "description": "Netmeds 20% off on medicine on minimum order of ₹999 once per calendar year"
+        },
+        {
+          "title": "BMS-Book my show",
+          "description": "Flat off of ₹250 on minimum purchase of 2 tickets once per calendar quarter"
+        },
+        {
+          "title": "TATA Cliq",
+          "description": "Voucher worth ₹500 once per calendar quarter"
+        },
+        {
+          "title": "Merchant Offers",
+          "description": "Exclusive Domestic and International offers from partner Merchants"
+        },
+        {
+          "title": "Personal Accident Insurance",
+          "description": "Personal Accident insurance cover up to ₹2 Lakh (Permanent total disability or Accidental death) *T&C of NPCI applied"
+        },
+        {
+          "title": "Concierge Services",
+          "description": "Personal Assistance, anytime, anywhere 24*7 in Hindi, English, Marathi, Gujarati, Punjabi and 4 south Indian languages"
+        }
+      ]
+    }
+  ]
 }

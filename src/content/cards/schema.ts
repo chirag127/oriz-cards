@@ -313,6 +313,26 @@ const benefitSchema = z
   })
   .passthrough()
 
+/** One extracted row from an issuer benefits document (e.g. a PDF). */
+const extractedBenefitSchema = z
+  .object({
+    title: z.string(),
+    description: z.string().optional(),
+  })
+  .passthrough()
+
+/** A source document attached to a card — official PDF/brochure content. */
+const sourceDocumentSchema = z
+  .object({
+    type: z.string().optional(),
+    title: z.string().optional(),
+    file: z.string().optional(),
+    url: z.string().optional(),
+    text: z.string().optional(),
+    extracted: z.array(extractedBenefitSchema).optional(),
+  })
+  .passthrough()
+
 const rewardProgramSchema = z
   .object({
     name: z.string().optional(),
@@ -470,6 +490,9 @@ export const cardSchema = z
 
     // Derived value / ROI
     value: valueSchema.optional(),
+
+    // Source documents (official PDFs / brochures) + their extracted content
+    documents: z.array(sourceDocumentSchema).optional(),
 
     // Presentation
     gradientColors: z.array(z.string()).optional(),

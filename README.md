@@ -72,9 +72,11 @@ knowledge/               # app-specific decisions, runbooks, services
 `scrape_pnb_cards.py` fetches [pnb.bank.in/card-index.html](https://pnb.bank.in/card-index.html),
 resolves each card tab's benefits PDF (direct `uploadfile/` link → "Benefits Cured with
 Card" fid → shared RuPay contactless doc), downloads them into
-`data/cards/debit/pnb/pdf/`, and writes `manifest.json`. `build_pnb_cards.py` parses
-that manifest into schema-compliant per-card JSONs and upgrades `data/cards.json`.
-Re-run both to refresh (idempotent).
+`data/cards/debit/pnb/pdf/`, and writes `manifest.json`. `extract_pnb_pdf_benefits.py`
+parses each PDF's two-column "Benefits | Offer Description" table into
+`pdf-extracted.json`. `build_pnb_cards.py` folds the page spec + PDF content into
+schema-compliant per-card JSONs (`benefits`, `documents[].extracted`, raw `text`)
+and upgrades `data/cards.json`. Re-run all three in order to refresh (idempotent).
 tests/                   # vitest + playwright
 astro.config.mjs         # shell() → financial-cards.oriz.in
 wrangler.toml            # Cloudflare Pages deploy config

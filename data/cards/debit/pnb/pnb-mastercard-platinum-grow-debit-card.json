@@ -11,7 +11,120 @@
   "feeWaiverSpend": null,
   "description": "PNB MasterCard Platinum Grow Debit Card is a PNB MASTERCARD PLATINUM GROW from Punjab National Bank. International usage; ATM limit Rs. 10,000/day, PoS/eCom limit Rs. 10,000/day. Valid 7 years.",
   "tagline": "MasterCard Platinum debit card from PNB — international usage with ATM + POS access.",
-  "benefits": [],
+  "benefits": [
+    {
+      "category": "offer",
+      "title": "Order at McDonald's",
+      "description": "Once per Year ●  In this offer you will get flat ₹100/- off on order at McDonald's. ●  Offer is valid on a minimum order value of ₹ 599/-. ●  Offer Valid on McDelivery Orders Only. ●  Offer Valid till stock ends. ●  Offer Valid on App /Web & Msite. ●  Offer Applicable on Advance & Regular orders. ●  Offer Valid in West & South McDonalds India. ●  Paytm and/or McDonald's solely reserves the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Taco Bell",
+      "description": "Once per Year ●  In this offer, you will get a Free Veg Taco at Taco Bell. ●  The offer is applicable on minimum order value of ₹ 329/-. ●  The coupon code is valid only once per user. ●  Voucher code needs to be presented for claiming the offer on Taco Bell Counter ●  Discount is not valid on discounted meals, special combos, Value items and MRP products. ●  Offer Valid only in Dine in & Take away ●  Paytm and Taco Bell solely reserves the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same membership on both iOS & Android devices only. ●  All transactions on the platform will be subject to the terms and conditions outlined at https://www.swiggy.com/terms-and-conditions . ●  Once the membership is activated, it cannot be cancelled, and no refunds will be issued. ●  The distance from the restaurant to the customer’s location will be determined using Google Maps driving directions at the time of placing the order. Swiggy shall not be held responsible for the accuracy or reliability of this data. ●  Swiggy One Lite benefits apply to orders above a certain amount, as specified in the benefits section. ●  Additional discounts specific to the Swiggy One program will be applied to the discounted value of food items after the application of any generally available coupons on the platform. ●  Paytm reserves the right to change the offer terms at any time without prior notice to the customer. ●  Paytm shall not be liable or responsible for any actions or inactions of service providers, nor for any breach of conditions, representations, or warranties by suppliers or service providers, and hereby expressly disclaims any and all responsibility. ●  The voucher codes are issued by Swiggy to activate Swiggy One Lite membership. ●  All transactions on the Platform will be subject to the other terms and conditions of provision of Services, as enumerated in Swiggy Terms and Conditions. ●  User Benefits of Swiggy One Lite Membership: ⮚  10 free deliveries upto 7 KMs on Food orders above ₹ 199/- ⮚  Additionally up to 30% extra discounts over and above other offers ⮚  10 free Instamart deliveries on orders above ₹  199/- ⮚  Flat 10% off on Genie on all orders above ₹ 60/- ⮚  Exclusive access to Pre-book deals on Dineout Reservations. ●  Once the membership is activated, it cannot be cancelled and no refund will be issued. responsible or liable for the accuracy or efficacy of such data. ●  Swiggy One Lite benefits are available to orders above a certain amount as mentioned in the benefit section. ●  Additional discounts specific to the Swiggy One program will be applicable on the discounted values of the food items post application of any generally available coupons on the Platform ●  The Offer is non-transferable and cannot be exchanged for cash or cheque or any form of credit. ●  Cardholders are not bound in any way to participate in the Offer. Any participation shall be voluntary and all participants understand, acknowledge and agree that the Offer is purely on a best effort basis and MasterCard does not assume any liability whatsoever regarding the Offer, the delivery of services or any incidental matter. ●  No two offers can be clubbed together and no additional discount/offer will be applicable. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  Helpdesk.paytmfirst@paytm.com  MasterCard or the issuing bank will not be liable for the same.",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Gold 3 months",
+      "description": "Once per Year ●  In this offer you will get 3 Months Zomato Gold Membership. ●  Redemption of code to only be done on Zomato app for the purpose of activating Zomato Gold membership. ●  Offer cannot be clubbed with any other ongoing offer. ●  Promo code can be redeemed from any city in India, however Gold benefits will be applicable in Gold-eligible cities only. ●  Zomato Gold benefits are variable basis cities and can be checked on the Gold plan page after changing app location to desired location. ●  Paytm and Zomato solely reserves the right to change offer terms at any time without prior notice to the customer. cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Sunglasses",
+      "description": "Once per Year ●  In this offer you will get flat 60% off on Tees by FastTrack Sunglasses. ●  As part of the offer use promo code FT60 at the time of check out on FastTrack platform. ●  Voucher code is valid only on Titan Eye+ Web and App, not in the Titan Eye+ stores / marketplaces. ●  Titan Eyeplus provides 7 days replacement or return. ●  This offer cannot be combined with any other offers on the Website/App. ●  Paytm solely reserves the right to change offer terms at any time without prior notice to the customer ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same.",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "on Bewakoof",
+      "description": "Once per Year ●  Offer is applicable on a minimum transaction of ₹ 799/- ●  Offer is applicable on all products at https://www.bewakoof.com/ ●  Offer cannot be clubbed with any other offer/voucher/combo ●  For any query email us at  care@bewakoof.com ●  Offer not applicable on COD. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "1,499/-",
+      "description": "Once per month ●  In this offer, you will get Flat 20% Off on minimum order value of ₹1499 on selected Fashion styles on AJIO. ●   One unique coupon code may be redeemed only once per user and is non-negotiable and non-encashable. ●  AJIO reserves the right to cancel the orders placed by Eligible Users if the transaction is found to be of fraudulent nature.",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "MOV of ₹ 2,499/-",
+      "description": "Once per Year ●  In this offer you will get flat ₹500/- off on Lifestyle. ●  As part of the offer use promo code at the time of check out on Lifestyle platform. ●  Offer is applicable on minimum order value of ₹2,499/-. ●  Offer is not applicable at physical stores. ●  Offer cannot be clubbed with any other ongoing offer. ●  Offer is not applicable on Beauty, Watches, Sunglasses, Perfumes, Face mask, Jockey, Fahrenheit, Manyavar Products & Home and Living products. ●  Paytm shall not be liable nor responsible for any actions or inaction of service providers nor any breach of conditions, representations or warranties by the supplier or service providers and hereby expressly disclaim any and all responsibility. ●  Paytm reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Discovery",
+      "description": "+",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Subscription",
+      "description": "Once per Year ●  The offer is applicable only on discovery+ App (for android users) or www.discoveryplus.in (for iOS users). ●  This voucher will enable a monthly free subscription of discovery + premium which will be renewed automatically for a total of 3 month free subscription. ●  This voucher will need successful payment authentication for activation. ●  The offer can be used once per user and cannot be clubbed with other offers. ●  This offer is non-refundable and cannot be redeemed for cash or credit, or exchanged for any other product. ●  Paytm and Discovery + reserve the right to modify or revoke the offer and attached terms & conditions, at any time, without notice. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same.",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "from Gritzo",
+      "description": "Once per Year ●  In this offer you will get flat ₹ 100/- off on Health Supplements from Gritzo. ●  As part of the offer use promo code PFGZ at the time to check out on Gritzo platform. ●  Offer cannot be clubbed with any other ongoing offer. ●  The offer will not be applicable to Flash Sales or Best price products. ●  All the return policy will remain the same as mentioned on the Gritzo website. ●  Paytm shall not be liable nor responsible for any actions or inaction of service providers nor any breach of conditions, representations or warranties by the supplier or service providers and hereby expressly disclaim any and all responsibility. ●  Paytm and Gritzo reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Cinepolis",
+      "description": "Once per Year ●  In this offer you will get flat 26% off upto Rs.100 on Movie Tickets at Cinepolis. ●  The offer is valid on transactions undertaken on the website and app of Cinepolis. ●  Offer is only valid for cinemas listed on Cinepolis digital channels. exchanged in any form whatsoever. ●  Once the booking is completed, the confirmation e-mail/SMS received from Cinepolis, needs to be scanned/exchanged with cinema representatives to enter the cinema premises. ●  Paytm and Cinepolis reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "purchase",
+      "description": "Once per Year ●  In this offer you will get flat ₹ 100/- off on any Ferns N Petals purchase. ●  The offer is applicable on all transactions on Ferns N Petals website and app only and is not valid on Ferns and Petals stores. ●  As part of the offer 1 promo code will be issued to you per month and can be used only once during the month. ●  Offer cannot be clubbed with any other ongoing offer. ●  Paytm reserve the right to change offer terms at any time without prior notice to the customer. ●  Paytm shall not be liable nor responsible for any actions or inaction of service providers nor any breach of conditions, representations or warranties by the supplier or service providers and hereby expressly disclaim any and all responsibility. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "Flower Aura",
+      "description": "●  The offer is applicable only for one time per user. ●  Offer cannot be clubbed with any other ongoing offer. ●  Paytm reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    },
+    {
+      "category": "offer",
+      "title": "product/services",
+      "description": "availed under this offer must be addressed in writing, by the cardholder directly to",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    }
+  ],
   "benefitIcons": [
     "shopping"
   ],
@@ -69,5 +182,72 @@
     ],
     "lastVerified": "2026-08-19"
   },
-  "lastUpdated": "2026-08-19"
+  "lastUpdated": "2026-08-19",
+  "documents": [
+    {
+      "type": "benefits",
+      "title": "PNB MasterCard Platinum Grow Debit Card",
+      "file": "data\\cards\\debit\\pnb\\pdf\\pnb-mastercard-platinum-grow.pdf",
+      "url": "https://pnb.bank.in/downloadprocess.aspx?fid=LsAhvPfXYmXTdOa4UsNw4w%3D%3D",
+      "text": "प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 1 of 9 PNB MASTERCARD PLATINUM GROW INTERNATIONAL DEBIT CARD Brand Offer Details Frequency Terms & Conditions McDonalds Get Flat ₹100/- Off on Order at McDonald's Once per Year ●  In this offer you will get flat ₹100/- off on order at McDonald's. ●  Offer is valid on a minimum order value of ₹ 599/-. ●  Offer Valid on McDelivery Orders Only. ●  Offer Valid till stock ends. ●  Offer Valid on App /Web & Msite. ●  Offer Applicable on Advance & Regular orders. ●  Offer Valid in West & South McDonalds India. ●  Paytm and/or McDonald's solely reserves the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same Taco Bell Get a Free Taco at Taco Bell Once per Year ●  In this offer, you will get a Free Veg Taco at Taco Bell. ●  The offer is applicable on minimum order value of ₹ 329/-. ●  The coupon code is valid only once per user. ●  Voucher code needs to be presented for claiming the offer on Taco Bell Counter ●  Discount is not valid on discounted meals, special combos, Value items and MRP products. ●  Offer Valid only in Dine in & Take away ●  Paytm and Taco Bell solely reserves the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 2 of 9 Brand Offer Details Frequency Terms & Conditions Swiggy One Lite Get Free Swiggy One Lite 3 months Once per Year ●  In this offer, you will receive 3 month Swiggy One Lite Membership. ●  The voucher codes are issued by Swiggy and can be used to activate Swiggy One Lite membership on both iOS & Android devices only. ●  All transactions on the platform will be subject to the terms and conditions outlined at https://www.swiggy.com/terms-and-conditions . ●  Once the membership is activated, it cannot be cancelled, and no refunds will be issued. ●  The distance from the restaurant to the customer’s location will be determined using Google Maps driving directions at the time of placing the order. Swiggy shall not be held responsible for the accuracy or reliability of this data. ●  Swiggy One Lite benefits apply to orders above a certain amount, as specified in the benefits section. ●  Additional discounts specific to the Swiggy One program will be applied to the discounted value of food items after the application of any generally available coupons on the platform. ●  Paytm reserves the right to change the offer terms at any time without prior notice to the customer. ●  Paytm shall not be liable or responsible for any actions or inactions of service providers, nor for any breach of conditions, representations, or warranties by suppliers or service providers, and hereby expressly disclaims any and all responsibility. ●  The voucher codes are issued by Swiggy to activate Swiggy One Lite membership. ●  All transactions on the Platform will be subject to the other terms and conditions of provision of Services, as enumerated in Swiggy Terms and Conditions. ●  User Benefits of Swiggy One Lite Membership: ⮚  10 free deliveries upto 7 KMs on Food orders above ₹ 199/- ⮚  Additionally up to 30% extra discounts over and above other offers ⮚  10 free Instamart deliveries on orders above ₹  199/- ⮚  Flat 10% off on Genie on all orders above ₹ 60/- ⮚  Exclusive access to Pre-book deals on Dineout Reservations. ●  Once the membership is activated, it cannot be cancelled and no refund will be issued. प्रधान   कार्ाालर्, प्लाट   सं . 4,  सेक्टर  10,  द्वारका ,   नई   दिल्ली - 110075 HEAD OFFICE PLOT NO.4, SECTOR-10, DWARKA, NEW Benefits  Cured with Card Page 3 of 9 Brand Offer Details Frequency Terms & Conditions ●  The distances from the restaurant location to the customer's location shall be captured as per Google Map driving directions data at the time of placing the Order. Swiggy shall not be held responsible or liable for the accuracy or efficacy of such data. ●  Swiggy One Lite benefits are available to orders above a certain amount as mentioned in the benefit section. ●  Additional discounts specific to the Swiggy One program will be applicable on the discounted values of the food items post application of any generally available coupons on the Platform ●  The Offer is non-transferable and cannot be exchanged for cash or cheque or any form of credit. ●  Cardholders are not bound in any way to participate in the Offer. Any participation shall be voluntary and all participants understand, acknowledge and agree that the Offer is purely on a best effort basis and MasterCard does not assume any liability whatsoever regarding the Offer, the delivery of services or any incidental matter. ●  No two offers can be clubbed together and no additional discount/offer will be applicable. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  Helpdesk.paytmfirst@paytm.com  MasterCard or the issuing bank will not be liable for the same. Zomato Gold Get Free Zomato Gold 3 months Once per Year ●  In this offer you will get 3 Months Zomato Gold Membership. ●  Red",
+      "extracted": [
+        {
+          "title": "Order at McDonald's",
+          "description": "Once per Year ●  In this offer you will get flat ₹100/- off on order at McDonald's. ●  Offer is valid on a minimum order value of ₹ 599/-. ●  Offer Valid on McDelivery Orders Only. ●  Offer Valid till stock ends. ●  Offer Valid on App /Web & Msite. ●  Offer Applicable on Advance & Regular orders. ●  Offer Valid in West & South McDonalds India. ●  Paytm and/or McDonald's solely reserves the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "Taco Bell",
+          "description": "Once per Year ●  In this offer, you will get a Free Veg Taco at Taco Bell. ●  The offer is applicable on minimum order value of ₹ 329/-. ●  The coupon code is valid only once per user. ●  Voucher code needs to be presented for claiming the offer on Taco Bell Counter ●  Discount is not valid on discounted meals, special combos, Value items and MRP products. ●  Offer Valid only in Dine in & Take away ●  Paytm and Taco Bell solely reserves the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same membership on both iOS & Android devices only. ●  All transactions on the platform will be subject to the terms and conditions outlined at https://www.swiggy.com/terms-and-conditions . ●  Once the membership is activated, it cannot be cancelled, and no refunds will be issued. ●  The distance from the restaurant to the customer’s location will be determined using Google Maps driving directions at the time of placing the order. Swiggy shall not be held responsible for the accuracy or reliability of this data. ●  Swiggy One Lite benefits apply to orders above a certain amount, as specified in the benefits section. ●  Additional discounts specific to the Swiggy One program will be applied to the discounted value of food items after the application of any generally available coupons on the platform. ●  Paytm reserves the right to change the offer terms at any time without prior notice to the customer. ●  Paytm shall not be liable or responsible for any actions or inactions of service providers, nor for any breach of conditions, representations, or warranties by suppliers or service providers, and hereby expressly disclaims any and all responsibility. ●  The voucher codes are issued by Swiggy to activate Swiggy One Lite membership. ●  All transactions on the Platform will be subject to the other terms and conditions of provision of Services, as enumerated in Swiggy Terms and Conditions. ●  User Benefits of Swiggy One Lite Membership: ⮚  10 free deliveries upto 7 KMs on Food orders above ₹ 199/- ⮚  Additionally up to 30% extra discounts over and above other offers ⮚  10 free Instamart deliveries on orders above ₹  199/- ⮚  Flat 10% off on Genie on all orders above ₹ 60/- ⮚  Exclusive access to Pre-book deals on Dineout Reservations. ●  Once the membership is activated, it cannot be cancelled and no refund will be issued. responsible or liable for the accuracy or efficacy of such data. ●  Swiggy One Lite benefits are available to orders above a certain amount as mentioned in the benefit section. ●  Additional discounts specific to the Swiggy One program will be applicable on the discounted values of the food items post application of any generally available coupons on the Platform ●  The Offer is non-transferable and cannot be exchanged for cash or cheque or any form of credit. ●  Cardholders are not bound in any way to participate in the Offer. Any participation shall be voluntary and all participants understand, acknowledge and agree that the Offer is purely on a best effort basis and MasterCard does not assume any liability whatsoever regarding the Offer, the delivery of services or any incidental matter. ●  No two offers can be clubbed together and no additional discount/offer will be applicable. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to  Helpdesk.paytmfirst@paytm.com  MasterCard or the issuing bank will not be liable for the same."
+        },
+        {
+          "title": "Gold 3 months",
+          "description": "Once per Year ●  In this offer you will get 3 Months Zomato Gold Membership. ●  Redemption of code to only be done on Zomato app for the purpose of activating Zomato Gold membership. ●  Offer cannot be clubbed with any other ongoing offer. ●  Promo code can be redeemed from any city in India, however Gold benefits will be applicable in Gold-eligible cities only. ●  Zomato Gold benefits are variable basis cities and can be checked on the Gold plan page after changing app location to desired location. ●  Paytm and Zomato solely reserves the right to change offer terms at any time without prior notice to the customer. cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "Sunglasses",
+          "description": "Once per Year ●  In this offer you will get flat 60% off on Tees by FastTrack Sunglasses. ●  As part of the offer use promo code FT60 at the time of check out on FastTrack platform. ●  Voucher code is valid only on Titan Eye+ Web and App, not in the Titan Eye+ stores / marketplaces. ●  Titan Eyeplus provides 7 days replacement or return. ●  This offer cannot be combined with any other offers on the Website/App. ●  Paytm solely reserves the right to change offer terms at any time without prior notice to the customer ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same."
+        },
+        {
+          "title": "on Bewakoof",
+          "description": "Once per Year ●  Offer is applicable on a minimum transaction of ₹ 799/- ●  Offer is applicable on all products at https://www.bewakoof.com/ ●  Offer cannot be clubbed with any other offer/voucher/combo ●  For any query email us at  care@bewakoof.com ●  Offer not applicable on COD. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "1,499/-",
+          "description": "Once per month ●  In this offer, you will get Flat 20% Off on minimum order value of ₹1499 on selected Fashion styles on AJIO. ●   One unique coupon code may be redeemed only once per user and is non-negotiable and non-encashable. ●  AJIO reserves the right to cancel the orders placed by Eligible Users if the transaction is found to be of fraudulent nature."
+        },
+        {
+          "title": "MOV of ₹ 2,499/-",
+          "description": "Once per Year ●  In this offer you will get flat ₹500/- off on Lifestyle. ●  As part of the offer use promo code at the time of check out on Lifestyle platform. ●  Offer is applicable on minimum order value of ₹2,499/-. ●  Offer is not applicable at physical stores. ●  Offer cannot be clubbed with any other ongoing offer. ●  Offer is not applicable on Beauty, Watches, Sunglasses, Perfumes, Face mask, Jockey, Fahrenheit, Manyavar Products & Home and Living products. ●  Paytm shall not be liable nor responsible for any actions or inaction of service providers nor any breach of conditions, representations or warranties by the supplier or service providers and hereby expressly disclaim any and all responsibility. ●  Paytm reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "Discovery",
+          "description": "+"
+        },
+        {
+          "title": "Subscription",
+          "description": "Once per Year ●  The offer is applicable only on discovery+ App (for android users) or www.discoveryplus.in (for iOS users). ●  This voucher will enable a monthly free subscription of discovery + premium which will be renewed automatically for a total of 3 month free subscription. ●  This voucher will need successful payment authentication for activation. ●  The offer can be used once per user and cannot be clubbed with other offers. ●  This offer is non-refundable and cannot be redeemed for cash or credit, or exchanged for any other product. ●  Paytm and Discovery + reserve the right to modify or revoke the offer and attached terms & conditions, at any time, without notice. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same."
+        },
+        {
+          "title": "from Gritzo",
+          "description": "Once per Year ●  In this offer you will get flat ₹ 100/- off on Health Supplements from Gritzo. ●  As part of the offer use promo code PFGZ at the time to check out on Gritzo platform. ●  Offer cannot be clubbed with any other ongoing offer. ●  The offer will not be applicable to Flash Sales or Best price products. ●  All the return policy will remain the same as mentioned on the Gritzo website. ●  Paytm shall not be liable nor responsible for any actions or inaction of service providers nor any breach of conditions, representations or warranties by the supplier or service providers and hereby expressly disclaim any and all responsibility. ●  Paytm and Gritzo reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "Cinepolis",
+          "description": "Once per Year ●  In this offer you will get flat 26% off upto Rs.100 on Movie Tickets at Cinepolis. ●  The offer is valid on transactions undertaken on the website and app of Cinepolis. ●  Offer is only valid for cinemas listed on Cinepolis digital channels. exchanged in any form whatsoever. ●  Once the booking is completed, the confirmation e-mail/SMS received from Cinepolis, needs to be scanned/exchanged with cinema representatives to enter the cinema premises. ●  Paytm and Cinepolis reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "purchase",
+          "description": "Once per Year ●  In this offer you will get flat ₹ 100/- off on any Ferns N Petals purchase. ●  The offer is applicable on all transactions on Ferns N Petals website and app only and is not valid on Ferns and Petals stores. ●  As part of the offer 1 promo code will be issued to you per month and can be used only once during the month. ●  Offer cannot be clubbed with any other ongoing offer. ●  Paytm reserve the right to change offer terms at any time without prior notice to the customer. ●  Paytm shall not be liable nor responsible for any actions or inaction of service providers nor any breach of conditions, representations or warranties by the supplier or service providers and hereby expressly disclaim any and all responsibility. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "Flower Aura",
+          "description": "●  The offer is applicable only for one time per user. ●  Offer cannot be clubbed with any other ongoing offer. ●  Paytm reserve the right to change offer terms at any time without prior notice to the customer. ●  Any dispute regarding delivery, service, suitability, merchantability, availability or quality of the offer/or product/services availed under this offer must be addressed in writing, by the cardholder directly to Helpdesk.paytmfirst@paytm.com. MasterCard or the issuing bank will not be liable for the same"
+        },
+        {
+          "title": "product/services",
+          "description": "availed under this offer must be addressed in writing, by the cardholder directly to"
+        }
+      ]
+    }
+  ]
 }
