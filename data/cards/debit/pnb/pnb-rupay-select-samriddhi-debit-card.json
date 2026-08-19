@@ -1,0 +1,99 @@
+{
+  "id": "pnb-rupay-select-samriddhi-debit-card",
+  "name": "PNB RuPay Select Samriddhi Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "tier": "Select",
+  "slug": "pnb-rupay-select-samriddhi-debit-card",
+  "annualFee": 0,
+  "joiningFee": 0,
+  "isLifetimeFree": false,
+  "colorScheme": "RuPay blue + PNB maroon",
+  "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+  "description": "PNB RuPay Select Samriddhi Debit Card is a PNB RUPAY SELECT SAMRIDDHI from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "benefits": [
+    {
+      "category": "insurance",
+      "title": "Personal Accidental Insurance Cover",
+      "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": true,
+      "valueNum": 1000000,
+      "valueStr": "Rs. 1,000,000"
+    },
+    {
+      "category": "lounge",
+      "title": "Airport Lounge Access",
+      "description": "The RuPay Select Debit Card provides cardholders with one (1) time domestic airport lounge access in current quarter in any of the participating Domestic Airport lounges on spending minimum of Rs.5000 through POS/E-com in last quarter. International lounge program provides access to cardholders Two ",
+      "valueStr": "Included",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    }
+  ],
+  "benefitIcons": [
+    "lounge",
+    "travel",
+    "insurance",
+    "health",
+    "rewards",
+    "dining",
+    "movie",
+    "shopping",
+    "concierge"
+  ],
+  "estimatedBenefitValue": "₹18,000–22,000/yr full; ~₹6-8K realistic",
+  "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 500,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 500,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 500,
+      "note": "Excluding GST"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 50000,
+    "posEcomPerDay": 150000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Farmers - As per National Policy for Farmers 2007, maintaining the minimum Half-Yealy Avg. Balance of Rs.25,000/-. Kisan Savings Account should be opened only for farmers and account opened under eligible schemes. Age criteria: 18 years and above The"
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-samriddhi.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=eJPH4F8a7lx0eT5KXmK2pg%3D%3D",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

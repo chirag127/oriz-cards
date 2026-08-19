@@ -1,0 +1,73 @@
+{
+  "id": "pnb-mastercard-platinum-grow-debit-card",
+  "name": "PNB MasterCard Platinum Grow Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "MasterCard",
+  "tier": "Platinum",
+  "joiningFee": null,
+  "annualFee": null,
+  "feeWaiverSpend": null,
+  "description": "PNB MasterCard Platinum Grow Debit Card is a PNB MASTERCARD PLATINUM GROW from Punjab National Bank. International usage; ATM limit Rs. 10,000/day, PoS/eCom limit Rs. 10,000/day. Valid 7 years.",
+  "tagline": "MasterCard Platinum debit card from PNB — international usage with ATM + POS access.",
+  "benefits": [],
+  "benefitIcons": [
+    "shopping"
+  ],
+  "minIncome": null,
+  "minCreditScore": null,
+  "colorScheme": "black and green",
+  "isLifetimeFree": false,
+  "applyUrl": "https://pnb.bank.in/",
+  "slug": "pnb-mastercard-platinum-grow-debit-card",
+  "variant": "MASTERCARD PLATINUM INTERNATIONAL DEBIT CARD",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": false,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 250,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 250,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 250,
+      "note": "Excluding GST"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 10000,
+    "posEcomPerDay": 10000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Account can be opened by a minor of any age through his/her natural or legally appointed guardian. Guardian must have PNB Savings A/c and account opened under eligible schemes. Minors above the age of 10 years (on obtaining satisfactory proof of age)"
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-mastercard-platinum-grow.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=LsAhvPfXYmXTdOa4UsNw4w%3D%3D",
+  "customerCareNumber": "1800 180 2222",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "pnb-rupay-business-platinum-ncmc-debit-card",
+  "name": "RuPay Business Platinum NCMC Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "tier": "Platinum",
+  "joiningFee": null,
+  "annualFee": null,
+  "feeWaiverSpend": null,
+  "description": "RuPay Business Platinum NCMC Debit Card is a RuPay Business Platinum NCMC Debit Card from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+  "benefits": [
+    {
+      "category": "insurance",
+      "title": "Personal Accidental Insurance Cover",
+      "description": "Insurance Coverage – Accidental Death & Permanent total disability Upto- Rs 10,00,000/-",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": true,
+      "valueNum": 1000000,
+      "valueStr": "Rs. 1,000,000"
+    }
+  ],
+  "benefitIcons": [
+    "lounge",
+    "insurance",
+    "travel"
+  ],
+  "minIncome": null,
+  "minCreditScore": null,
+  "colorScheme": "dark blue and gold",
+  "isLifetimeFree": false,
+  "applyUrl": "https://pnb.bank.in/",
+  "slug": "pnb-rupay-business-platinum-ncmc-debit-card",
+  "variant": "Business Platinum International Contactless NCMC Debit Card",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 250,
+      "note": "Primary card; add-on card also charged"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 250
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 250
+    }
+  ],
+  "limits": {
+    "atmPerDay": 50000,
+    "posEcomPerDay": 300000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Domestic Acceptance Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "The card can be issued in current account under following categories Sole proprietorship Partnership concerns (Authorized Individual) Private limited companies (Authorized Individual) Public limited companies (Authorized Individual)"
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=eLdAHi1ALm2YaLBpgmkr7A%3D%3D",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "customerCareNumber": "1800 180 2222",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

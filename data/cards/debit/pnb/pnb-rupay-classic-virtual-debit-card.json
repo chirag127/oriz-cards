@@ -1,0 +1,68 @@
+{
+  "id": "pnb-rupay-classic-virtual-debit-card",
+  "name": "RuPay Classic Virtual Debit Card",
+  "tier": "Classic",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "slug": "pnb-rupay-classic-virtual-debit-card",
+  "annualFee": 0,
+  "joiningFee": 0,
+  "isLifetimeFree": true,
+  "colorScheme": "RuPay blue",
+  "tagline": "RuPay Classic debit card from PNB — domestic usage with ATM + POS access.",
+  "description": "RuPay Classic Virtual Debit Card is a Rupay Classic Virtual Debit Card from Punjab National Bank. Domestic usage; ATM limit Rs. 60,000/day, bank-defined PoS/eCom limits. Valid 7 years.",
+  "benefits": [],
+  "benefitIcons": [
+    "rewards"
+  ],
+  "estimatedBenefitValue": "Standard debit benefits",
+  "variant": "Classic Virtual Debit Card",
+  "usage": "Domestic",
+  "internationalUsable": false,
+  "contactless": false,
+  "ncmc": false,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 0,
+      "note": "Nil"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 0,
+      "note": "Nil"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 0,
+      "note": "Nil"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 60000
+  },
+  "features": [],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "All eligible PNB customers using PNB One App & Retail Internet Banking Services can apply for Rupay Classic Virtual Debit Card"
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=pBq1bKW%2BDSTOjPkb8d2bXg%3D%3D",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

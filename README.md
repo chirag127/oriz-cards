@@ -61,7 +61,20 @@ flowchart TD
 src/                     # Astro pages, React islands, content collections
   content/cards/schema.ts   # maximal card schema
 data/cards/              # per-issuer, per-category card JSON  (the catalog)
+data/cards/debit/pnb/    # PNB debit catalog — scraped from pnb.bank.in/card-index.html
+                         #   pdf/           benefit PDFs per card
+                         #   manifest.json  scrape output (tab text + pdf mapping)
+                         #   scrape_pnb_cards.py / build_pnb_cards.py  (repo root)
 knowledge/               # app-specific decisions, runbooks, services
+
+## PNB debit-catalog pipeline
+
+`scrape_pnb_cards.py` fetches [pnb.bank.in/card-index.html](https://pnb.bank.in/card-index.html),
+resolves each card tab's benefits PDF (direct `uploadfile/` link → "Benefits Cured with
+Card" fid → shared RuPay contactless doc), downloads them into
+`data/cards/debit/pnb/pdf/`, and writes `manifest.json`. `build_pnb_cards.py` parses
+that manifest into schema-compliant per-card JSONs and upgrades `data/cards.json`.
+Re-run both to refresh (idempotent).
 tests/                   # vitest + playwright
 astro.config.mjs         # shell() → financial-cards.oriz.in
 wrangler.toml            # Cloudflare Pages deploy config

@@ -1,0 +1,68 @@
+{
+  "id": "pnb-pay-wearable-rupay-debit",
+  "name": "PNB Pay Wearable RuPay Debit Card",
+  "tier": "Classic",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "slug": "pnb-pay-wearable-rupay-debit",
+  "annualFee": 0,
+  "joiningFee": 0,
+  "isLifetimeFree": true,
+  "colorScheme": "RuPay blue",
+  "tagline": "RuPay Classic debit card from PNB — domestic usage with NCMC transit.",
+  "description": "PNB Pay -(banks' Wearable Products Based On RuPay On-the-go Technology Debit Card is a RuPay debit card from Punjab National Bank. Domestic usage; ATM limit bank-defined limits, PoS/eCom limit Rs. 60,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "benefits": [],
+  "benefitIcons": [
+    "rewards"
+  ],
+  "estimatedBenefitValue": "Standard debit benefits",
+  "variant": "The product shall be available in three forms – PVC Keychain, Leather Keychain and Mobile Sticker. It will be a Debit Card at back-end (linked to an account)",
+  "usage": "Domestic",
+  "internationalUsable": false,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "note": "Leather Keychain: RS 450 + taxes PVC keychain: RS 400 + taxes Mobile sticker: RS"
+    },
+    {
+      "label": "Annual Fee",
+      "note": "Leather Keychain: RS 150 + taxes PVC keychain: RS 150 + taxes Mobile sticker: RS"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 0,
+      "note": "Nil"
+    }
+  ],
+  "limits": {
+    "posEcomPerDay": 60000
+  },
+  "features": [
+    "Can be used at all POS terminals, E Com Websites / Apps across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Any individual having KYC compliant account with the our bank and is otherwise eligible for Debit Card Issuance (including Savings and Current account holders)."
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=V1Ijtq07O3VCXTFrbpOcYQ%3D%3D",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

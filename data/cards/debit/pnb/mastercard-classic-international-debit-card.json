@@ -1,0 +1,59 @@
+{
+  "name": "MasterCard Classic International Debit Card",
+  "cardType": "debit",
+  "network": "MasterCard",
+  "tier": "Classic",
+  "variant": "Classic Debit Card (Contactless)",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": false,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 250,
+      "note": "Primary card; add-on card also charged"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 250
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 150
+    }
+  ],
+  "limits": {
+    "atmPerDay": 25000,
+    "posEcomPerDay": 60000
+  },
+  "benefits": [],
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true
+  },
+  "description": "MasterCard Classic International Debit Card is a MasterCard Classic International Debit Card from Punjab National Bank. International usage; ATM limit Rs. 25,000/day, PoS/eCom limit Rs. 60,000/day. Valid 7 years.",
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=wMVk1vduDPfmpX%2Bgg8yX0w%3D%3D",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "id": "mastercard-classic-international-debit-card",
+  "slug": "mastercard-classic-international-debit-card",
+  "tagline": "MasterCard Classic debit card from PNB — international usage with ATM + POS access.",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

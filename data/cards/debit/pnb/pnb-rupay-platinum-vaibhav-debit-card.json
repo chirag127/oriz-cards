@@ -1,0 +1,97 @@
+{
+  "id": "pnb-rupay-platinum-vaibhav-debit-card",
+  "name": "PNB RuPay Platinum Vaibhav Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "tier": "Platinum",
+  "joiningFee": 300,
+  "annualFee": 500,
+  "feeWaiverSpend": null,
+  "description": "PNB RuPay Platinum Vaibhav Debit Card is a PNB RUPAY PLATINUM VAIBHAV from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+  "benefits": [
+    {
+      "category": "insurance",
+      "title": "Personal Accidental Insurance Cover",
+      "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": true,
+      "valueNum": 200000,
+      "valueStr": "Rs. 200,000"
+    },
+    {
+      "category": "lounge",
+      "title": "Airport Lounge Access",
+      "description": "Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders Two (2) times per calendar year per card in any of the participating Domestic Airport lounges. For updated lounge list, refer to NPCI RuPay Website",
+      "valueStr": "Included",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    }
+  ],
+  "benefitIcons": [
+    "rewards",
+    "lounge",
+    "insurance",
+    "shopping",
+    "milestone"
+  ],
+  "minIncome": null,
+  "minCreditScore": null,
+  "colorScheme": "gold and maroon",
+  "isLifetimeFree": false,
+  "applyUrl": "https://pnb.bank.in/",
+  "slug": "pnb-rupay-platinum-vaibhav-debit-card",
+  "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 300,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 500,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 300,
+      "note": "Excluding GST"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 50000,
+    "posEcomPerDay": 150000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Either Senior Citizen or Pensioners or both maintaining Monthly Average Balance of Rs.50,000/- or above and account opened under eligible schemes."
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-vaibhav.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=L0x0zfQoyOMRwcj2fJ9F/w%3D%3D",
+  "customerCareNumber": "1800 180 2222",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

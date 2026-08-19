@@ -1,0 +1,78 @@
+{
+  "id": "pnb-rupay-ncmc-platinum-domestic-debit-card",
+  "name": "RuPay NCMC Platinum Domestic Debit Card",
+  "tier": "Platinum",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "slug": "pnb-rupay-ncmc-platinum-domestic-debit-card",
+  "annualFee": 0,
+  "joiningFee": 0,
+  "isLifetimeFree": true,
+  "colorScheme": "RuPay blue",
+  "tagline": "RuPay Platinum debit card from PNB — domestic usage with NCMC transit.",
+  "description": "RuPay NCMC Platinum Domestic Debit Card is a RuPay NCMC Platinum Domestic Debit Card from Punjab National Bank. Domestic usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "benefits": [
+    {
+      "category": "insurance",
+      "title": "Personal Accidental Insurance Cover",
+      "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": true,
+      "valueNum": 200000,
+      "valueStr": "Rs. 200,000"
+    }
+  ],
+  "benefitIcons": [
+    "rewards"
+  ],
+  "estimatedBenefitValue": "Standard debit benefits",
+  "variant": "Platinum Domestic Contactless NCMC Debit Card",
+  "usage": "Domestic",
+  "internationalUsable": false,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 250,
+      "note": "Primary card; add-on card also charged"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 250
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 250
+    }
+  ],
+  "limits": {
+    "atmPerDay": 50000,
+    "posEcomPerDay": 300000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=200F0YYXQIW6L9grNbQsng%3D%3D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

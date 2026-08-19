@@ -1,0 +1,85 @@
+{
+  "id": "pnb-mastercard-world-grand-debit-card",
+  "name": "PNB MasterCard World Grand Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "MasterCard",
+  "tier": "World",
+  "joiningFee": 2500,
+  "annualFee": 3000,
+  "feeWaiverSpend": null,
+  "description": "PNB MasterCard World Grand Debit Card is a PNB MASTERCARD WORLD GRAND from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. Valid 7 years.",
+  "tagline": "MasterCard World debit card from PNB — international usage with ATM + POS access.",
+  "benefits": [
+    {
+      "category": "lounge",
+      "title": "Airport Lounge Access",
+      "description": "Complimentary Airport lounge access. Twice (2) (1 Cardholder + 1 Guest) per calendar quarter per card on domestic lounges. For updated lounge list, refer to MasterCard official website.",
+      "valueStr": "Complimentary",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    }
+  ],
+  "benefitIcons": [
+    "lounge",
+    "concierge",
+    "travel"
+  ],
+  "minIncome": null,
+  "minCreditScore": null,
+  "colorScheme": "dark red and gold",
+  "isLifetimeFree": false,
+  "applyUrl": "https://pnb.bank.in/",
+  "slug": "pnb-mastercard-world-grand-debit-card",
+  "variant": "MASTERCARD WORLD INTERNATIONAL DEBIT CARD",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": false,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 2500,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 3000,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 2500,
+      "note": "Excluding GST"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 150000,
+    "posEcomPerDay": 500000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "All Individuals above 18 years of age maintaining Monthly Average Balance of Rs.5,00,000/- and account opened under eligible schemes."
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-mastercard-world-grand.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=7SrMKSfJo/QSWYu2GcRz9g%3D%3D",
+  "customerCareNumber": "1800 180 2222",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

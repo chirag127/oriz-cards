@@ -1,0 +1,72 @@
+{
+  "name": "MasterCard Business Debit Card",
+  "cardType": "debit",
+  "network": "MasterCard",
+  "tier": "Classic",
+  "variant": "For Business concerns",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": false,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 250,
+      "note": "Primary card; add-on card also charged"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 500
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 250
+    }
+  ],
+  "limits": {
+    "atmPerDay": 75000,
+    "posEcomPerDay": 500000
+  },
+  "benefits": [
+    {
+      "category": "lounge",
+      "title": "Airport Lounge Access",
+      "description": "Complimentary Airport lounge access. Twice (2) per calendar quarter per card on domestic lounges. For upgraded lounge list, refer to MasterCard website.",
+      "valueStr": "Complimentary",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    }
+  ],
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "The card can be issued in current account under following categories - Sole proprietorship Partnership concerns (Authorized Individual) Private limited companies (Authorized Individual) Public limited companies (Authorized Individual)"
+    ]
+  },
+  "description": "MasterCard Business Debit Card is a MasterCard Business Debit Card from Punjab National Bank. International usage; ATM limit Rs. 75,000/day, PoS/eCom limit Rs. 500,000/day. Valid 7 years.",
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=k7HBroM6fwOZljNj1C8BYA%3D%3D",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "id": "mastercard-business-debit-card",
+  "slug": "mastercard-business-debit-card",
+  "tagline": "MasterCard Classic debit card from PNB — international usage with ATM + POS access.",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

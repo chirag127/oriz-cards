@@ -1,0 +1,101 @@
+{
+  "id": "pnb-rupay-select-government-imperial-debit-card",
+  "name": "PNB RuPay Select Government Imperial Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "tier": "Select",
+  "slug": "pnb-rupay-select-government-imperial-debit-card",
+  "annualFee": 0,
+  "joiningFee": 0,
+  "isLifetimeFree": false,
+  "colorScheme": "RuPay blue + PNB maroon",
+  "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+  "description": "PNB RuPay Select Government Imperial Debit Card is a PNB RUPAY SELECT GOVERNMENT IMPERIAL from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "benefits": [
+    {
+      "category": "insurance",
+      "title": "Personal Accidental Insurance Cover",
+      "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": true,
+      "valueNum": 1000000,
+      "valueStr": "Rs. 1,000,000"
+    },
+    {
+      "category": "lounge",
+      "title": "Airport Lounge Access",
+      "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders two (2) times per Calendar Quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time calendar Quarter per card in any of th",
+      "valueStr": "Included",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    }
+  ],
+  "benefitIcons": [
+    "lounge",
+    "travel",
+    "golf",
+    "insurance",
+    "health",
+    "rewards",
+    "dining",
+    "movie",
+    "shopping",
+    "concierge",
+    "milestone"
+  ],
+  "estimatedBenefitValue": "₹52,000–58,000/yr full; ~₹16-22K realistic (flagship, incl. golf)",
+  "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 600,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 900,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 600,
+      "note": "Excluding GST"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 150000,
+    "posEcomPerDay": 500000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Account opened under PNB Salary Saving Scheme for Central Government Employees (Group A)"
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-government-imperial.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=Mf0nasjwR4oPD%2BiZl3ul2w%3D%3D",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

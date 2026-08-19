@@ -162208,49 +162208,40 @@
   },
   {
     "id": "pnb-ru-pay-select-neo-debit-card",
-    "name": "PNB RuPay Select NEO International Debit Card",
-    "tagline": "International RuPay Select with travel perks",
-    "description": "The PNB RuPay Select NEO International Debit Card is a premium international debit card offering domestic and international lounge access, personal accident cover, and NCMC enabled contactless payments. Ideal for PNB customers who travel internationally.",
+    "name": "PNB RuPay Select Neo Debit Card",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Neo Debit Card is a PNB RUPAY SELECT NEO from Punjab National Bank. International usage; ATM limit Rs. 75,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "network": "RuPay",
     "cardType": "debit",
     "tier": "Select",
-    "variant": "NEO",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
     "usage": "International",
     "bin": "607",
     "material": "Plastic",
     "colorScheme": "Sky blue-indigo gradient",
     "virtualCardAvailable": true,
     "eligibility": {
-      "employmentType": [
-        "Salaried",
-        "Self-Employed"
-      ],
-      "minAge": 18,
-      "maxAge": 65,
       "existingAccountRequired": true,
-      "accountType": [
-        "Savings",
-        "Current"
-      ],
-      "invitationOnly": false,
       "notes": [
-        "Available to PNB account holders",
-        "International usage enabled by default"
+        "Salaried Individual (Regular & contractual employees of Government Department, Public Sector Undertaking, MNCs, Educational Institutions, Corporate, any industrial establishments, etc.) drawing a Monthly Gross Salary Rs.10,000/- to Rs.25,000/- and ac"
       ]
     },
     "charges": [
       {
         "label": "Issuance Fee",
-        "amount": 0,
-        "amountWithGst": 0,
-        "note": "Free issuance"
+        "amount": 500,
+        "note": "Excluding GST"
       },
       {
         "label": "Annual Fee",
         "amount": 500,
-        "amountWithGst": 590,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 500,
         "note": "Excluding GST"
       }
     ],
@@ -162274,80 +162265,26 @@
       "physicalStatementCharge": 100
     },
     "limits": {
-      "atmPerDay": 150000,
-      "posEcomPerDay": 500000,
-      "contactlessPerTxn": 5000,
-      "contactlessDailyLimit": 50000,
-      "upiDailyLimit": 100000
+      "atmPerDay": 75000,
+      "posEcomPerDay": 500000
     },
     "benefits": [
-      "Domestic airport lounge: 2 visits/year (1 per half-year) — worth ~₹2,400",
-      "International airport lounge: 2 visits/year (1 per half-year) — worth ~₹5,000",
-      "1 annual OTT subscription (Amazon Prime or Hotstar) — worth ~₹1,499",
-      "Personal accident / accidental death cover up to ₹10 lakh",
-      "1 complimentary health check-up per year (SRL/Thyrocare) — worth ~₹1,800",
-      "Cult.fit 90-day Live home-workout membership — worth ~₹1,200",
-      "1 SPA/salon session per year (Four Fountains/Kairali/Lakmé) — worth ~₹2,000",
-      "Swiggy One 3-month membership — worth ~₹450",
-      "BookMyShow voucher ₹250/year",
-      "Kalyan Jewellers voucher ₹2,000/year",
-      "Myntra voucher ₹500/year",
-      "24×7 multilingual concierge (Hindi/English + regional)",
-      "Rotating NPCI merchant offers (domestic + international)",
-      {
-        "category": "lounge",
-        "title": "Domestic Airport Lounge Access",
-        "description": "Complimentary domestic airport lounge access at participating lounges across India.",
-        "valueStr": "4 visits/year",
-        "valueNum": 4,
-        "frequencyStr": "1 per quarter",
-        "frequencyPerYear": 4,
-        "annualValue": 8000,
-        "conditions": [
-          "1 visit per quarter",
-          "Valid at participating domestic lounges",
-          "Card must be presented for entry"
-        ],
-        "isSellable": false,
-        "sellValue": 0,
-        "isActive": true,
-        "activationRequired": false
-      },
-      {
-        "category": "lounge",
-        "title": "International Airport Lounge Access",
-        "description": "Complimentary international airport lounge access at participating lounges worldwide.",
-        "valueStr": "2 visits/year",
-        "valueNum": 2,
-        "frequencyStr": "2 per year",
-        "frequencyPerYear": 2,
-        "annualValue": 6000,
-        "conditions": [
-          "2 visits per year",
-          "Valid at participating international lounges",
-          "Card must be presented for entry"
-        ],
-        "isSellable": false,
-        "sellValue": 0,
-        "isActive": true,
-        "activationRequired": false
-      },
       {
         "category": "insurance",
-        "title": "Personal Accident Cover",
-        "description": "Personal accident insurance cover for cardholders.",
-        "valueStr": "₹10 lakh",
-        "valueNum": 1000000,
-        "frequencyStr": "Annual",
-        "frequencyPerYear": 1,
-        "annualValue": 5000,
-        "conditions": [
-          "Cover valid while using the card",
-          "Claim process through PNB insurance partner",
-          "Nominee must be registered"
-        ],
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
         "isSellable": false,
-        "sellValue": 0,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "The RuPay Select Debit Card provides cardholders with one (1) time domestic airport lounge access in current quarter in any of the participating Domestic Airport lounges on spending minimum of Rs.5000 through POS/E-com in last quarter. International lounge program provides access to cardholders two ",
+        "valueStr": "Included",
+        "isSellable": false,
         "isActive": true,
         "activationRequired": false
       }
@@ -162362,16 +162299,10 @@
     "milestoneBonuses": [],
     "feeWaivers": [],
     "features": [
-      "NCMC enabled for metro and transit payments",
-      "Contactless payments up to ₹5,000",
-      "EMV chip security",
-      "International acceptance",
-      "High ATM and POS limits",
-      "Airport lounge access",
-      "Personal accident cover"
+      "Personalised Debit Card Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
     ],
-    "validity": "5 years",
-    "contactless": true,
+    "validity": "7 years",
+    "contactless": false,
     "ncmc": true,
     "gradientColors": [
       "#0EA5E9",
@@ -162401,7 +162332,7 @@
       "Daily Use"
     ],
     "dataQuality": {
-      "status": "verified",
+      "status": "auto-scraped",
       "verifiedFields": [
         "charges",
         "limits",
@@ -162409,13 +162340,13 @@
       ],
       "unverifiedFields": [],
       "sourceUrls": [
-        "https://www.pnbindia.in"
+        "https://pnb.bank.in/card-index.html"
       ],
-      "lastVerified": "2026-04-01"
+      "lastVerified": "2026-08-19"
     },
     "customerCareNumber": "1800 180 2222",
     "applyUrl": "https://www.pnbindia.in",
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-08-19",
     "type": "debit",
     "slug": "pnb-ru-pay-select-neo-debit-card",
     "benefitIcons": [
@@ -162430,7 +162361,9 @@
       "concierge",
       "milestone"
     ],
-    "estimatedBenefitValue": "₹18,000–22,000/year (full redemption); ~₹6,000–8,000 realistic"
+    "estimatedBenefitValue": "₹18,000–22,000/year (full redemption); ~₹6,000–8,000 realistic",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-neo.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=pzi8GocaHyf6LL159W58mw%3D%3D"
   },
   {
     "id": "pnb-rupay-platinum-debit-card",
@@ -193757,18 +193690,19 @@
     "joiningFee": 250,
     "annualFee": 250,
     "feeWaiverSpend": null,
-    "description": "RuPay debit card for everyday domestic and international use offering ₹1 lakh ATM withdrawal limit and ₹3 lakh daily POS/online purchase limit. Includes personal accident insurance of ₹2 lakh and complimentary airport lounge access 3 times per quarter domestically.",
-    "tagline": "Reliable card for daily spends and travel",
+    "description": "RuPay PNB Palaash Debit Card - Recycled PVC Debit Card is a Rupay PNB PALAASH DEBIT CARD - RECYCLED PVC DEBIT CARD from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Daily ATM withdrawal limit of ₹1 lakh",
-      "Combined PoS/eCommerce limit of ₹3 lakh per day",
-      "Personal accident insurance of ₹2 lakh",
-      "3 complimentary domestic airport lounge visits per quarter",
-      "3 complimentary international airport lounge visits per year",
-      "Global acceptance at ATMs and PoS terminals",
-      "Contactless tap-to-pay up to ₹5,000",
-      "NCMC-enabled for public transport",
-      "Card validity: 7 years"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      }
     ],
     "benefitIcons": [
       "travel",
@@ -193780,11 +193714,58 @@
     "colorScheme": "green and gold",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-rupay-palaash-debit-card"
+    "slug": "pnb-rupay-palaash-debit-card",
+    "variant": "Rupay Platinum NCMC Contactless Debit Card",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Customers who are eligible for RuPay Platinum Debit Card issuance."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=IsMQyh6GEIYxlZ7VyK5XYg%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-women-power-platinum-debit-card",
-    "name": "PNB RuPay Women Power Platinum Debit Card",
+    "name": "RuPay Women Power Platinum Debit Card",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "cardType": "debit",
@@ -193793,18 +193774,19 @@
     "joiningFee": 250,
     "annualFee": 250,
     "feeWaiverSpend": null,
-    "description": "Debit card exclusively designed for women PNB customers on RuPay Platinum with ₹1 lakh ATM limit and ₹3 lakh purchase limit. Includes ₹2 lakh accident insurance, quarterly lounge access, tap-to-pay, and NCMC functionality.",
-    "tagline": "Empowering women with premium banking privileges",
+    "description": "RuPay Women Power Platinum Debit Card is a RuPay Women Power Platinum Debit Card from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Daily ATM withdrawal limit of ₹1 lakh",
-      "Combined PoS/eCommerce limit of ₹3 lakh per day",
-      "Personal accident insurance of ₹2 lakh",
-      "1 complimentary domestic airport or railway lounge per quarter",
-      "2 complimentary international airport lounge visits per year",
-      "Contactless tap-to-pay up to ₹5,000 without PIN",
-      "NCMC-enabled for public transport",
-      "Offline transactions at select merchants",
-      "Card validity: 7 years"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/- Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of accid",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -193816,7 +193798,55 @@
     "colorScheme": "pink and gold",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-rupay-women-power-platinum-debit-card"
+    "slug": "pnb-rupay-women-power-platinum-debit-card",
+    "variant": "Platinum and Contactless",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "PNB Customer - Women Individual"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=XqbNX4BHGrwul6w5P3XUhQ%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-antah-drishthi-braille-debit-card",
@@ -193829,19 +193859,9 @@
     "joiningFee": 0,
     "annualFee": 150,
     "feeWaiverSpend": null,
-    "description": "Specially designed Classic NCMC debit card for visually impaired individuals featuring Braille dots, a tactile notch for orientation, and high-contrast colors. Domestic-use-only card with ₹25,000 ATM limit and ₹60,000 POS/eCommerce limit per day.",
-    "tagline": "Financial inclusion for visually impaired banking customers",
-    "benefits": [
-      "Raised Braille dots spelling PNB for easy identification",
-      "Rounded notch for ATM/PoS orientation",
-      "High-contrast colors for readability",
-      "Daily ATM withdrawal limit of ₹25,000",
-      "Combined PoS/eCommerce limit of ₹60,000",
-      "Contactless tap-to-pay enabled",
-      "NCMC-enabled for public transport",
-      "Domestic use only",
-      "Card validity: 7 years"
-    ],
+    "description": "RuPay PNB Antah Drishti Braille Debit Card is a RuPay PNB ANTAH DRISHTI Braille Debit Card from Punjab National Bank. Domestic usage; ATM limit Rs. 25,000/day, PoS/eCom limit Rs. 60,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Classic debit card from PNB — domestic usage with NCMC transit.",
+    "benefits": [],
     "benefitIcons": [
       "shopping"
     ],
@@ -193850,11 +193870,65 @@
     "colorScheme": "high-contrast blue and white",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-rupay-antah-drishthi-braille-debit-card"
+    "slug": "pnb-rupay-antah-drishthi-braille-debit-card",
+    "variant": "Classic Contactless NCMC Debit Card",
+    "usage": "Domestic",
+    "internationalUsable": false,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "note": "Primary Debit Card – NIL"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 150
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 150
+      }
+    ],
+    "limits": {
+      "atmPerDay": 25000,
+      "posEcomPerDay": 60000
+    },
+    "features": [
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India",
+      "Raised Braille Dots (PNB in Braille) - The “PNB” is prominently embossed on the card, making it easy for visually impaired and blind customers to differentiate between PNB and other Banks` Cards",
+      "Rounded Notch – The card has a rounded notch on the opposite side of the chip",
+      "This facilitates the card holder to know about the direction of the card while dipping the same in ATM / POS. Glossy Spot UV lamination effect – The card have a glossy spot UV lamination effect with raised texture on the Bank`s logo and silk screen rough spot UV on the contactless symbol",
+      "This helps visually impaired and blind customers to locate the bank`s logo easily and read the card`s contactless symbol, making it easy for them to use the card",
+      "Contrasting colours – The card have contrasting colours for easier reading and the colours used on the card are easily distinguishable by visually impaired and blind customers, making it easy for them to read the card details",
+      "Rupay National Common Mobility Card (NCMC) The RuPay National Common Mobility Card (NCMC) is a contactless payment solution designed to facilitate seamless transactions across transport, retail, and parking",
+      "Launched with the vision of “One Nation One Card,” this card aims to integrate multiple payment needs into a single card, promoting convenience and efficiency for users",
+      "RuPay NCMC is part of India`s initiative to create a unified and interoperable payment system"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Individual Saving / Current account Customers who are Visually Impaired and Blind persons.Branches to ensure to update the status of all such customers to ‘BLIND’ in CRM."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=ivgCwSo2o7gpqx5Er%2BMCag%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-business-platinum-ncmc-debit-card",
-    "name": "PNB RuPay Business Platinum NCMC Debit Card",
+    "name": "RuPay Business Platinum NCMC Debit Card",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "cardType": "debit",
@@ -193863,17 +193937,19 @@
     "joiningFee": null,
     "annualFee": null,
     "feeWaiverSpend": null,
-    "description": "Business debit card for sole proprietorships, private/public companies, and partnerships on RuPay Platinum NCMC. Provides ₹1 lakh ATM limit, ₹3 lakh purchase limit, ₹10 lakh accident insurance, lounge access, and NCMC offline transport functionality.",
-    "tagline": "Smart business banking with NCMC convenience",
+    "description": "RuPay Business Platinum NCMC Debit Card is a RuPay Business Platinum NCMC Debit Card from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Daily ATM withdrawal limit of ₹1 lakh",
-      "Combined PoS/eCommerce limit of ₹3 lakh per day",
-      "Personal accident insurance up to ₹10 lakh",
-      "Complimentary domestic and international airport lounge access",
-      "NCMC-enabled for offline public transport transactions",
-      "Contactless payment for quick transactions",
-      "Available to sole proprietorships, companies, and partnerships",
-      "Card validity: 7 years"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Insurance Coverage – Accidental Death & Permanent total disability Upto- Rs 10,00,000/-",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -193885,7 +193961,55 @@
     "colorScheme": "dark blue and gold",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-rupay-business-platinum-ncmc-debit-card"
+    "slug": "pnb-rupay-business-platinum-ncmc-debit-card",
+    "variant": "Business Platinum International Contactless NCMC Debit Card",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Domestic Acceptance Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "The card can be issued in current account under following categories Sole proprietorship Partnership concerns (Authorized Individual) Private limited companies (Authorized Individual) Public limited companies (Authorized Individual)"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=eLdAHi1ALm2YaLBpgmkr7A%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-farmer-samridhi-select-debit-card",
@@ -193956,20 +194080,28 @@
     "joiningFee": 300,
     "annualFee": 500,
     "feeWaiverSpend": null,
-    "description": "Debit card for senior citizens and pensioners maintaining ₹50,000 monthly average balance in the Vaibhav Savings Account. Offers reward points, OTT memberships, Flipkart/BookMyShow vouchers, wellness benefits, and 2 domestic lounge visits per year.",
-    "tagline": "Premium rewards and wellness for senior citizens",
+    "description": "PNB RuPay Platinum Vaibhav Debit Card is a PNB RUPAY PLATINUM VAIBHAV from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Daily ATM withdrawal limit of ₹50,000",
-      "Combined PoS/eCommerce limit of ₹1.5 lakh per day",
-      "Contactless payments up to ₹5,000 per day",
-      "100 Reward Points on account opening",
-      "400 Reward Points on first transaction",
-      "400 Reward Points in birthday month",
-      "2 complimentary domestic airport lounge visits per year",
-      "Complimentary OTT streaming memberships",
-      "Flipkart and BookMyShow vouchers",
-      "Personal accident insurance up to ₹2 lakh",
-      "Wellness programs and insurance coverage"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders Two (2) times per calendar year per card in any of the participating Domestic Airport lounges. For updated lounge list, refer to NPCI RuPay Website",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "rewards",
@@ -193983,11 +194115,60 @@
     "colorScheme": "gold and maroon",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-rupay-platinum-vaibhav-debit-card"
+    "slug": "pnb-rupay-platinum-vaibhav-debit-card",
+    "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 300,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 300,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 150000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Either Senior Citizen or Pensioners or both maintaining Monthly Average Balance of Rs.50,000/- or above and account opened under eligible schemes."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-vaibhav.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=L0x0zfQoyOMRwcj2fJ9F/w%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-platinum-vishawas-varishth-debit-card",
-    "name": "PNB RuPay Platinum Vishawas & Varishth Debit Card",
+    "name": "PNB RuPay Platinum Vishwas & Varishth Debit Card",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "cardType": "debit",
@@ -193996,16 +194177,28 @@
     "joiningFee": 250,
     "annualFee": 450,
     "feeWaiverSpend": null,
-    "description": "Debit card for senior citizens above 60 maintaining ₹10,000 monthly average balance. Provides ₹50,000 ATM limit, ₹1.5 lakh daily purchase limit, 1 domestic lounge visit per year, and ₹2 lakh personal accident insurance.",
-    "tagline": "Reliable banking for senior citizens aged 60+",
+    "description": "PNB RuPay Platinum Vishwas & Varishth Debit Card is a PNB RUPAY PLATINUM VISHWAS & VARISHTH from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Daily ATM withdrawal limit of ₹50,000",
-      "Combined PoS/eCommerce limit of ₹1.5 lakh per day",
-      "Contactless payments up to ₹5,000 per day",
-      "1 complimentary domestic airport lounge visit per year",
-      "Personal accident insurance up to ₹2 lakh",
-      "OTT streaming memberships",
-      "Wellness programs"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders One (1) time per calendar year per card in any of the participating Domestic Airport lounges. For updated lounge list, refer to NPCI RuPay Website",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -194017,7 +194210,56 @@
     "colorScheme": "blue and silver",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-rupay-platinum-vishawas-varishth-debit-card"
+    "slug": "pnb-rupay-platinum-vishawas-varishth-debit-card",
+    "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 450,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 150000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All individuals who have retired on superannuation / retired due to VRS from any Central Govt., Civil Ministries, State Govt., Local bodies, PSUs and eligible for Pension. Minimum pension of Rs.10000/- and above and account opened under eligible sche"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-vishwas-varishth.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=Uw2y%2BNiT3ZzpM5GuhNV3tw%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-excel-debit-card",
@@ -194030,28 +194272,28 @@
     "joiningFee": 500,
     "annualFee": 650,
     "feeWaiverSpend": null,
-    "description": "Mid-tier salaried debit card for customers earning ₹25,000–₹75,000 monthly. Provides semi-annual domestic and international lounge access plus ₹10 lakh accident insurance.",
-    "tagline": "Enhanced perks for mid-level salaried professionals",
+    "description": "PNB RuPay Select Excel Debit Card is a PNB RUPAY SELECT EXCEL from Punjab National Bank. International usage; ATM limit Rs. 75,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Domestic airport lounge: 2 visits/year (1 per half-year) — worth ~₹2,400",
-      "International airport lounge: 2 visits/year (1 per half-year) — worth ~₹5,000",
-      "1 annual OTT subscription (Amazon Prime or Hotstar) — worth ~₹1,499",
-      "Personal accident / accidental death cover up to ₹10 lakh",
-      "1 complimentary health check-up per year (SRL/Thyrocare) — worth ~₹1,800",
-      "Cult.fit 90-day Live home-workout membership — worth ~₹1,200",
-      "1 SPA/salon session per year (Four Fountains/Kairali/Lakmé) — worth ~₹2,000",
-      "Swiggy One 3-month membership — worth ~₹450",
-      "BookMyShow voucher ₹250/year",
-      "Kalyan Jewellers voucher ₹2,000/year",
-      "Myntra voucher ₹500/year",
-      "24×7 multilingual concierge (Hindi/English + regional)",
-      "Rotating NPCI merchant offers (domestic + international)",
-      "1 complimentary domestic airport lounge visit per 6 months",
-      "1 complimentary international airport lounge visit per 6 months",
-      "Personal accident insurance up to ₹10 lakh",
-      "Eligible for salaried individuals with monthly salary ₹25,000–₹75,000",
-      "Contactless payment capability",
-      "Global RuPay acceptance"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Half Year per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Half Year per card in an",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -194071,7 +194313,56 @@
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
     "slug": "pnb-rupay-select-excel-debit-card",
-    "estimatedBenefitValue": "₹18,000–22,000/year (full redemption); ~₹6,000–8,000 realistic"
+    "estimatedBenefitValue": "₹18,000–22,000/year (full redemption); ~₹6,000–8,000 realistic",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 650,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 75000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Salaried Individual (Regular & contractual employees of Government Department, Public Sector Undertaking, MNCs, Educational Institutions, Corporate, any industrial establishments, etc.) drawing a Monthly Gross Salary Above Rs.25,000/- to Rs.75,000/- "
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-excel.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=2tscAepep5Zo6I7Q%2BOpxmg%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-optima-debit-card",
@@ -194084,29 +194375,28 @@
     "joiningFee": 600,
     "annualFee": 800,
     "feeWaiverSpend": null,
-    "description": "PNB RuPay Select Optima Debit Card is the top-tier PNB RuPay Select debit card: QUARTERLY airport lounges (8/yr total), quarterly Cult.fit, an annual OTT + Gaana subscription, ₹10 lakh accident cover, and a large voucher stack (ClearTax, Kalyan, Decathlon, Reliance Digital, Myntra, Blinkit, Apollo, BookMyShow, MakeMyTrip). Benefits worth ~₹37-40K/year against a nominal debit-card fee.",
-    "tagline": "Optimised banking for high-earning salaried professionals",
+    "description": "PNB RuPay Select Optima Debit Card is a PNB RUPAY SELECT OPTIMA from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Domestic airport lounge: 4 visits/year (1 per quarter) — worth ~₹4,800",
-      "International airport lounge: 4 visits/year (1 per quarter) — worth ~₹10,000",
-      "ClearTax voucher ₹2,950/year",
-      "1 annual OTT subscription (Amazon Prime or Hotstar) — worth ~₹1,499",
-      "Personal accident / accidental death cover up to ₹10 lakh",
-      "1 complimentary health check-up per year (SRL/Thyrocare) — worth ~₹1,800",
-      "Apollo Pharmacy voucher ₹250 per half-year (₹500/yr)",
-      "Cult.fit 90-day Live membership every quarter — worth ~₹4,000/yr",
-      "1 SPA/salon session per year (Four Fountains/Kairali/Lakmé) — worth ~₹2,000",
-      "Blinkit voucher ₹250 per half-year (₹500/yr)",
-      "Swiggy One 3-month membership",
-      "Gaana annual subscription",
-      "BookMyShow voucher ₹250 per half-year (₹500/yr)",
-      "Decathlon voucher ₹500 per half-year (₹1,000/yr)",
-      "Kalyan Jewellers voucher ₹2,000/year",
-      "Myntra voucher ₹500 per half-year (₹1,000/yr)",
-      "Reliance Digital voucher ₹500 per half-year (₹1,000/yr)",
-      "MakeMyTrip: flat 10% off up to ₹1,500/year",
-      "24×7 multilingual concierge (Hindi/English + regional)",
-      "Rotating NPCI merchant offers (domestic + international)"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Quarter per card in any of",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -194127,7 +194417,56 @@
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
     "slug": "pnb-rupay-select-optima-debit-card",
-    "estimatedBenefitValue": "₹37,000–40,000/year (full redemption); ~₹12,000–16,000 realistic — top PNB RuPay Select tier"
+    "estimatedBenefitValue": "₹37,000–40,000/year (full redemption); ~₹12,000–16,000 realistic — top PNB RuPay Select tier",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 800,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Salaried Individual (Regular & contractual employees of Government Department, Public Sector Undertaking, MNCs, Educational Institutions, Corporate, any industrial establishments, etc.) drawing a Monthly Gross Salary Above Rs.75,000/- to Rs.1,50,000/"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-optima.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=eboRlKVzLlS3K7R4DMIfUQ%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-imperial-debit-card",
@@ -194140,30 +194479,28 @@
     "joiningFee": 600,
     "annualFee": 800,
     "feeWaiverSpend": null,
-    "description": "PNB RuPay Select Imperial Debit Card is the FLAGSHIP PNB RuPay Select debit card. The only tier with GOLF (quarterly Golftripz rounds), plus quarterly airport lounges, quarterly Cult.fit/Apollo/Blinkit/BookMyShow/Decathlon/Myntra/Reliance vouchers, half-yearly SPA + Kalyan, annual OTT + Gaana + ClearTax, ₹10 lakh accident cover and 24×7 concierge. Benefits worth ~₹52-58K/year against a nominal debit-card fee.",
-    "tagline": "Imperial banking privileges for top-tier salary earners",
+    "description": "PNB RuPay Select Imperial Debit Card is a PNB RUPAY SELECT IMPERIAL from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
     "benefits": [
-      "Domestic airport lounge: 4 visits/year (quarterly) — ~₹4,800",
-      "International airport lounge: 4 visits/year (quarterly) — ~₹10,000",
-      "Golf: 1 complimentary lesson or round per quarter (Golftripz) — ~₹6,000-12,000/yr",
-      "1 annual OTT subscription (Amazon Prime or Hotstar) — ~₹1,499",
-      "Personal accident / accidental death cover up to ₹10 lakh",
-      "1 complimentary health check-up per year (SRL/Thyrocare) — ~₹1,800",
-      "Apollo Pharmacy voucher ₹250 per quarter (₹1,000/yr)",
-      "Cult.fit 90-day Live membership every quarter — ~₹4,000/yr",
-      "SPA/salon session per half-year (2/yr) — ~₹4,000",
-      "Blinkit voucher ₹250 per quarter (₹1,000/yr)",
-      "Swiggy One 3-month membership",
-      "Gaana annual subscription",
-      "BookMyShow voucher ₹250 per quarter (₹1,000/yr)",
-      "Decathlon voucher ₹500 per quarter (₹2,000/yr)",
-      "Kalyan Jewellers voucher ₹2,000 per half-year (₹4,000/yr)",
-      "Myntra voucher ₹500 per quarter (₹2,000/yr)",
-      "Reliance Digital voucher ₹500 per quarter (₹2,000/yr)",
-      "MakeMyTrip: flat 10% off up to ₹1,500/year",
-      "ClearTax voucher ₹2,950/year",
-      "24×7 multilingual concierge",
-      "Rotating NPCI merchant offers (domestic + international)"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Quarter per card in any of",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -194185,27 +194522,80 @@
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
     "slug": "pnb-rupay-select-imperial-debit-card",
-    "estimatedBenefitValue": "₹52,000–58,000/year (full redemption); ~₹16,000–22,000 realistic — FLAGSHIP PNB RuPay Select tier, includes golf"
+    "estimatedBenefitValue": "₹52,000–58,000/year (full redemption); ~₹16,000–22,000 realistic — FLAGSHIP PNB RuPay Select tier, includes golf",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 900,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Salaried Individual (Regular & contractual employees of Government Department, Public Sector Undertaking, MNCs, Educational Institutions, Corporate, any industrial establishments, etc.) drawing a Monthly Gross Salary Above Rs.1,50,000/- and account o"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-imperial.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=PSzB5vfp8WJuiJfDQRx0%2BA%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-mastercard-world-grand-debit-card",
-    "name": "PNB Mastercard World Grand Debit Card",
+    "name": "PNB MasterCard World Grand Debit Card",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "cardType": "debit",
-    "network": "Mastercard",
-    "tier": "Signature",
+    "network": "MasterCard",
+    "tier": "World",
     "joiningFee": 2500,
     "annualFee": 3000,
     "feeWaiverSpend": null,
-    "description": "Premium Mastercard World debit card for high-net-worth individuals maintaining ₹5 lakh monthly average balance. Provides 2 domestic lounge visits per quarter for cardholder plus one guest, positioning it as an exclusive luxury banking product.",
-    "tagline": "World-class privileges for HNI customers",
+    "description": "PNB MasterCard World Grand Debit Card is a PNB MASTERCARD WORLD GRAND from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. Valid 7 years.",
+    "tagline": "MasterCard World debit card from PNB — international usage with ATM + POS access.",
     "benefits": [
-      "2 complimentary domestic airport lounge visits per quarter (cardholder + 1 guest)",
-      "Eligible for customers maintaining ₹5 lakh monthly average balance",
-      "Mastercard World global acceptance",
-      "Premium concierge assistance",
-      "High transaction limits"
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Complimentary Airport lounge access. Twice (2) (1 Cardholder + 1 Guest) per calendar quarter per card on domestic lounges. For updated lounge list, refer to MasterCard official website.",
+        "valueStr": "Complimentary",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -194217,26 +194607,80 @@
     "colorScheme": "dark red and gold",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-mastercard-world-grand-debit-card"
+    "slug": "pnb-mastercard-world-grand-debit-card",
+    "variant": "MASTERCARD WORLD INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 2500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 3000,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 2500,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All Individuals above 18 years of age maintaining Monthly Average Balance of Rs.5,00,000/- and account opened under eligible schemes."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-mastercard-world-grand.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=7SrMKSfJo/QSWYu2GcRz9g%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-mastercard-platinum-rise-debit-card",
-    "name": "PNB Mastercard Platinum Rise Debit Card",
+    "name": "PNB MasterCard Platinum Rise Debit Card",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "cardType": "debit",
-    "network": "Mastercard",
+    "network": "MasterCard",
     "tier": "Platinum",
     "joiningFee": null,
     "annualFee": null,
     "feeWaiverSpend": null,
-    "description": "Mastercard Platinum debit card from PNB offering standard platinum-tier benefits including ATM access, PoS transactions, and domestic purchase convenience for everyday banking needs.",
-    "tagline": "Rise to premium banking with Mastercard Platinum",
+    "description": "PNB MasterCard Platinum Rise Debit Card is a PNB MASTERCARD PLATINUM RISE from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. Valid 7 years.",
+    "tagline": "MasterCard Platinum debit card from PNB — international usage with ATM + POS access.",
     "benefits": [
-      "Daily ATM withdrawal limit of ₹50,000",
-      "Mastercard Platinum global acceptance",
-      "PoS and eCommerce transaction support",
-      "Contactless payment capability"
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders One (1) time per calendar year per card in any of the participating Domestic Airport lounges.",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "shopping"
@@ -194246,27 +194690,71 @@
     "colorScheme": "black and silver",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-mastercard-platinum-rise-debit-card"
+    "slug": "pnb-mastercard-platinum-rise-debit-card",
+    "variant": "MASTERCARD PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 375,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 375,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 375,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All Individuals of age from 18 years to 28 years and account opened under eligible schemes."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-mastercard-platinum-rise.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=5aHc/TQtqrmApuO4z/VlJg%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-mastercard-platinum-grow-debit-card",
-    "name": "PNB Mastercard Platinum Grow Debit Card",
+    "name": "PNB MasterCard Platinum Grow Debit Card",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "cardType": "debit",
-    "network": "Mastercard",
+    "network": "MasterCard",
     "tier": "Platinum",
     "joiningFee": null,
     "annualFee": null,
     "feeWaiverSpend": null,
-    "description": "Mastercard Platinum debit card from PNB targeting customers looking to grow their savings while enjoying contactless transactions, ATM access, and standard Mastercard Platinum acceptance.",
-    "tagline": "Grow your wealth with Mastercard Platinum convenience",
-    "benefits": [
-      "Daily ATM withdrawal limit of ₹50,000",
-      "Mastercard Platinum global acceptance",
-      "PoS and eCommerce transaction support",
-      "Contactless payment capability"
-    ],
+    "description": "PNB MasterCard Platinum Grow Debit Card is a PNB MASTERCARD PLATINUM GROW from Punjab National Bank. International usage; ATM limit Rs. 10,000/day, PoS/eCom limit Rs. 10,000/day. Valid 7 years.",
+    "tagline": "MasterCard Platinum debit card from PNB — international usage with ATM + POS access.",
+    "benefits": [],
     "benefitIcons": [
       "shopping"
     ],
@@ -194275,7 +194763,56 @@
     "colorScheme": "black and green",
     "isLifetimeFree": false,
     "applyUrl": "https://pnb.bank.in/",
-    "slug": "pnb-mastercard-platinum-grow-debit-card"
+    "slug": "pnb-mastercard-platinum-grow-debit-card",
+    "variant": "MASTERCARD PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 10000,
+      "posEcomPerDay": 10000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Account can be opened by a minor of any age through his/her natural or legally appointed guardian. Guardian must have PNB Savings A/c and account opened under eligible schemes. Minors above the age of 10 years (on obtaining satisfactory proof of age)"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-mastercard-platinum-grow.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=LsAhvPfXYmXTdOa4UsNw4w%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-pmjdy-debit-card",
@@ -206241,35 +206778,34 @@
     "bankCode": "pnb",
     "cardType": "debit",
     "network": "RuPay",
-    "tier": "Imperial",
+    "tier": "Select",
     "slug": "pnb-rupay-select-government-imperial-debit-card",
     "annualFee": 0,
     "joiningFee": 0,
     "isLifetimeFree": false,
     "colorScheme": "RuPay blue + PNB maroon",
-    "tagline": "PNB RuPay Select Government Imperial Debit Card — NPCI RuPay Select imperial benefit program",
-    "description": "PNB RuPay Select Government Imperial Debit Card carries the NPCI RuPay Select imperial-tier benefit program. ₹52,000–58,000/yr full; ~₹16-22K realistic (flagship, incl. golf)",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Government Imperial Debit Card is a PNB RUPAY SELECT GOVERNMENT IMPERIAL from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Domestic lounge 4/yr (quarterly)",
-      "International lounge 4/yr (quarterly)",
-      "Golf quarterly (Golftripz)",
-      "OTT annual",
-      "₹10L accident cover",
-      "Health check-up 1/yr",
-      "Apollo ₹1000/yr",
-      "Cult.fit quarterly",
-      "SPA/salon 2/yr",
-      "Blinkit ₹1000/yr",
-      "Swiggy One 3mo",
-      "Gaana annual",
-      "BookMyShow ₹1000/yr",
-      "Decathlon ₹2000/yr",
-      "Kalyan ₹4000/yr",
-      "Myntra ₹2000/yr",
-      "Reliance Digital ₹2000/yr",
-      "MakeMyTrip 10% up to ₹1500",
-      "ClearTax ₹2950",
-      "24×7 concierge"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders two (2) times per Calendar Quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time calendar Quarter per card in any of th",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -206284,7 +206820,57 @@
       "concierge",
       "milestone"
     ],
-    "estimatedBenefitValue": "₹52,000–58,000/yr full; ~₹16-22K realistic (flagship, incl. golf)"
+    "estimatedBenefitValue": "₹52,000–58,000/yr full; ~₹16-22K realistic (flagship, incl. golf)",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 900,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Account opened under PNB Salary Saving Scheme for Central Government Employees (Group A)"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-government-imperial.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=Mf0nasjwR4oPD%2BiZl3ul2w%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-government-optima-debit-card",
@@ -206293,34 +206879,34 @@
     "bankCode": "pnb",
     "cardType": "debit",
     "network": "RuPay",
-    "tier": "Optima",
+    "tier": "Select",
     "slug": "pnb-rupay-select-government-optima-debit-card",
     "annualFee": 0,
     "joiningFee": 0,
     "isLifetimeFree": false,
     "colorScheme": "RuPay blue + PNB maroon",
-    "tagline": "PNB RuPay Select Government Optima Debit Card — NPCI RuPay Select optima benefit program",
-    "description": "PNB RuPay Select Government Optima Debit Card carries the NPCI RuPay Select optima-tier benefit program. ₹37,000–40,000/yr full; ~₹12-16K realistic",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Government Optima Debit Card is a PNB RUPAY SELECT GOVERNMENT OPTIMA from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Domestic lounge 4/yr (quarterly)",
-      "International lounge 4/yr (quarterly)",
-      "ClearTax ₹2950",
-      "OTT annual",
-      "₹10L accident cover",
-      "Health check-up 1/yr",
-      "Apollo ₹500/yr",
-      "Cult.fit quarterly",
-      "SPA/salon 1/yr",
-      "Blinkit ₹500/yr",
-      "Swiggy One 3mo",
-      "Gaana annual",
-      "BookMyShow ₹500/yr",
-      "Decathlon ₹1000/yr",
-      "Kalyan ₹2000",
-      "Myntra ₹1000/yr",
-      "Reliance Digital ₹1000/yr",
-      "MakeMyTrip 10% up to ₹1500",
-      "24×7 concierge"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Quarter per card in any of",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -206334,7 +206920,57 @@
       "concierge",
       "milestone"
     ],
-    "estimatedBenefitValue": "₹37,000–40,000/yr full; ~₹12-16K realistic"
+    "estimatedBenefitValue": "₹37,000–40,000/yr full; ~₹12-16K realistic",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 800,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Account opened under PNB Salary Saving Scheme for Central Government Employees (Group B)"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-government-optima.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=SJoRNMTM4P8vnsHY6uPiLw%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-government-excel-debit-card",
@@ -206343,27 +206979,34 @@
     "bankCode": "pnb",
     "cardType": "debit",
     "network": "RuPay",
-    "tier": "Excel",
+    "tier": "Select",
     "slug": "pnb-rupay-select-government-excel-debit-card",
     "annualFee": 0,
     "joiningFee": 0,
     "isLifetimeFree": false,
     "colorScheme": "RuPay blue + PNB maroon",
-    "tagline": "PNB RuPay Select Government Excel Debit Card — NPCI RuPay Select excel benefit program",
-    "description": "PNB RuPay Select Government Excel Debit Card carries the NPCI RuPay Select excel-tier benefit program. ₹18,000–22,000/yr full; ~₹6-8K realistic",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Government Excel Debit Card is a PNB RUPAY SELECT GOVERNMENT EXCEL from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Domestic lounge 2/yr",
-      "International lounge 2/yr",
-      "OTT annual",
-      "₹10L accident cover",
-      "Health check-up 1/yr",
-      "Cult.fit 90d",
-      "SPA/salon 1/yr",
-      "Swiggy One 3mo",
-      "BookMyShow ₹250",
-      "Kalyan ₹2000",
-      "Myntra ₹500",
-      "24×7 concierge"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Half Year per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Half Year per card in an",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -206376,7 +207019,57 @@
       "shopping",
       "concierge"
     ],
-    "estimatedBenefitValue": "₹18,000–22,000/yr full; ~₹6-8K realistic"
+    "estimatedBenefitValue": "₹18,000–22,000/yr full; ~₹6-8K realistic",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 650,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Account opened under PNB Salary Saving Scheme for Central Government Employees (Group C)"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-government-excel.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=FkACGLOFyaCio%2BkiSTz3hg%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-rakshak-optima-debit-card",
@@ -206385,34 +207078,34 @@
     "bankCode": "pnb",
     "cardType": "debit",
     "network": "RuPay",
-    "tier": "Optima",
+    "tier": "Select",
     "slug": "pnb-rupay-select-rakshak-optima-debit-card",
     "annualFee": 0,
     "joiningFee": 0,
     "isLifetimeFree": false,
     "colorScheme": "RuPay blue + PNB maroon",
-    "tagline": "PNB RuPay Select Rakshak Optima Debit Card — NPCI RuPay Select optima benefit program",
-    "description": "PNB RuPay Select Rakshak Optima Debit Card carries the NPCI RuPay Select optima-tier benefit program. ₹37,000–40,000/yr full; ~₹12-16K realistic",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Rakshak Optima Debit Card is a PNB RUPAY SELECT RAKSHAK OPTIMA from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Domestic lounge 4/yr (quarterly)",
-      "International lounge 4/yr (quarterly)",
-      "ClearTax ₹2950",
-      "OTT annual",
-      "₹10L accident cover",
-      "Health check-up 1/yr",
-      "Apollo ₹500/yr",
-      "Cult.fit quarterly",
-      "SPA/salon 1/yr",
-      "Blinkit ₹500/yr",
-      "Swiggy One 3mo",
-      "Gaana annual",
-      "BookMyShow ₹500/yr",
-      "Decathlon ₹1000/yr",
-      "Kalyan ₹2000",
-      "Myntra ₹1000/yr",
-      "Reliance Digital ₹1000/yr",
-      "MakeMyTrip 10% up to ₹1500",
-      "24×7 concierge"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Quarter per card in any of",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -206426,7 +207119,57 @@
       "concierge",
       "milestone"
     ],
-    "estimatedBenefitValue": "₹37,000–40,000/yr full; ~₹12-16K realistic"
+    "estimatedBenefitValue": "₹37,000–40,000/yr full; ~₹12-16K realistic",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 800,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All officers of following: a. State Police Forces, Union Territories Police forces & Railway Police Forces, Metro Police (Cities which follows Police Commissionerate System- like Delhi Police, Mumbai Police, Kolkata Police etc.) and account opened un"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-rakshak-optima.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=fHCkOcoGBEVFyjravzG2Yw%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-rakshak-imperial-debit-card",
@@ -206435,35 +207178,34 @@
     "bankCode": "pnb",
     "cardType": "debit",
     "network": "RuPay",
-    "tier": "Imperial",
+    "tier": "Select",
     "slug": "pnb-rupay-select-rakshak-imperial-debit-card",
     "annualFee": 0,
     "joiningFee": 0,
     "isLifetimeFree": false,
     "colorScheme": "RuPay blue + PNB maroon",
-    "tagline": "PNB RuPay Select Rakshak Imperial Debit Card — NPCI RuPay Select imperial benefit program",
-    "description": "PNB RuPay Select Rakshak Imperial Debit Card carries the NPCI RuPay Select imperial-tier benefit program. ₹52,000–58,000/yr full; ~₹16-22K realistic (flagship, incl. golf)",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Rakshak Imperial Debit Card is a PNB RUPAY SELECT RAKSHAK IMPERIAL from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Domestic lounge 4/yr (quarterly)",
-      "International lounge 4/yr (quarterly)",
-      "Golf quarterly (Golftripz)",
-      "OTT annual",
-      "₹10L accident cover",
-      "Health check-up 1/yr",
-      "Apollo ₹1000/yr",
-      "Cult.fit quarterly",
-      "SPA/salon 2/yr",
-      "Blinkit ₹1000/yr",
-      "Swiggy One 3mo",
-      "Gaana annual",
-      "BookMyShow ₹1000/yr",
-      "Decathlon ₹2000/yr",
-      "Kalyan ₹4000/yr",
-      "Myntra ₹2000/yr",
-      "Reliance Digital ₹2000/yr",
-      "MakeMyTrip 10% up to ₹1500",
-      "ClearTax ₹2950",
-      "24×7 concierge"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Quarter per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Quarter per card in any of",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -206478,7 +207220,57 @@
       "concierge",
       "milestone"
     ],
-    "estimatedBenefitValue": "₹52,000–58,000/yr full; ~₹16-22K realistic (flagship, incl. golf)"
+    "estimatedBenefitValue": "₹52,000–58,000/yr full; ~₹16-22K realistic (flagship, incl. golf)",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 900,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 600,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All officers in cadre brigadier and above: Serving personnel of Indian Air Force, Indian Army & Indian Navy, BSF, CISF, ITBP, SSB, CRPF, Assam Rifles & NSG, CISF, CRPF, Research & Analysis Wing (RAW), Intelligence Bureau (IB), Central Bureau of Inves"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-rakshak-imperial.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=I0lvLFZONKwIh3jU5yQ4ZQ%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-rakshak-debit-card",
@@ -206493,21 +207285,28 @@
     "joiningFee": 0,
     "isLifetimeFree": false,
     "colorScheme": "RuPay blue + PNB maroon",
-    "tagline": "PNB RuPay Select Rakshak Debit Card — NPCI RuPay Select excel benefit program",
-    "description": "PNB RuPay Select Rakshak Debit Card carries the NPCI RuPay Select excel-tier benefit program. ₹18,000–22,000/yr full; ~₹6-8K realistic",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Rakshak Debit Card is a PNB RUPAY SELECT RAKSHAK from Punjab National Bank. International usage; ATM limit Rs. 150,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Domestic lounge 2/yr",
-      "International lounge 2/yr",
-      "OTT annual",
-      "₹10L accident cover",
-      "Health check-up 1/yr",
-      "Cult.fit 90d",
-      "SPA/salon 1/yr",
-      "Swiggy One 3mo",
-      "BookMyShow ₹250",
-      "Kalyan ₹2000",
-      "Myntra ₹500",
-      "24×7 concierge"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "The RuPay Select Debit Card provides cardholders with one (1) time domestic airport lounge access in current quarter in any of the participating Domestic Airport lounges on spending minimum of Rs.5000 through POS/E-com in last quarter. International lounge program provides access to cardholders two ",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -206520,7 +207319,57 @@
       "shopping",
       "concierge"
     ],
-    "estimatedBenefitValue": "₹18,000–22,000/yr full; ~₹6-8K realistic"
+    "estimatedBenefitValue": "₹18,000–22,000/yr full; ~₹6-8K realistic",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 150000,
+      "posEcomPerDay": 500000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Person below officer in below: a. Serving personnel of Indian Air Force, Indian Army & Indian Navy, BSF, CISF, ITBP, SSB, CRPF, Assam Rifles & NSG, CISF, CRPF, Research & Analysis Wing (RAW), Intelligence Bureau (IB), Central Bureau of Investigation "
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-rakshak.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=xxMRCn9zKeNiRYz%2BcVtTvg%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-select-samriddhi-debit-card",
@@ -206535,21 +207384,28 @@
     "joiningFee": 0,
     "isLifetimeFree": false,
     "colorScheme": "RuPay blue + PNB maroon",
-    "tagline": "PNB RuPay Select Samriddhi Debit Card — NPCI RuPay Select excel benefit program",
-    "description": "PNB RuPay Select Samriddhi Debit Card carries the NPCI RuPay Select excel-tier benefit program. ₹18,000–22,000/yr full; ~₹6-8K realistic",
+    "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Select Samriddhi Debit Card is a PNB RUPAY SELECT SAMRIDDHI from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Domestic lounge 2/yr",
-      "International lounge 2/yr",
-      "OTT annual",
-      "₹10L accident cover",
-      "Health check-up 1/yr",
-      "Cult.fit 90d",
-      "SPA/salon 1/yr",
-      "Swiggy One 3mo",
-      "BookMyShow ₹250",
-      "Kalyan ₹2000",
-      "Myntra ₹500",
-      "24×7 concierge"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 1000000,
+        "valueStr": "Rs. 1,000,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "The RuPay Select Debit Card provides cardholders with one (1) time domestic airport lounge access in current quarter in any of the participating Domestic Airport lounges on spending minimum of Rs.5000 through POS/E-com in last quarter. International lounge program provides access to cardholders Two ",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "lounge",
@@ -206562,7 +207418,57 @@
       "shopping",
       "concierge"
     ],
-    "estimatedBenefitValue": "₹18,000–22,000/yr full; ~₹6-8K realistic"
+    "estimatedBenefitValue": "₹18,000–22,000/yr full; ~₹6-8K realistic",
+    "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 150000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Farmers - As per National Policy for Farmers 2007, maintaining the minimum Half-Yealy Avg. Balance of Rs.25,000/-. Kisan Savings Account should be opened only for farmers and account opened under eligible schemes. Age criteria: 18 years and above The"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-samriddhi.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=eJPH4F8a7lx0eT5KXmK2pg%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-platinum-harit-debit-card",
@@ -206577,16 +207483,74 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB RuPay Platinum Harit Debit Card",
-    "description": "PNB RuPay Platinum Harit Debit Card — a PNB RuPay debit card.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Platinum Harit Debit Card is a PNB RUPAY PLATINUM HARIT from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      }
     ],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 150000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Farmers - As per National Policy for Farmers 2007, maintaining the minimum Half-Yealy Avg. Balance of Rs.5,000/-. Kisan Savings Account should be opened only for farmers and account opened under eligible schemes. Age criteria: 18 years and above The "
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-harit.pdf",
+    "pdfUrl": "https://pnb.bank.in/uploadfile/Cards/PNB_RUPAY_PLATINUM_HARIT-_OFFER_&_BENEFITS_DETAILS.pdf",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-platinum-pearl-debit-card",
@@ -206601,16 +207565,74 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB RuPay Platinum Pearl Debit Card",
-    "description": "PNB RuPay Platinum Pearl Debit Card — a PNB RuPay debit card.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Platinum Pearl Debit Card is a PNB RUPAY PLATINUM PEARL from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      }
     ],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 350,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 150000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All Women saving account holder maintaining Monthly Average Balance of Rs.10,000/- and account opened under eligible schemes."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-pearl.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=wwivM%2BhbK7PobpQsmZB1Fg%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-platinum-emerald-debit-card",
@@ -206625,16 +207647,83 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB RuPay Platinum Emerald Debit Card",
-    "description": "PNB RuPay Platinum Emerald Debit Card — a PNB RuPay debit card.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Platinum Emerald Debit Card is a PNB RUPAY PLATINUM EMERALD from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders one (1) time per calendar year per card in any of the participating Domestic Airport lounges. For updated lounge list, refer to NPCI RuPay Website",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 300,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 500,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 300,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 150000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All Women saving account holder maintaining Monthly Average Balance of Rs.25,000/- and account opened under eligible schemes."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-emerald.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=vtivl23mOBk/jdR7UCc75Q%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-platinum-solitaire-debit-card",
@@ -206649,16 +207738,83 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB RuPay Platinum Solitaire Debit Card",
-    "description": "PNB RuPay Platinum Solitaire Debit Card — a PNB RuPay debit card.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+    "description": "PNB RuPay Platinum Solitaire Debit Card is a PNB RUPAY PLATINUM SOLITAIRE from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      },
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Domestic Airport lounge program for RuPay Platinum Debit Card provides access to cardholders two (2) times per calendar year per card in any of the participating Domestic Airport lounges. For updated lounge list, refer to NPCI RuPay Website",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
     ],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 400,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 650,
+        "note": "Excluding GST"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 400,
+        "note": "Excluding GST"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 150000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All Women saving account holder maintaining Monthly Average Balance of Rs.50,000/- and account opened under eligible schemes."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-solitaire.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=O63shZM/LdyN0VbUXRy8MA%3D%3D",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-ncmc-classic-debit-card",
@@ -206686,7 +207842,7 @@
   },
   {
     "id": "pnb-rupay-ncmc-platinum-domestic-debit-card",
-    "name": "PNB RuPay NCMC Platinum Domestic Debit Card",
+    "name": "RuPay NCMC Platinum Domestic Debit Card",
     "tier": "Platinum",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
@@ -206697,20 +207853,74 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB RuPay NCMC Platinum Domestic Debit Card",
-    "description": "PNB RuPay NCMC Platinum Domestic Debit Card — a PNB RuPay debit card.",
+    "tagline": "RuPay Platinum debit card from PNB — domestic usage with NCMC transit.",
+    "description": "RuPay NCMC Platinum Domestic Debit Card is a RuPay NCMC Platinum Domestic Debit Card from Punjab National Bank. Domestic usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      }
     ],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "Platinum Domestic Contactless NCMC Debit Card",
+    "usage": "Domestic",
+    "internationalUsable": false,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=200F0YYXQIW6L9grNbQsng%3D%3D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-ncmc-platinum-international-debit-card",
-    "name": "PNB RuPay NCMC Platinum International Debit Card",
+    "name": "RuPay NCMC Platinum International Debit Card",
     "tier": "Platinum",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
@@ -206721,21 +207931,75 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB RuPay NCMC Platinum International Debit Card",
-    "description": "PNB RuPay NCMC Platinum International Debit Card — a PNB RuPay debit card.",
+    "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+    "description": "RuPay NCMC Platinum International Debit Card is a RuPay NCMC Platinum International Debit Card from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. NCMC offline transit enabled. Valid 7 years.",
     "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
+      {
+        "category": "insurance",
+        "title": "Personal Accidental Insurance Cover",
+        "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": true,
+        "valueNum": 200000,
+        "valueStr": "Rs. 200,000"
+      }
     ],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "Platinum International Contactless NCMC Debit Card",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=Qj1AvrCObxsvsxbi5/o3Ug%3D%3D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-pay-wearable-rupay-debit",
-    "name": "PNB Pay Wearable (RuPay On-the-Go)",
-    "tier": "Contactless",
+    "name": "PNB Pay Wearable RuPay Debit Card",
+    "tier": "Classic",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
     "cardType": "debit",
@@ -206745,20 +208009,64 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB Pay Wearable (RuPay On-the-Go)",
-    "description": "PNB Pay Wearable (RuPay On-the-Go) — a PNB RuPay debit card.",
-    "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
-    ],
+    "tagline": "RuPay Classic debit card from PNB — domestic usage with NCMC transit.",
+    "description": "PNB Pay -(banks' Wearable Products Based On RuPay On-the-go Technology Debit Card is a RuPay debit card from Punjab National Bank. Domestic usage; ATM limit bank-defined limits, PoS/eCom limit Rs. 60,000/day. NCMC offline transit enabled. Valid 7 years.",
+    "benefits": [],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "The product shall be available in three forms – PVC Keychain, Leather Keychain and Mobile Sticker. It will be a Debit Card at back-end (linked to an account)",
+    "usage": "Domestic",
+    "internationalUsable": false,
+    "contactless": false,
+    "ncmc": true,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "note": "Leather Keychain: RS 450 + taxes PVC keychain: RS 400 + taxes Mobile sticker: RS"
+      },
+      {
+        "label": "Annual Fee",
+        "note": "Leather Keychain: RS 150 + taxes PVC keychain: RS 150 + taxes Mobile sticker: RS"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 0,
+        "note": "Nil"
+      }
+    ],
+    "limits": {
+      "posEcomPerDay": 60000
+    },
+    "features": [
+      "Can be used at all POS terminals, E Com Websites / Apps across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "Any individual having KYC compliant account with the our bank and is otherwise eligible for Debit Card Issuance (including Savings and Current account holders)."
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=V1Ijtq07O3VCXTFrbpOcYQ%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   },
   {
     "id": "pnb-rupay-classic-virtual-debit-card",
-    "name": "PNB RuPay Classic Virtual Debit Card",
+    "name": "RuPay Classic Virtual Debit Card",
     "tier": "Classic",
     "bank": "Punjab National Bank",
     "bankCode": "pnb",
@@ -206769,15 +208077,497 @@
     "joiningFee": 0,
     "isLifetimeFree": true,
     "colorScheme": "RuPay blue",
-    "tagline": "PNB RuPay Classic Virtual Debit Card",
-    "description": "PNB RuPay Classic Virtual Debit Card — a PNB RuPay debit card.",
-    "benefits": [
-      "Contactless payments",
-      "ATM + POS + e-com access"
-    ],
+    "tagline": "RuPay Classic debit card from PNB — domestic usage with ATM + POS access.",
+    "description": "RuPay Classic Virtual Debit Card is a Rupay Classic Virtual Debit Card from Punjab National Bank. Domestic usage; ATM limit Rs. 60,000/day, bank-defined PoS/eCom limits. Valid 7 years.",
+    "benefits": [],
     "benefitIcons": [
       "rewards"
     ],
-    "estimatedBenefitValue": "Standard debit benefits"
+    "estimatedBenefitValue": "Standard debit benefits",
+    "variant": "Classic Virtual Debit Card",
+    "usage": "Domestic",
+    "internationalUsable": false,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 0,
+        "note": "Nil"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 0,
+        "note": "Nil"
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 0,
+        "note": "Nil"
+      }
+    ],
+    "limits": {
+      "atmPerDay": 60000
+    },
+    "features": [],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "All eligible PNB customers using PNB One App & Retail Internet Banking Services can apply for Rupay Classic Virtual Debit Card"
+      ]
+    },
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=pBq1bKW%2BDSTOjPkb8d2bXg%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "name": "MasterCard Business Debit Card",
+    "cardType": "debit",
+    "network": "MasterCard",
+    "tier": "Classic",
+    "variant": "For Business concerns",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 500
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 75000,
+      "posEcomPerDay": 500000
+    },
+    "benefits": [
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "Complimentary Airport lounge access. Twice (2) per calendar quarter per card on domestic lounges. For upgraded lounge list, refer to MasterCard website.",
+        "valueStr": "Complimentary",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
+    ],
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "The card can be issued in current account under following categories - Sole proprietorship Partnership concerns (Authorized Individual) Private limited companies (Authorized Individual) Public limited companies (Authorized Individual)"
+      ]
+    },
+    "description": "MasterCard Business Debit Card is a MasterCard Business Debit Card from Punjab National Bank. International usage; ATM limit Rs. 75,000/day, PoS/eCom limit Rs. 500,000/day. Valid 7 years.",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=k7HBroM6fwOZljNj1C8BYA%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "id": "mastercard-business-debit-card",
+    "slug": "mastercard-business-debit-card",
+    "tagline": "MasterCard Classic debit card from PNB — international usage with ATM + POS access.",
+    "bank": "Punjab National Bank",
+    "bankCode": "pnb",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "name": "MasterCard Classic Domestic Debit Card",
+    "cardType": "debit",
+    "network": "MasterCard",
+    "tier": "Classic",
+    "variant": "Classic Debit Card (Contactless)",
+    "usage": "Domestic",
+    "internationalUsable": false,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 150,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 150
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 150
+      }
+    ],
+    "limits": {
+      "atmPerDay": 25000,
+      "posEcomPerDay": 60000
+    },
+    "benefits": [],
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true
+    },
+    "description": "MasterCard Classic Domestic Debit Card is a MasterCard Classic Domestic Debit Card from Punjab National Bank. Domestic usage; ATM limit Rs. 25,000/day, PoS/eCom limit Rs. 60,000/day. Valid 7 years.",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "id": "mastercard-classic-domestic-debit-card",
+    "slug": "mastercard-classic-domestic-debit-card",
+    "tagline": "MasterCard Classic debit card from PNB — domestic usage with ATM + POS access.",
+    "bank": "Punjab National Bank",
+    "bankCode": "pnb",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "name": "MasterCard Classic International Debit Card",
+    "cardType": "debit",
+    "network": "MasterCard",
+    "tier": "Classic",
+    "variant": "Classic Debit Card (Contactless)",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 150
+      }
+    ],
+    "limits": {
+      "atmPerDay": 25000,
+      "posEcomPerDay": 60000
+    },
+    "benefits": [],
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true
+    },
+    "description": "MasterCard Classic International Debit Card is a MasterCard Classic International Debit Card from Punjab National Bank. International usage; ATM limit Rs. 25,000/day, PoS/eCom limit Rs. 60,000/day. Valid 7 years.",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=wMVk1vduDPfmpX%2Bgg8yX0w%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "id": "mastercard-classic-international-debit-card",
+    "slug": "mastercard-classic-international-debit-card",
+    "tagline": "MasterCard Classic debit card from PNB — international usage with ATM + POS access.",
+    "bank": "Punjab National Bank",
+    "bankCode": "pnb",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "name": "MasterCard Platinum Debit Card",
+    "cardType": "debit",
+    "network": "MasterCard",
+    "tier": "Platinum",
+    "variant": "Platinum Debit Card (Contactless)",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "benefits": [
+      {
+        "category": "lounge",
+        "title": "Airport Lounge Access",
+        "description": "NA",
+        "valueStr": "Included",
+        "isSellable": false,
+        "isActive": true,
+        "activationRequired": false
+      }
+    ],
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true,
+      "notes": [
+        "PNB Customers maintaining QAB Rs. 25,000/- or more"
+      ]
+    },
+    "description": "MasterCard Platinum Debit Card is a MasterCard Platinum Debit Card from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. Valid 7 years.",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=nfNlks6JQKeVZGbYfQmG3g%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "id": "mastercard-platinum-debit-card",
+    "slug": "mastercard-platinum-debit-card",
+    "tagline": "MasterCard Platinum debit card from PNB — international usage with ATM + POS access.",
+    "bank": "Punjab National Bank",
+    "bankCode": "pnb",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "name": "Visa Classic Debit Card",
+    "cardType": "debit",
+    "network": "Visa",
+    "tier": "Classic",
+    "variant": "VISA Classic Debit Card (Contactless)",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 150,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 150
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 150
+      }
+    ],
+    "limits": {
+      "atmPerDay": 25000,
+      "posEcomPerDay": 60000
+    },
+    "benefits": [],
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true
+    },
+    "description": "Visa Classic Debit Card is a VISA Classic Debit Card from Punjab National Bank. International usage; ATM limit Rs. 25,000/day, PoS/eCom limit Rs. 60,000/day. Valid 7 years.",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=Ae1YakCcJVoeqKv/EF62iw%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "id": "visa-classic-debit-card",
+    "slug": "visa-classic-debit-card",
+    "tagline": "Visa Classic debit card from PNB — international usage with ATM + POS access.",
+    "bank": "Punjab National Bank",
+    "bankCode": "pnb",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "name": "Visa Gold Debit Card",
+    "cardType": "debit",
+    "network": "Visa",
+    "tier": "Gold",
+    "variant": "VISA Gold Debit Card (Contactless)",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 250,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 250
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 250
+      }
+    ],
+    "limits": {
+      "atmPerDay": 50000,
+      "posEcomPerDay": 300000
+    },
+    "benefits": [],
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true
+    },
+    "description": "Visa Gold Debit Card is a VISA Gold Debit Card from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. Valid 7 years.",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=pK/3qZfInQipP3fFGcBE5Q%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "id": "visa-gold-debit-card",
+    "slug": "visa-gold-debit-card",
+    "tagline": "Visa Gold debit card from PNB — international usage with ATM + POS access.",
+    "bank": "Punjab National Bank",
+    "bankCode": "pnb",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "name": "Visa Signature Debit Card",
+    "cardType": "debit",
+    "network": "Visa",
+    "tier": "Signature",
+    "variant": "VISA Signature Debit Card (Contactless)",
+    "usage": "International",
+    "internationalUsable": true,
+    "contactless": false,
+    "ncmc": false,
+    "validity": "7 years",
+    "charges": [
+      {
+        "label": "Issuance Fee",
+        "amount": 500,
+        "note": "Primary card; add-on card also charged"
+      },
+      {
+        "label": "Annual Fee",
+        "amount": 750
+      },
+      {
+        "label": "Replacement Fee",
+        "amount": 500
+      }
+    ],
+    "limits": {
+      "atmPerDay": 75000,
+      "posEcomPerDay": 500000
+    },
+    "benefits": [],
+    "features": [
+      "Personalised Debit Card",
+      "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+    ],
+    "eligibility": {
+      "existingAccountRequired": true
+    },
+    "description": "Visa Signature Debit Card is a VISA Signature Debit Card from Punjab National Bank. International usage; ATM limit Rs. 75,000/day, PoS/eCom limit Rs. 500,000/day. Valid 7 years.",
+    "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+    "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=KABofS7lVcOMJVsMf/VyKw%3D%3D",
+    "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+    "id": "visa-signature-debit-card",
+    "slug": "visa-signature-debit-card",
+    "tagline": "Visa Signature debit card from PNB — international usage with ATM + POS access.",
+    "bank": "Punjab National Bank",
+    "bankCode": "pnb",
+    "customerCareNumber": "1800 180 2222",
+    "applyUrl": "https://pnb.bank.in/card-index.html",
+    "type": "debit",
+    "dataQuality": {
+      "status": "auto-scraped",
+      "sourceUrls": [
+        "https://pnb.bank.in/card-index.html"
+      ],
+      "lastVerified": "2026-08-19"
+    },
+    "lastUpdated": "2026-08-19"
   }
 ]

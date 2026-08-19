@@ -1,0 +1,82 @@
+{
+  "id": "pnb-rupay-platinum-harit-debit-card",
+  "name": "PNB RuPay Platinum Harit Debit Card",
+  "tier": "Platinum",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "slug": "pnb-rupay-platinum-harit-debit-card",
+  "annualFee": 0,
+  "joiningFee": 0,
+  "isLifetimeFree": true,
+  "colorScheme": "RuPay blue",
+  "tagline": "RuPay Platinum debit card from PNB — international usage with NCMC transit.",
+  "description": "PNB RuPay Platinum Harit Debit Card is a PNB RUPAY PLATINUM HARIT from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 150,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "benefits": [
+    {
+      "category": "insurance",
+      "title": "Personal Accidental Insurance Cover",
+      "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 2,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acci",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": true,
+      "valueNum": 200000,
+      "valueStr": "Rs. 200,000"
+    }
+  ],
+  "benefitIcons": [
+    "rewards"
+  ],
+  "estimatedBenefitValue": "Standard debit benefits",
+  "variant": "RUPAY PLATINUM INTERNATIONAL DEBIT CARD",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 250,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 250,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 250,
+      "note": "Excluding GST"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 50000,
+    "posEcomPerDay": 150000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Farmers - As per National Policy for Farmers 2007, maintaining the minimum Half-Yealy Avg. Balance of Rs.5,000/-. Kisan Savings Account should be opened only for farmers and account opened under eligible schemes. Age criteria: 18 years and above The "
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-platinum-harit.pdf",
+  "pdfUrl": "https://pnb.bank.in/uploadfile/Cards/PNB_RUPAY_PLATINUM_HARIT-_OFFER_&_BENEFITS_DETAILS.pdf",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

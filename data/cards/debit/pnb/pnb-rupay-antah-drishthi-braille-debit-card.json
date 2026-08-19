@@ -1,0 +1,78 @@
+{
+  "id": "pnb-rupay-antah-drishthi-braille-debit-card",
+  "name": "PNB RuPay Antah Drishthi Braille Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "tier": "Classic",
+  "joiningFee": 0,
+  "annualFee": 150,
+  "feeWaiverSpend": null,
+  "description": "RuPay PNB Antah Drishti Braille Debit Card is a RuPay PNB ANTAH DRISHTI Braille Debit Card from Punjab National Bank. Domestic usage; ATM limit Rs. 25,000/day, PoS/eCom limit Rs. 60,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "tagline": "RuPay Classic debit card from PNB — domestic usage with NCMC transit.",
+  "benefits": [],
+  "benefitIcons": [
+    "shopping"
+  ],
+  "minIncome": null,
+  "minCreditScore": null,
+  "colorScheme": "high-contrast blue and white",
+  "isLifetimeFree": false,
+  "applyUrl": "https://pnb.bank.in/",
+  "slug": "pnb-rupay-antah-drishthi-braille-debit-card",
+  "variant": "Classic Contactless NCMC Debit Card",
+  "usage": "Domestic",
+  "internationalUsable": false,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "note": "Primary Debit Card – NIL"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 150
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 150
+    }
+  ],
+  "limits": {
+    "atmPerDay": 25000,
+    "posEcomPerDay": 60000
+  },
+  "features": [
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India",
+    "Raised Braille Dots (PNB in Braille) - The “PNB” is prominently embossed on the card, making it easy for visually impaired and blind customers to differentiate between PNB and other Banks` Cards",
+    "Rounded Notch – The card has a rounded notch on the opposite side of the chip",
+    "This facilitates the card holder to know about the direction of the card while dipping the same in ATM / POS. Glossy Spot UV lamination effect – The card have a glossy spot UV lamination effect with raised texture on the Bank`s logo and silk screen rough spot UV on the contactless symbol",
+    "This helps visually impaired and blind customers to locate the bank`s logo easily and read the card`s contactless symbol, making it easy for them to use the card",
+    "Contrasting colours – The card have contrasting colours for easier reading and the colours used on the card are easily distinguishable by visually impaired and blind customers, making it easy for them to read the card details",
+    "Rupay National Common Mobility Card (NCMC) The RuPay National Common Mobility Card (NCMC) is a contactless payment solution designed to facilitate seamless transactions across transport, retail, and parking",
+    "Launched with the vision of “One Nation One Card,” this card aims to integrate multiple payment needs into a single card, promoting convenience and efficiency for users",
+    "RuPay NCMC is part of India`s initiative to create a unified and interoperable payment system"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Individual Saving / Current account Customers who are Visually Impaired and Blind persons.Branches to ensure to update the status of all such customers to ‘BLIND’ in CRM."
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=ivgCwSo2o7gpqx5Er%2BMCag%3D%3D",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "customerCareNumber": "1800 180 2222",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

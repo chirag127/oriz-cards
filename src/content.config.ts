@@ -18,7 +18,8 @@ import { cardSchema } from './content/cards/schema'
 
 const cards = defineCollection({
   loader: glob({
-    pattern: '**/*.json',
+    // `manifest.json` files are scraper working files, not card entries.
+    pattern: ['**/*.json', '!**/manifest.json'],
     // `base` is resolved relative to the project root (the dir containing
     // astro.config.mjs), so the catalog at `data/cards/**` is reachable.
     base: './data/cards',

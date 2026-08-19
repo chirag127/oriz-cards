@@ -1,0 +1,103 @@
+{
+  "id": "pnb-rupay-select-excel-debit-card",
+  "name": "PNB RuPay Select Excel Debit Card",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "cardType": "debit",
+  "network": "RuPay",
+  "tier": "Select",
+  "joiningFee": 500,
+  "annualFee": 650,
+  "feeWaiverSpend": null,
+  "description": "PNB RuPay Select Excel Debit Card is a PNB RUPAY SELECT EXCEL from Punjab National Bank. International usage; ATM limit Rs. 75,000/day, PoS/eCom limit Rs. 500,000/day. NCMC offline transit enabled. Valid 7 years.",
+  "tagline": "RuPay Select debit card from PNB — international usage with NCMC transit.",
+  "benefits": [
+    {
+      "category": "insurance",
+      "title": "Personal Accidental Insurance Cover",
+      "description": "Personal Accident Insurance cover (Accidental Death or Permanent Total Disability) of upto Rs. 10,00,000/-. Cardholder needs to perform minimum one successful Rupay Card induced financial transaction at any POS/E-com, both Intra and Inter-bank i.e. on-us or off-us within 30 days prior to date of acc",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": true,
+      "valueNum": 1000000,
+      "valueStr": "Rs. 1,000,000"
+    },
+    {
+      "category": "lounge",
+      "title": "Airport Lounge Access",
+      "description": "Domestic Airport lounge program for RuPay Select Debit Card provides access to cardholders one (1) time per calendar Half Year per card in any of the participating Domestic Airport lounges. International lounge program provides access to cardholders one (1) time per calendar Half Year per card in an",
+      "valueStr": "Included",
+      "isSellable": false,
+      "isActive": true,
+      "activationRequired": false
+    }
+  ],
+  "benefitIcons": [
+    "lounge",
+    "insurance",
+    "travel",
+    "health",
+    "rewards",
+    "dining",
+    "movie",
+    "shopping",
+    "concierge",
+    "milestone"
+  ],
+  "minIncome": 25000,
+  "minCreditScore": null,
+  "colorScheme": "teal and silver",
+  "isLifetimeFree": false,
+  "applyUrl": "https://pnb.bank.in/",
+  "slug": "pnb-rupay-select-excel-debit-card",
+  "estimatedBenefitValue": "₹18,000–22,000/year (full redemption); ~₹6,000–8,000 realistic",
+  "variant": "RUPAY SELECT INTERNATIONAL DEBIT CARD",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": true,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 500,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 650,
+      "note": "Excluding GST"
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 500,
+      "note": "Excluding GST"
+    }
+  ],
+  "limits": {
+    "atmPerDay": 75000,
+    "posEcomPerDay": 500000
+  },
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true,
+    "notes": [
+      "Salaried Individual (Regular & contractual employees of Government Department, Public Sector Undertaking, MNCs, Educational Institutions, Corporate, any industrial establishments, etc.) drawing a Monthly Gross Salary Above Rs.25,000/- to Rs.75,000/- "
+    ]
+  },
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\pnb-rupay-select-excel.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=2tscAepep5Zo6I7Q%2BOpxmg%3D%3D",
+  "customerCareNumber": "1800 180 2222",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}

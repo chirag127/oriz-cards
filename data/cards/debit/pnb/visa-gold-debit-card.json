@@ -1,0 +1,59 @@
+{
+  "name": "Visa Gold Debit Card",
+  "cardType": "debit",
+  "network": "Visa",
+  "tier": "Gold",
+  "variant": "VISA Gold Debit Card (Contactless)",
+  "usage": "International",
+  "internationalUsable": true,
+  "contactless": false,
+  "ncmc": false,
+  "validity": "7 years",
+  "charges": [
+    {
+      "label": "Issuance Fee",
+      "amount": 250,
+      "note": "Primary card; add-on card also charged"
+    },
+    {
+      "label": "Annual Fee",
+      "amount": 250
+    },
+    {
+      "label": "Replacement Fee",
+      "amount": 250
+    }
+  ],
+  "limits": {
+    "atmPerDay": 50000,
+    "posEcomPerDay": 300000
+  },
+  "benefits": [],
+  "features": [
+    "Personalised Debit Card",
+    "Can be used at all POS terminals, E Com Websites / Apps and ATMs across India"
+  ],
+  "eligibility": {
+    "existingAccountRequired": true
+  },
+  "description": "Visa Gold Debit Card is a VISA Gold Debit Card from Punjab National Bank. International usage; ATM limit Rs. 50,000/day, PoS/eCom limit Rs. 300,000/day. Valid 7 years.",
+  "pdfFile": "data\\cards\\debit\\pnb\\pdf\\rupay-contactless-benefits.pdf",
+  "pdfUrl": "https://pnb.bank.in/downloadprocess.aspx?fid=pK/3qZfInQipP3fFGcBE5Q%3D%3D",
+  "pdfNote": "No card-specific PDF on the page; linked shared RuPay Contactless benefits doc.",
+  "id": "visa-gold-debit-card",
+  "slug": "visa-gold-debit-card",
+  "tagline": "Visa Gold debit card from PNB — international usage with ATM + POS access.",
+  "bank": "Punjab National Bank",
+  "bankCode": "pnb",
+  "customerCareNumber": "1800 180 2222",
+  "applyUrl": "https://pnb.bank.in/card-index.html",
+  "type": "debit",
+  "dataQuality": {
+    "status": "auto-scraped",
+    "sourceUrls": [
+      "https://pnb.bank.in/card-index.html"
+    ],
+    "lastVerified": "2026-08-19"
+  },
+  "lastUpdated": "2026-08-19"
+}
